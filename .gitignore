@@ -57,3 +57,4 @@ scripts/notes-eval/output/
 
 # Local real-app verification profiles, copied runtimes, model weights and evidence.
 artifacts/notes-model-verification/
+artifacts/
