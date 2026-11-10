@@ -477,5 +477,6 @@
   "ui.mistralConnecting": "Jungiamasi…",
   "ui.mistralConnectedBody": "AutoDoc prijungtas prie Mistral API. Pastabos ir Ask AI veikia per Mistral; transkripcija lieka šiame įrenginyje.",
   "ui.mistralKeyRejected": "API raktas atmestas. Patikrinkite raktą ir bandykite dar kartą.",
-  "ui.useLocalModels": "Naudoti vietinius modelius"
+  "ui.useLocalModels": "Naudoti vietinius modelius",
+  "settings.mistralApi": "Mistral API"
 }

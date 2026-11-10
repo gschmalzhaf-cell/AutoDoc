@@ -477,5 +477,6 @@
   "ui.mistralConnecting": "接続中…",
   "ui.mistralConnectedBody": "AutoDocはMistral APIに接続されています。ノートとAsk AIはMistralで実行され、文字起こしはこのデバイス上で行われます。",
   "ui.mistralKeyRejected": "APIキーが拒否されました。キーを確認して、もう一度お試しください。",
-  "ui.useLocalModels": "ローカルモデルを使用"
+  "ui.useLocalModels": "ローカルモデルを使用",
+  "settings.mistralApi": "Mistral API"
 }

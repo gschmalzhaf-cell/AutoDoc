@@ -477,5 +477,6 @@
   "ui.mistralConnecting": "Свързване…",
   "ui.mistralConnectedBody": "AutoDoc е свързан с API на Mistral. Бележките и Ask AI работят в Mistral; транскрипцията остава на това устройство.",
   "ui.mistralKeyRejected": "API ключът беше отхвърлен. Проверете ключа и опитайте отново.",
-  "ui.useLocalModels": "Използване на локални модели"
+  "ui.useLocalModels": "Използване на локални модели",
+  "settings.mistralApi": "API на Mistral"
 }

@@ -18,7 +18,12 @@ Ollama request options map onto Mistral parameters as follows: `num_predict` →
 
 ## Configuration
 
-The recommended way to enable Mistral mode is the **in-app option**: during onboarding, the AI setup step offers **Use Mistral API** with an API key field. The key is validated against the Mistral API, stored in AutoDoc's preferences, and the app switches immediately — no environment variables needed.
+The recommended way to enable Mistral mode is the **in-app option**. It is available in two places:
+
+- **Settings → Mistral API**: enter or disconnect the API key at any time.
+- **Onboarding**: the AI setup step offers **Use Mistral API** with an API key field.
+
+In both places the key is validated against the Mistral API, stored in AutoDoc's preferences, and the app switches immediately — no environment variables needed.
 
 Alternatively, set `MISTRAL_API_KEY` before launching the app. A key entered in the app takes precedence over the environment variable.
 

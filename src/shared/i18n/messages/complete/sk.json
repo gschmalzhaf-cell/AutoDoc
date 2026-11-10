@@ -477,5 +477,6 @@
   "ui.mistralConnecting": "Pripája sa…",
   "ui.mistralConnectedBody": "AutoDoc je pripojený k API Mistral. Poznámky a Ask AI bežia na Mistrali; transkripcia zostáva na tomto zariadení.",
   "ui.mistralKeyRejected": "Kľúč API bol odmietnutý. Skontrolujte kľúč a skúste to znova.",
-  "ui.useLocalModels": "Použiť lokálne modely"
+  "ui.useLocalModels": "Použiť lokálne modely",
+  "settings.mistralApi": "API Mistral"
 }

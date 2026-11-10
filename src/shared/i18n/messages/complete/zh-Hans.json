@@ -477,5 +477,6 @@
   "ui.mistralConnecting": "连接中…",
   "ui.mistralConnectedBody": "AutoDoc 已连接到 Mistral API。笔记和 Ask AI 在 Mistral 上运行；转录保留在此设备上。",
   "ui.mistralKeyRejected": "API 密钥被拒绝。请检查密钥后重试。",
-  "ui.useLocalModels": "使用本地模型"
+  "ui.useLocalModels": "使用本地模型",
+  "settings.mistralApi": "Mistral API"
 }

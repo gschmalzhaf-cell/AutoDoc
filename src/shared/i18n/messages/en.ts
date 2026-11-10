@@ -39,6 +39,7 @@ export const en = {
   'settings.googleAccount': 'Google account',
   'settings.microsoftAccount': 'Microsoft account',
   'settings.disconnect': 'Disconnect',
+  'settings.mistralApi': 'Mistral API',
   'settings.addGoogle': 'Add Google Calendar',
   'settings.addMicrosoft': 'Add Microsoft Outlook',
   'settings.connecting': 'Connecting...',

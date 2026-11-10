@@ -13,7 +13,12 @@ import { useCalendarStore } from '../stores/calendar'
 import { useRecordingStore } from '../stores/recording'
 import { useCalendarConnect } from '../hooks/useCalendarConnect'
 import type { UpdateStatus } from '../../../preload/ipc.d'
-import type { AppRuntimeInfo, AppStorageInfo, CalendarAccount } from '../../../shared/types'
+import type {
+  AppRuntimeInfo,
+  AppStorageInfo,
+  CalendarAccount,
+  MistralStatus
+} from '../../../shared/types'
 import {
   DEFAULT_MEETING_LANGUAGE,
   isMeetingLanguageAvailable,
@@ -126,6 +131,10 @@ export function Settings() {
     ? t('settings.finishRecordingBeforeRestart')
     : updateInstallBlockMessage(updateStatus.installBlockedReason, t)
   const [runtimeInfo, setRuntimeInfo] = useState<AppRuntimeInfo | null>(null)
+  const [mistralStatus, setMistralStatus] = useState<MistralStatus | null>(null)
+  const [mistralApiKeyInput, setMistralApiKeyInput] = useState('')
+  const [mistralConnecting, setMistralConnecting] = useState(false)
+  const [mistralKeyRejected, setMistralKeyRejected] = useState(false)
   const [storageInfo, setStorageInfo] = useState<AppStorageInfo | null>(null)
   const [analyticsConsent, setAnalyticsConsentState] = useState<boolean | null>(null)
   const [diagnosticLogUploadConsent, setDiagnosticLogUploadConsentState] = useState(false)
@@ -163,6 +172,55 @@ export function Settings() {
   const refreshStorageInfo = useCallback(() => {
     return window.electronAPI.invoke('app:get-storage-info').then(setStorageInfo)
   }, [])
+
+  const refreshMistralStatus = useCallback(() => {
+    void window.electronAPI
+      .invoke('mistral:get-status')
+      .then((status) => setMistralStatus(status))
+      .catch(() => setMistralStatus(null))
+  }, [])
+
+  const refreshRuntimeInfo = useCallback(() => {
+    window.electronAPI
+      .invoke('app:get-runtime-info')
+      .then(setRuntimeInfo)
+      .catch(() => {})
+  }, [])
+
+  const connectMistral = useCallback(async () => {
+    const trimmed = mistralApiKeyInput.trim()
+    if (mistralConnecting || trimmed.length === 0) return
+    setMistralConnecting(true)
+    setMistralKeyRejected(false)
+    try {
+      const result = await window.electronAPI.invoke('mistral:set-api-key', trimmed)
+      if (result?.ok) {
+        setMistralApiKeyInput('')
+        refreshMistralStatus()
+        refreshRuntimeInfo()
+      } else {
+        setMistralKeyRejected(true)
+      }
+    } catch {
+      setMistralKeyRejected(true)
+    } finally {
+      setMistralConnecting(false)
+    }
+  }, [mistralApiKeyInput, mistralConnecting, refreshMistralStatus, refreshRuntimeInfo])
+
+  const disconnectMistral = useCallback(async () => {
+    try {
+      await window.electronAPI.invoke('mistral:clear-api-key')
+    } catch {
+      // Clearing is best-effort; the status refresh reflects the outcome.
+    }
+    refreshMistralStatus()
+    refreshRuntimeInfo()
+  }, [refreshMistralStatus, refreshRuntimeInfo])
+
+  useEffect(() => {
+    refreshMistralStatus()
+  }, [refreshMistralStatus])
 
   useEffect(() => {
     window.electronAPI.invoke('app:get-version').then(setAppVersion)
@@ -810,6 +868,49 @@ export function Settings() {
                   <span className="mt-1 block">{t('ui.optionalDiagnosticLogUpload')}</span>
                 </span>
               </label>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-[13px] font-semibold text-ink mb-2">{t('settings.mistralApi')}</h3>
+            <div className="i18n-setting-row rounded-xl border border-border-subtle bg-bg-accent px-4 py-3">
+              <p className="i18n-setting-copy text-[12px] text-ink-muted leading-relaxed text-pretty">
+                {mistralStatus?.enabled ? t('ui.mistralConnectedBody') : t('ui.mistralDescription')}
+              </p>
+              {mistralStatus?.enabled ? (
+                <button
+                  type="button"
+                  onClick={() => void disconnectMistral()}
+                  className="i18n-btn text-[12px] font-medium leading-snug text-ink-muted bg-bg-accent px-3 py-1.5 rounded-lg border border-border-subtle hover:border-ink-muted transition-colors"
+                >
+                  {t('settings.disconnect')}
+                </button>
+              ) : (
+                <div className="i18n-setting-control flex flex-col items-end gap-2">
+                  <input
+                    type="password"
+                    value={mistralApiKeyInput}
+                    onChange={(event) => setMistralApiKeyInput(event.target.value)}
+                    onKeyDown={(event) => {
+                      if (event.key === 'Enter') void connectMistral()
+                    }}
+                    placeholder={t('ui.mistralApiKeyPlaceholder')}
+                    className="w-[240px] rounded-lg border border-border bg-bg-card px-3 py-1.5 text-[12px] text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage"
+                  />
+                  {mistralKeyRejected && (
+                    <p className="text-[12px] text-clay leading-relaxed text-right">
+                      {t('ui.mistralKeyRejected')}
+                    </p>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => void connectMistral()}
+                    disabled={mistralConnecting || mistralApiKeyInput.trim().length === 0}
+                    className="i18n-btn rounded-lg bg-sage px-3 py-1.5 text-[12px] font-medium leading-snug text-on-brand disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {mistralConnecting ? t('ui.mistralConnecting') : t('ui.mistralConnect')}
+                  </button>
+                </div>
+              )}
             </div>
           </div>
           <div>

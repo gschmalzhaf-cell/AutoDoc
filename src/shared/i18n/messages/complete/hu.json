@@ -477,5 +477,6 @@
   "ui.mistralConnecting": "Csatlakozás…",
   "ui.mistralConnectedBody": "Az AutoDoc csatlakozott a Mistral API-hoz. A jegyzetek és az Ask AI a Mistralon fut; a átírás ezen az eszközön marad.",
   "ui.mistralKeyRejected": "Az API-kulcsot elutasították. Ellenőrizze a kulcsot, és próbálja újra.",
-  "ui.useLocalModels": "Helyi modellek használata"
+  "ui.useLocalModels": "Helyi modellek használata",
+  "settings.mistralApi": "Mistral API"
 }

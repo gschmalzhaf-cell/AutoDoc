@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.1] — 2026-11-10
+
+### Added
+
+- Settings now has a **Mistral API** section: enter or disconnect the Mistral
+  API key at any time, not only during onboarding. The section shows the
+  current connection state and validates the key against the Mistral API
+  before saving it.
+
+
 ## [1.5.0] — 2026-11-10
 
 ### Added
