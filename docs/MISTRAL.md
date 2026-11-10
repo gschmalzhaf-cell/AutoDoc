@@ -20,7 +20,7 @@ Ollama request options map onto Mistral parameters as follows: `num_predict` →
 
 The recommended way to enable Mistral mode is the **in-app option**. It is available in two places:
 
-- **Settings → Mistral API**: enter, change, or disconnect the API key at any time, and pick the chat model (for example `mistral-small-latest` or `mistral-large-latest`; any Mistral model ID can be typed in).
+- **Settings → Mistral API**: enter, change, or disconnect the API key at any time, and pick the chat model. As soon as a key is connected, the model list is fetched from the Mistral API and offered in the picker (any other Mistral model ID can still be typed in).
 - **Onboarding**: the AI setup step offers **Use Mistral API** with an API key field.
 
 In both places the key is validated against the Mistral API, stored in AutoDoc's preferences, and the app switches immediately — no environment variables needed.

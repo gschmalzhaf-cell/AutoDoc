@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.3] — 2026-11-10
+
+### Added
+
+- The Mistral model picker in Settings now shows the models that are actually
+  available for the connected API key, fetched live from the Mistral API
+  (non-chat models such as embeddings and moderation are filtered out). The
+  static suggestions remain as a fallback, and free entry of any model ID is
+  unchanged.
+
+
 ## [1.5.2] — 2026-11-10
 
 ### Added

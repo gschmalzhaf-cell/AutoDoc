@@ -550,6 +550,30 @@ export async function closeMistralOllamaAdapter(): Promise<void> {
   }
 }
 
+/** Chat-capable model IDs the given key can use, sorted; empty on failure. */
+export async function listMistralModels(
+  apiKey = getMistralApiKey(),
+  apiBaseUrl = getMistralApiBaseUrl()
+): Promise<string[]> {
+  const key = apiKey.trim()
+  if (key.length === 0) return []
+  try {
+    const res = await fetch(`${apiBaseUrl}/v1/models`, {
+      headers: { Authorization: `Bearer ${key}` },
+      signal: AbortSignal.timeout(10_000)
+    })
+    if (!res.ok) return []
+    const data = (await res.json()) as { data?: Array<{ id?: unknown }> }
+    return (data.data ?? [])
+      .map((entry) => (typeof entry.id === 'string' ? entry.id : ''))
+      .filter((id) => id.length > 0)
+      .filter((id) => !/embed|moderation|ocr/i.test(id))
+      .sort()
+  } catch {
+    return []
+  }
+}
+
 /** Cheap credential check against the Mistral API before storing a key. */
 export async function validateMistralApiKey(
   apiKey: string,

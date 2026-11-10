@@ -137,6 +137,7 @@ export function Settings() {
   const [mistralKeyRejected, setMistralKeyRejected] = useState(false)
   const [mistralShowKeyInput, setMistralShowKeyInput] = useState(false)
   const [mistralModelInput, setMistralModelInput] = useState('')
+  const [mistralModelOptions, setMistralModelOptions] = useState<string[]>([])
   const [storageInfo, setStorageInfo] = useState<AppStorageInfo | null>(null)
   const [analyticsConsent, setAnalyticsConsentState] = useState<boolean | null>(null)
   const [diagnosticLogUploadConsent, setDiagnosticLogUploadConsentState] = useState(false)
@@ -243,6 +244,25 @@ export function Settings() {
   useEffect(() => {
     if (mistralStatus?.model) setMistralModelInput(mistralStatus.model)
   }, [mistralStatus?.model])
+
+  useEffect(() => {
+    if (!mistralStatus?.enabled) {
+      setMistralModelOptions([])
+      return
+    }
+    let cancelled = false
+    void window.electronAPI
+      .invoke('mistral:list-models')
+      .then((models) => {
+        if (!cancelled) setMistralModelOptions(Array.isArray(models) ? models : [])
+      })
+      .catch(() => {
+        if (!cancelled) setMistralModelOptions([])
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [mistralStatus?.enabled])
 
   useEffect(() => {
     window.electronAPI.invoke('app:get-version').then(setAppVersion)
@@ -918,7 +938,10 @@ export function Settings() {
                       className="w-[200px] rounded-lg border border-border bg-bg-card px-3 py-1.5 text-[12px] text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage"
                     />
                     <datalist id="mistral-model-options">
-                      {MISTRAL_CHAT_MODEL_OPTIONS.map((model) => (
+                      {(mistralModelOptions.length > 0
+                        ? mistralModelOptions
+                        : MISTRAL_CHAT_MODEL_OPTIONS
+                      ).map((model) => (
                         <option key={model} value={model} />
                       ))}
                     </datalist>

@@ -16,11 +16,13 @@ vi.mock('electron', () => ({
 const validateMistralApiKey = vi.fn()
 const ensureMistralOllamaAdapter = vi.fn()
 const closeMistralOllamaAdapter = vi.fn()
+const listMistralModels = vi.fn()
 
 vi.mock('../../services/mistral-ollama-adapter', () => ({
   validateMistralApiKey: (...args: unknown[]) => validateMistralApiKey(...args),
   ensureMistralOllamaAdapter: (...args: unknown[]) => ensureMistralOllamaAdapter(...args),
-  closeMistralOllamaAdapter: (...args: unknown[]) => closeMistralOllamaAdapter(...args)
+  closeMistralOllamaAdapter: (...args: unknown[]) => closeMistralOllamaAdapter(...args),
+  listMistralModels: (...args: unknown[]) => listMistralModels(...args)
 }))
 
 vi.mock('../../services/mistral-config', () => ({
@@ -61,6 +63,8 @@ describe('mistral IPC', () => {
     validateMistralApiKey.mockReset()
     ensureMistralOllamaAdapter.mockReset()
     closeMistralOllamaAdapter.mockReset()
+    listMistralModels.mockReset()
+    listMistralModels.mockResolvedValue([])
     validateMistralApiKey.mockResolvedValue(true)
     ensureMistralOllamaAdapter.mockResolvedValue({})
     closeMistralOllamaAdapter.mockResolvedValue(undefined)
@@ -138,6 +142,16 @@ describe('mistral IPC', () => {
     expect(deps.clearStoredApiKey).toHaveBeenCalled()
     expect(closeMistralOllamaAdapter).toHaveBeenCalled()
     expect(process.env.MISTRAL_API_KEY).toBeUndefined()
+  })
+
+  it('lists the models available to the current key', async () => {
+    register()
+    listMistralModels.mockResolvedValue(['mistral-large-latest', 'mistral-small-latest'])
+
+    const models = (await handler('mistral:list-models')()) as string[]
+
+    expect(listMistralModels).toHaveBeenCalled()
+    expect(models).toEqual(['mistral-large-latest', 'mistral-small-latest'])
   })
 
   it('stores a selected chat model', async () => {

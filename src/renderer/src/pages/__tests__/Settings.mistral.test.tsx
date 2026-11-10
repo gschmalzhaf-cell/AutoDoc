@@ -150,6 +150,50 @@ describe('Settings Mistral API section', () => {
     expect(modelInput).toHaveValue('mistral-large-latest')
   })
 
+  it('offers the models available to the key after connecting', async () => {
+    vi.mocked(window.electronAPI.invoke).mockImplementation((channel: string) => {
+      if (channel === 'mistral:get-status') {
+        return Promise.resolve({
+          enabled: true,
+          keyStored: true,
+          keyFromEnv: false,
+          model: 'mistral-small-latest'
+        })
+      }
+      if (channel === 'mistral:list-models') {
+        return Promise.resolve(['mistral-large-latest', 'mistral-small-latest'])
+      }
+      if (channel === 'app:get-runtime-info') {
+        return Promise.resolve({ platform: 'win32', ollamaModel: 'qwen3:4b-instruct' })
+      }
+      if (channel === 'updater:get-status') {
+        return Promise.resolve({ state: 'idle' })
+      }
+      if (channel === 'app:get-version') {
+        return Promise.resolve('1.5.3')
+      }
+      if (channel === 'calendar:get-accounts') {
+        return Promise.resolve([])
+      }
+      if (channel === 'calendar:get-events') {
+        return Promise.resolve([])
+      }
+      return Promise.resolve()
+    })
+
+    await act(async () => {
+      render(<Settings />)
+      await Promise.resolve()
+    })
+
+    const datalist = document.getElementById('mistral-model-options')
+    expect(datalist).not.toBeNull()
+    const values = Array.from(datalist!.querySelectorAll('option')).map((option) =>
+      option.getAttribute('value')
+    )
+    expect(values).toEqual(['mistral-large-latest', 'mistral-small-latest'])
+  })
+
   it('reveals the API key input when changing the key', async () => {
     vi.mocked(window.electronAPI.invoke).mockImplementation((channel: string) => {
       if (channel === 'mistral:get-status') {

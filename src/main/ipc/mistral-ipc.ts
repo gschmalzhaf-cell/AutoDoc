@@ -5,6 +5,7 @@ import { getMistralNotesModel, isMistralModeEnabled } from '../services/mistral-
 import {
   closeMistralOllamaAdapter,
   ensureMistralOllamaAdapter,
+  listMistralModels,
   validateMistralApiKey
 } from '../services/mistral-ollama-adapter'
 
@@ -35,6 +36,8 @@ export function registerMistralIpc(deps: MistralIpcDeps): void {
   }
 
   ipcMain.handle('mistral:get-status', (): MistralStatus => status())
+
+  ipcMain.handle('mistral:list-models', async (): Promise<string[]> => listMistralModels())
 
   ipcMain.handle(
     'mistral:set-api-key',

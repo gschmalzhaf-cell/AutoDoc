@@ -1,6 +1,7 @@
-import { afterAll, beforeAll, describe, expect, it } from 'vitest'
+import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from 'vitest'
 import { createServer, type Server } from 'http'
 import {
+  listMistralModels,
   ollamaChatToMistralChat,
   ollamaFormatToMistralResponseFormat,
   ollamaGenerateToMistralChat,
@@ -8,6 +9,39 @@ import {
   startMistralOllamaAdapter,
   type MistralAdapterHandle
 } from '../mistral-ollama-adapter'
+
+describe('listMistralModels', () => {
+  const originalFetch = globalThis.fetch
+
+  afterEach(() => {
+    globalThis.fetch = originalFetch
+  })
+
+  it('returns sorted chat-capable model ids for a valid key', async () => {
+    globalThis.fetch = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        data: [
+          { id: 'mistral-embed' },
+          { id: 'mistral-large-latest' },
+          { id: 'mistral-moderation-latest' },
+          { id: 'mistral-small-latest' }
+        ]
+      })
+    }) as unknown as typeof fetch
+
+    const models = await listMistralModels('key', 'https://api.example.com')
+
+    expect(models).toEqual(['mistral-large-latest', 'mistral-small-latest'])
+  })
+
+  it('returns an empty list without a key or on failure', async () => {
+    expect(await listMistralModels('  ', 'https://api.example.com')).toEqual([])
+
+    globalThis.fetch = vi.fn().mockResolvedValue({ ok: false }) as unknown as typeof fetch
+    expect(await listMistralModels('key', 'https://api.example.com')).toEqual([])
+  })
+})
 
 describe('ollamaFormatToMistralResponseFormat', () => {
   it('maps json mode to json_object', () => {
