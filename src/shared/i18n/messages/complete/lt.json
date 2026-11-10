@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Patinka tamsesnė išvaizda? Įjunkite tamsųjį režimą.",
   "announcement.done": "Atlikta",
   "announcement.meetingLanguageBody": "Transkripcijos ir užrašai dabar palaiko {count} kalbas!",
-  "announcement.meetingLanguageDescription": "Pasirinkite kalbą, kuria kalbama susitikimuose. Naujos transkripcijos ir užrašai bus kuriami šia kalba."
+  "announcement.meetingLanguageDescription": "Pasirinkite kalbą, kuria kalbama susitikimuose. Naujos transkripcijos ir užrašai bus kuriami šia kalba.",
+  "nav.mistralConnected": "Mistral prijungtas",
+  "nav.mistralDisconnected": "Mistral neprijungtas",
+  "ui.mistralUseMistralApi": "Naudoti Mistral API",
+  "ui.mistralDescription": "Pastabos ir Ask AI veikia per Mistral API vietoj vietinių modelių. Vietiniai AI modeliai neatsisiunčiami.",
+  "ui.mistralApiKeyPlaceholder": "API raktas",
+  "ui.mistralConnect": "Prisijungti",
+  "ui.mistralConnecting": "Jungiamasi…",
+  "ui.mistralConnectedBody": "AutoDoc prijungtas prie Mistral API. Pastabos ir Ask AI veikia per Mistral; transkripcija lieka šiame įrenginyje.",
+  "ui.mistralKeyRejected": "API raktas atmestas. Patikrinkite raktą ir bandykite dar kartą.",
+  "ui.useLocalModels": "Naudoti vietinius modelius"
 }

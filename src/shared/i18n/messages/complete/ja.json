@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "暗めの画面がお好みですか？ダークモードをオンにしましょう。",
   "announcement.done": "完了",
   "announcement.meetingLanguageBody": "文字起こしとノートが{count}言語に対応しました！",
-  "announcement.meetingLanguageDescription": "会議で話す言語を選択してください。新しい文字起こしとノートは、この言語で作成されます。"
+  "announcement.meetingLanguageDescription": "会議で話す言語を選択してください。新しい文字起こしとノートは、この言語で作成されます。",
+  "nav.mistralConnected": "Mistral 接続済み",
+  "nav.mistralDisconnected": "Mistral 接続なし",
+  "ui.mistralUseMistralApi": "Mistral API を使用",
+  "ui.mistralDescription": "ノートとAsk AIをローカルモデルの代わりにMistral APIで実行します。ローカルAIモデルはダウンロードされません。",
+  "ui.mistralApiKeyPlaceholder": "APIキー",
+  "ui.mistralConnect": "接続",
+  "ui.mistralConnecting": "接続中…",
+  "ui.mistralConnectedBody": "AutoDocはMistral APIに接続されています。ノートとAsk AIはMistralで実行され、文字起こしはこのデバイス上で行われます。",
+  "ui.mistralKeyRejected": "APIキーが拒否されました。キーを確認して、もう一度お試しください。",
+  "ui.useLocalModels": "ローカルモデルを使用"
 }

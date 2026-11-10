@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Предпочитате по-тъмен изглед? Включете тъмния режим.",
   "announcement.done": "Готово",
   "announcement.meetingLanguageBody": "Транскрипциите и бележките вече поддържат {count} езика!",
-  "announcement.meetingLanguageDescription": "Изберете езика, на който се говори в срещите ви. Новите транскрипции и бележки ще бъдат на този език."
+  "announcement.meetingLanguageDescription": "Изберете езика, на който се говори в срещите ви. Новите транскрипции и бележки ще бъдат на този език.",
+  "nav.mistralConnected": "Mistral е свързан",
+  "nav.mistralDisconnected": "Mistral е прекъснат",
+  "ui.mistralUseMistralApi": "Използване на API на Mistral",
+  "ui.mistralDescription": "Бележките и Ask AI работят през API на Mistral вместо локални модели. Не се изтеглят локални AI модели.",
+  "ui.mistralApiKeyPlaceholder": "API ключ",
+  "ui.mistralConnect": "Свързване",
+  "ui.mistralConnecting": "Свързване…",
+  "ui.mistralConnectedBody": "AutoDoc е свързан с API на Mistral. Бележките и Ask AI работят в Mistral; транскрипцията остава на това устройство.",
+  "ui.mistralKeyRejected": "API ключът беше отхвърлен. Проверете ключа и опитайте отново.",
+  "ui.useLocalModels": "Използване на локални модели"
 }

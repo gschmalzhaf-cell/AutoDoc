@@ -539,6 +539,33 @@ export function ensureMistralOllamaAdapter(): Promise<MistralAdapterHandle> {
   return mistralAdapterPromise
 }
 
+export async function closeMistralOllamaAdapter(): Promise<void> {
+  const handle = mistralAdapterPromise
+  mistralAdapterPromise = null
+  if (!handle) return
+  try {
+    await (await handle).close()
+  } catch {
+    // Closing is best-effort; a stale loopback server is replaced on next start.
+  }
+}
+
+/** Cheap credential check against the Mistral API before storing a key. */
+export async function validateMistralApiKey(
+  apiKey: string,
+  apiBaseUrl = getMistralApiBaseUrl()
+): Promise<boolean> {
+  try {
+    const res = await fetch(`${apiBaseUrl}/v1/models`, {
+      headers: { Authorization: `Bearer ${apiKey.trim()}` },
+      signal: AbortSignal.timeout(10_000)
+    })
+    return res.ok
+  } catch {
+    return false
+  }
+}
+
 export function resetMistralOllamaAdapterForTests(): void {
   mistralAdapterPromise = null
 }

@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Želite tamniji izgled? Uključite tamni način rada.",
   "announcement.done": "Gotovo",
   "announcement.meetingLanguageBody": "Transkripti i bilješke sada podržavaju {count} jezika!",
-  "announcement.meetingLanguageDescription": "Odaberite jezik koji se govori na vašim sastancima. Novi transkripti i bilješke bit će na tom jeziku."
+  "announcement.meetingLanguageDescription": "Odaberite jezik koji se govori na vašim sastancima. Novi transkripti i bilješke bit će na tom jeziku.",
+  "nav.mistralConnected": "Mistral povezan",
+  "nav.mistralDisconnected": "Mistral nije povezan",
+  "ui.mistralUseMistralApi": "Koristi Mistral API",
+  "ui.mistralDescription": "Bilješke i Ask AI rade na Mistral API-ju umjesto na lokalnim modelima. Lokalni AI modeli se ne preuzimaju.",
+  "ui.mistralApiKeyPlaceholder": "API ključ",
+  "ui.mistralConnect": "Poveži",
+  "ui.mistralConnecting": "Povezivanje…",
+  "ui.mistralConnectedBody": "AutoDoc je povezan s Mistral API-jem. Bilješke i Ask AI rade na Mistralu; transkripcija ostaje na ovom uređaju.",
+  "ui.mistralKeyRejected": "API ključ je odbijen. Provjerite ključ i pokušajte ponovno.",
+  "ui.useLocalModels": "Koristi lokalne modele"
 }

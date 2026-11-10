@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Віддаєте перевагу темному оформленню? Увімкніть темний режим.",
   "announcement.done": "Готово",
   "announcement.meetingLanguageBody": "Розшифровки та нотатки тепер доступні {count} мовами!",
-  "announcement.meetingLanguageDescription": "Виберіть мову, якою розмовляють на ваших зустрічах. Нові розшифровки та нотатки будуть цією мовою."
+  "announcement.meetingLanguageDescription": "Виберіть мову, якою розмовляють на ваших зустрічах. Нові розшифровки та нотатки будуть цією мовою.",
+  "nav.mistralConnected": "Mistral підключено",
+  "nav.mistralDisconnected": "Mistral не підключено",
+  "ui.mistralUseMistralApi": "Використовувати API Mistral",
+  "ui.mistralDescription": "Нотатки та Ask AI працюють через API Mistral замість локальних моделей. Локальні моделі ШІ не завантажуються.",
+  "ui.mistralApiKeyPlaceholder": "Ключ API",
+  "ui.mistralConnect": "Підключити",
+  "ui.mistralConnecting": "Підключення…",
+  "ui.mistralConnectedBody": "AutoDoc підключено до API Mistral. Нотатки та Ask AI працюють у Mistral; розшифровка залишається на цьому пристрої.",
+  "ui.mistralKeyRejected": "Ключ API відхилено. Перевірте ключ і спробуйте ще раз.",
+  "ui.useLocalModels": "Використовувати локальні моделі"
 }

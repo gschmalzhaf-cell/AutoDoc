@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "喜欢更暗的外观？开启深色模式吧。",
   "announcement.done": "完成",
   "announcement.meetingLanguageBody": "转录和笔记现已支持 {count} 种语言！",
-  "announcement.meetingLanguageDescription": "选择会议中使用的语言。新的转录和笔记将使用此语言。"
+  "announcement.meetingLanguageDescription": "选择会议中使用的语言。新的转录和笔记将使用此语言。",
+  "nav.mistralConnected": "Mistral 已连接",
+  "nav.mistralDisconnected": "Mistral 未连接",
+  "ui.mistralUseMistralApi": "使用 Mistral API",
+  "ui.mistralDescription": "笔记和 Ask AI 将通过 Mistral API 运行，而不是本地模型。不会下载本地 AI 模型。",
+  "ui.mistralApiKeyPlaceholder": "API 密钥",
+  "ui.mistralConnect": "连接",
+  "ui.mistralConnecting": "连接中…",
+  "ui.mistralConnectedBody": "AutoDoc 已连接到 Mistral API。笔记和 Ask AI 在 Mistral 上运行；转录保留在此设备上。",
+  "ui.mistralKeyRejected": "API 密钥被拒绝。请检查密钥后重试。",
+  "ui.useLocalModels": "使用本地模型"
 }

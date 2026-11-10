@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Lieber ein dunkleres Design? Aktivieren Sie den Dunkelmodus.",
   "announcement.done": "Fertig",
   "announcement.meetingLanguageBody": "Transkripte und Notizen unterstützen jetzt {count} Sprachen!",
-  "announcement.meetingLanguageDescription": "Wählen Sie die Sprache, die in Ihren Besprechungen gesprochen wird. Neue Transkripte und Notizen werden in dieser Sprache erstellt."
+  "announcement.meetingLanguageDescription": "Wählen Sie die Sprache, die in Ihren Besprechungen gesprochen wird. Neue Transkripte und Notizen werden in dieser Sprache erstellt.",
+  "nav.mistralConnected": "Mistral verbunden",
+  "nav.mistralDisconnected": "Mistral-Verbindung getrennt",
+  "ui.mistralUseMistralApi": "Mistral API verwenden",
+  "ui.mistralDescription": "Notizen und Ask AI laufen über die Mistral-API statt über lokale Modelle. Es werden keine lokalen KI-Modelle heruntergeladen.",
+  "ui.mistralApiKeyPlaceholder": "API-Schlüssel",
+  "ui.mistralConnect": "Verbinden",
+  "ui.mistralConnecting": "Verbinden…",
+  "ui.mistralConnectedBody": "AutoDoc ist mit der Mistral-API verbunden. Notizen und Ask AI laufen über Mistral; die Transkription bleibt auf diesem Gerät.",
+  "ui.mistralKeyRejected": "Der API-Schlüssel wurde abgelehnt. Prüfen Sie den Schlüssel und versuchen Sie es erneut.",
+  "ui.useLocalModels": "Lokale Modelle verwenden"
 }

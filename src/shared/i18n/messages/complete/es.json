@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "¿Prefieres un aspecto más oscuro? Activa el modo oscuro.",
   "announcement.done": "Listo",
   "announcement.meetingLanguageBody": "¡Las transcripciones y las notas ahora están disponibles en {count} idiomas!",
-  "announcement.meetingLanguageDescription": "Elige el idioma que se habla en tus reuniones. Las nuevas transcripciones y notas usarán este idioma."
+  "announcement.meetingLanguageDescription": "Elige el idioma que se habla en tus reuniones. Las nuevas transcripciones y notas usarán este idioma.",
+  "nav.mistralConnected": "Mistral conectado",
+  "nav.mistralDisconnected": "Mistral desconectado",
+  "ui.mistralUseMistralApi": "Usar la API de Mistral",
+  "ui.mistralDescription": "Las notas y Ask AI se ejecutan en la API de Mistral en lugar de modelos locales. No se descarga ningún modelo de IA local.",
+  "ui.mistralApiKeyPlaceholder": "Clave de API",
+  "ui.mistralConnect": "Conectar",
+  "ui.mistralConnecting": "Conectando…",
+  "ui.mistralConnectedBody": "AutoDoc está conectado a la API de Mistral. Las notas y Ask AI se ejecutan en Mistral; la transcripción permanece en este dispositivo.",
+  "ui.mistralKeyRejected": "La clave de API fue rechazada. Comprueba la clave e inténtalo de nuevo.",
+  "ui.useLocalModels": "Usar modelos locales"
 }

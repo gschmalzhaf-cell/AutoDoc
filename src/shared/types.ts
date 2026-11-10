@@ -583,9 +583,18 @@ export interface AppRuntimeInfo {
   whisperModel: string
   transcriptionBackend?: string
   ollamaModel: string
+  mistralEnabled?: boolean
+  mistralModel?: string
   ramBucket?: '8gb' | '16gb' | '32gb+'
   cpuClass?: 'low' | 'recommended'
   hasGpu?: boolean
+}
+
+export interface MistralStatus {
+  enabled: boolean
+  keyStored: boolean
+  keyFromEnv: boolean
+  model: string
 }
 
 export type AnalyticsLocalSignal =

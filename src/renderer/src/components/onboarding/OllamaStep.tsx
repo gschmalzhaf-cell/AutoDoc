@@ -11,6 +11,11 @@ export function OllamaStep({ onNext }: { onNext: () => void }) {
   const [percent, setPercent] = useState(0)
   const [error, setError] = useState<string | null>(null)
   const [showSkip, setShowSkip] = useState(false)
+  const [mistralEnabled, setMistralEnabled] = useState(false)
+  const [showMistralForm, setShowMistralForm] = useState(false)
+  const [apiKey, setApiKey] = useState('')
+  const [connecting, setConnecting] = useState(false)
+  const [keyRejected, setKeyRejected] = useState(false)
   const setupStartedAt = useRef<number | null>(null)
   const lastFailureKey = useRef<string | null>(null)
 
@@ -68,9 +73,42 @@ export function OllamaStep({ onNext }: { onNext: () => void }) {
   }, [recordStatus])
 
   useEffect(() => {
+    void window.electronAPI
+      .invoke('mistral:get-status')
+      .then((status) => {
+        if (status?.enabled) {
+          setMistralEnabled(true)
+          markReady()
+        }
+      })
+      .catch(() => {})
+  }, [markReady])
+
+  useEffect(() => {
     const timer = setTimeout(() => setShowSkip(true), 1500)
     return () => clearTimeout(timer)
   }, [])
+
+  const connectMistral = useCallback(async () => {
+    if (connecting) return
+    const trimmed = apiKey.trim()
+    if (trimmed.length === 0) return
+    setConnecting(true)
+    setKeyRejected(false)
+    try {
+      const result = await window.electronAPI.invoke('mistral:set-api-key', trimmed)
+      if (result?.ok) {
+        setMistralEnabled(true)
+        markReady()
+      } else {
+        setKeyRejected(true)
+      }
+    } catch {
+      setKeyRejected(true)
+    } finally {
+      setConnecting(false)
+    }
+  }, [apiKey, connecting, markReady])
 
   if (phase === 'ready') {
     return (
@@ -95,13 +133,64 @@ export function OllamaStep({ onNext }: { onNext: () => void }) {
           {t('ui.aIModelReady')}
         </h2>
         <p className="text-[14px] text-ink-muted leading-relaxed mb-7">
-          {t('ui.ollamaAndTheNotesModelAreInstalledAndReadyToGo')}
+          {mistralEnabled
+            ? t('ui.mistralConnectedBody')
+            : t('ui.ollamaAndTheNotesModelAreInstalledAndReadyToGo')}
         </p>
         <button
           onClick={onNext}
           className="i18n-btn px-6 py-2.5 bg-sage text-on-brand rounded-[10px] text-[14px] font-semibold hover:opacity-90 transition-opacity"
         >
           {t('ui.continue')}
+        </button>
+      </div>
+    )
+  }
+
+  if (showMistralForm) {
+    return (
+      <div className="text-center">
+        <div className="w-16 h-16 rounded-2xl bg-dusk-light flex items-center justify-center text-[28px] mx-auto mb-5">
+          {t('ui.aI')}
+        </div>
+        <h2 className="text-[20px] font-bold text-ink tracking-[-0.02em] mb-2">
+          {t('ui.mistralUseMistralApi')}
+        </h2>
+        <p className="text-[14px] text-ink-muted leading-relaxed mb-5 max-w-[320px] mx-auto">
+          {t('ui.mistralDescription')}
+        </p>
+
+        <div className="flex flex-col items-center gap-3 mb-3">
+          <input
+            type="password"
+            value={apiKey}
+            onChange={(event) => setApiKey(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter') void connectMistral()
+            }}
+            placeholder={t('ui.mistralApiKeyPlaceholder')}
+            className="w-[280px] rounded-lg border border-border bg-bg-card px-3 py-2 text-[14px] text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage"
+          />
+          {keyRejected && (
+            <p className="text-[12px] text-clay leading-relaxed">{t('ui.mistralKeyRejected')}</p>
+          )}
+          <button
+            onClick={() => void connectMistral()}
+            disabled={connecting || apiKey.trim().length === 0}
+            className="i18n-btn px-6 py-2.5 bg-sage text-on-brand rounded-[10px] text-[14px] font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {connecting ? t('ui.mistralConnecting') : t('ui.mistralConnect')}
+          </button>
+        </div>
+
+        <button
+          onClick={() => {
+            setShowMistralForm(false)
+            setKeyRejected(false)
+          }}
+          className="text-[13px] text-ink-faint hover:text-ink-muted transition-colors"
+        >
+          {t('ui.useLocalModels')}
         </button>
       </div>
     )
@@ -143,6 +232,17 @@ export function OllamaStep({ onNext }: { onNext: () => void }) {
         >
           {t('ui.retry')}
         </button>
+      )}
+
+      {!error && (
+        <div className="mb-2">
+          <button
+            onClick={() => setShowMistralForm(true)}
+            className="i18n-btn px-6 py-2.5 border border-border text-ink rounded-[10px] text-[14px] font-semibold hover:bg-surface transition-colors"
+          >
+            {t('ui.mistralUseMistralApi')}
+          </button>
+        </div>
       )}
 
       {showSkip && !error && (

@@ -173,6 +173,16 @@ export const completeEn = {
   'ui.wearHeadphonesWhileRecordingTheyHelpAutoDocTellYourVoiceApartFromEveryoneEl':
     "Wear headphones while recording. They help AutoDoc tell your voice apart from everyone else's and make playback cleaner.",
   'ui.aIModelReady': 'AI Model Ready',
+  'ui.mistralUseMistralApi': 'Use Mistral API',
+  'ui.mistralDescription':
+    'Run notes and Ask AI on the Mistral API instead of local models. No local AI models are downloaded.',
+  'ui.mistralApiKeyPlaceholder': 'API key',
+  'ui.mistralConnect': 'Connect',
+  'ui.mistralConnecting': 'Connecting…',
+  'ui.mistralConnectedBody':
+    'AutoDoc is connected to the Mistral API. Notes and Ask AI run on Mistral; transcription stays on this device.',
+  'ui.mistralKeyRejected': 'The API key was rejected. Check the key and try again.',
+  'ui.useLocalModels': 'Use local models',
   'ui.continue': 'Continue',
   'ui.aI': 'AI',
   'ui.settingUpAI': 'Setting Up AI',

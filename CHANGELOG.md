@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] — 2026-11-10
+
+### Added
+
+- Mistral API mode is now selectable in the app. During onboarding, the AI setup
+  step offers **Use Mistral API** with an API key field; the key is validated
+  against the Mistral API and stored in AutoDoc's preferences, so no environment
+  variable is required.
+- The sidebar shows **Mistral connected** while notes and Ask AI run on Mistral,
+  and Settings shows the active Mistral chat model.
+
+
 ## [1.4.0] — 2026-11-10
 
 ### Added

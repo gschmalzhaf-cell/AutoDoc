@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Uprednostňujete tmavší vzhľad? Zapnite tmavý režim.",
   "announcement.done": "Hotovo",
   "announcement.meetingLanguageBody": "Prepisy a poznámky teraz podporujú {count} jazykov!",
-  "announcement.meetingLanguageDescription": "Vyberte jazyk, ktorým sa hovorí na vašich stretnutiach. Nové prepisy a poznámky budú v tomto jazyku."
+  "announcement.meetingLanguageDescription": "Vyberte jazyk, ktorým sa hovorí na vašich stretnutiach. Nové prepisy a poznámky budú v tomto jazyku.",
+  "nav.mistralConnected": "Mistral pripojený",
+  "nav.mistralDisconnected": "Mistral odpojený",
+  "ui.mistralUseMistralApi": "Použiť API Mistral",
+  "ui.mistralDescription": "Poznámky a Ask AI bežia na API Mistral namiesto lokálnych modelov. Lokálne AI modely sa nestahujú.",
+  "ui.mistralApiKeyPlaceholder": "Kľúč API",
+  "ui.mistralConnect": "Pripojiť",
+  "ui.mistralConnecting": "Pripája sa…",
+  "ui.mistralConnectedBody": "AutoDoc je pripojený k API Mistral. Poznámky a Ask AI bežia na Mistrali; transkripcia zostáva na tomto zariadení.",
+  "ui.mistralKeyRejected": "Kľúč API bol odmietnutý. Skontrolujte kľúč a skúste to znova.",
+  "ui.useLocalModels": "Použiť lokálne modely"
 }

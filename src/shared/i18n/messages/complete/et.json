@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Eelistad tumedamat ilmet? Lülita sisse tume režiim.",
   "announcement.done": "Valmis",
   "announcement.meetingLanguageBody": "Transkriptsioonid ja märkmed toetavad nüüd {count} keelt!",
-  "announcement.meetingLanguageDescription": "Valige koosolekutel räägitav keel. Uued transkriptsioonid ja märkmed koostatakse selles keeles."
+  "announcement.meetingLanguageDescription": "Valige koosolekutel räägitav keel. Uued transkriptsioonid ja märkmed koostatakse selles keeles.",
+  "nav.mistralConnected": "Mistral on ühendatud",
+  "nav.mistralDisconnected": "Mistral ei ole ühendatud",
+  "ui.mistralUseMistralApi": "Kasuta Mistral API-t",
+  "ui.mistralDescription": "Märkmed ja Ask AI töötavad Mistral API-l kohalike mudelite asemel. Kohalikke AI-mudeleid ei laadita alla.",
+  "ui.mistralApiKeyPlaceholder": "API-võti",
+  "ui.mistralConnect": "Ühenda",
+  "ui.mistralConnecting": "Ühendamine…",
+  "ui.mistralConnectedBody": "AutoDoc on Mistral API-ga ühendatud. Märkmed ja Ask AI töötavad Mistralis; transkriptsioon jääb sellesse seadmesse.",
+  "ui.mistralKeyRejected": "API-võti lükati tagasi. Kontrolli võtit ja proovi uuesti.",
+  "ui.useLocalModels": "Kasuta kohalikke mudeleid"
 }

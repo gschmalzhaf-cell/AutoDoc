@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Sötétebb megjelenést szeretne? Kapcsolja be a sötét módot.",
   "announcement.done": "Kész",
   "announcement.meetingLanguageBody": "Az átiratok és a jegyzetek mostantól {count} nyelvet támogatnak!",
-  "announcement.meetingLanguageDescription": "Válassza ki a megbeszéléseken használt nyelvet. Az új átiratok és jegyzetek ezen a nyelven készülnek."
+  "announcement.meetingLanguageDescription": "Válassza ki a megbeszéléseken használt nyelvet. Az új átiratok és jegyzetek ezen a nyelven készülnek.",
+  "nav.mistralConnected": "Mistral csatlakoztatva",
+  "nav.mistralDisconnected": "Mistral nincs csatlakoztatva",
+  "ui.mistralUseMistralApi": "Mistral API használata",
+  "ui.mistralDescription": "A jegyzetek és az Ask AI a Mistral API-n futnak helyi modellek helyett. Nem töltődnek le helyi AI-modellek.",
+  "ui.mistralApiKeyPlaceholder": "API-kulcs",
+  "ui.mistralConnect": "Csatlakozás",
+  "ui.mistralConnecting": "Csatlakozás…",
+  "ui.mistralConnectedBody": "Az AutoDoc csatlakozott a Mistral API-hoz. A jegyzetek és az Ask AI a Mistralon fut; a átírás ezen az eszközön marad.",
+  "ui.mistralKeyRejected": "Az API-kulcsot elutasították. Ellenőrizze a kulcsot, és próbálja újra.",
+  "ui.useLocalModels": "Helyi modellek használata"
 }

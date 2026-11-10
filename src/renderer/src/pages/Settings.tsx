@@ -823,7 +823,9 @@ export function Settings() {
           <div>
             <h3 className="text-[13px] font-semibold text-ink mb-2">{t('settings.ollamaModel')}</h3>
             <p className="text-[12px] text-ink-muted [overflow-wrap:anywhere]">
-              {runtimeInfo?.ollamaModel ?? t('settings.loading')}
+              {runtimeInfo?.mistralEnabled
+                ? (runtimeInfo.mistralModel ?? t('settings.loading'))
+                : (runtimeInfo?.ollamaModel ?? t('settings.loading'))}
             </p>
           </div>
           <div>

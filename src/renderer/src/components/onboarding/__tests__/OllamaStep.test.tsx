@@ -1,6 +1,12 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { render, screen, act } from '@testing-library/react'
+import { render, screen, act, fireEvent } from '@testing-library/react'
 import { OllamaStep } from '../OllamaStep'
+
+async function userEventTyping(input: HTMLElement, value: string): Promise<void> {
+  await act(async () => {
+    fireEvent.change(input, { target: { value } })
+  })
+}
 
 describe('OllamaStep', () => {
   beforeEach(() => {
@@ -99,6 +105,109 @@ describe('OllamaStep', () => {
     })
 
     expect(screen.getByText(/continue/i)).toBeInTheDocument()
+  })
+
+  it('shows the Mistral connected state when Mistral mode is already enabled', async () => {
+    vi.mocked(window.electronAPI.invoke).mockImplementation((channel: string) => {
+      if (channel === 'mistral:get-status') {
+        return Promise.resolve({
+          enabled: true,
+          keyStored: true,
+          keyFromEnv: false,
+          model: 'mistral-small-latest'
+        })
+      }
+      if (channel === 'ollama:get-setup-status') {
+        return Promise.resolve({ phase: 'starting', percent: 0 })
+      }
+      return Promise.resolve()
+    })
+
+    await act(async () => {
+      render(<OllamaStep onNext={vi.fn()} />)
+      await Promise.resolve()
+    })
+
+    expect(screen.getByRole('heading', { name: 'AI Model Ready' })).toBeInTheDocument()
+    expect(screen.getByText(/AutoDoc is connected to the Mistral API./i)).toBeInTheDocument()
+  })
+
+  it('offers the Mistral option and connects with a valid API key', async () => {
+    vi.mocked(window.electronAPI.invoke).mockImplementation((channel: string) => {
+      if (channel === 'ollama:get-setup-status') {
+        return Promise.resolve({ phase: 'downloading', percent: 40 })
+      }
+      if (channel === 'mistral:set-api-key') {
+        return Promise.resolve({
+          enabled: true,
+          keyStored: true,
+          keyFromEnv: false,
+          model: 'mistral-small-latest',
+          ok: true
+        })
+      }
+      return Promise.resolve()
+    })
+
+    await act(async () => {
+      render(<OllamaStep onNext={vi.fn()} />)
+      await Promise.resolve()
+    })
+
+    await act(async () => {
+      screen.getByRole('button', { name: 'Use Mistral API' }).click()
+      await Promise.resolve()
+    })
+
+    await act(async () => {
+      const input = screen.getByPlaceholderText('API key')
+      await userEventTyping(input, 'test-key')
+      screen.getByRole('button', { name: 'Connect' }).click()
+      await Promise.resolve()
+    })
+
+    expect(window.electronAPI.invoke).toHaveBeenCalledWith('mistral:set-api-key', 'test-key')
+    expect(screen.getByRole('heading', { name: 'AI Model Ready' })).toBeInTheDocument()
+    expect(screen.getByText(/AutoDoc is connected to the Mistral API./i)).toBeInTheDocument()
+  })
+
+  it('shows a rejection message when the Mistral API key is invalid', async () => {
+    vi.mocked(window.electronAPI.invoke).mockImplementation((channel: string) => {
+      if (channel === 'ollama:get-setup-status') {
+        return Promise.resolve({ phase: 'downloading', percent: 40 })
+      }
+      if (channel === 'mistral:set-api-key') {
+        return Promise.resolve({
+          enabled: false,
+          keyStored: false,
+          keyFromEnv: false,
+          model: 'mistral-small-latest',
+          ok: false,
+          error: 'invalid-key'
+        })
+      }
+      return Promise.resolve()
+    })
+
+    await act(async () => {
+      render(<OllamaStep onNext={vi.fn()} />)
+      await Promise.resolve()
+    })
+
+    await act(async () => {
+      screen.getByRole('button', { name: 'Use Mistral API' }).click()
+      await Promise.resolve()
+    })
+
+    await act(async () => {
+      const input = screen.getByPlaceholderText('API key')
+      await userEventTyping(input, 'bad-key')
+      screen.getByRole('button', { name: 'Connect' }).click()
+      await Promise.resolve()
+    })
+
+    expect(screen.getByText(/The API key was rejected./i)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Use local models' })).toBeInTheDocument()
   })
 
   it('shows the notes model download label during model pull', async () => {

@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Preferați un aspect mai întunecat? Activați modul întunecat.",
   "announcement.done": "Gata",
   "announcement.meetingLanguageBody": "Transcrierile și notițele sunt acum disponibile în {count} de limbi!",
-  "announcement.meetingLanguageDescription": "Alegeți limba vorbită în întâlniri. Noile transcrieri și notițe vor fi în această limbă."
+  "announcement.meetingLanguageDescription": "Alegeți limba vorbită în întâlniri. Noile transcrieri și notițe vor fi în această limbă.",
+  "nav.mistralConnected": "Mistral conectat",
+  "nav.mistralDisconnected": "Mistral deconectat",
+  "ui.mistralUseMistralApi": "Folosește API-ul Mistral",
+  "ui.mistralDescription": "Notele și Ask AI rulează pe API-ul Mistral în loc de modele locale. Nu se descarcă modele AI locale.",
+  "ui.mistralApiKeyPlaceholder": "Cheie API",
+  "ui.mistralConnect": "Conectare",
+  "ui.mistralConnecting": "Se conectează…",
+  "ui.mistralConnectedBody": "AutoDoc este conectat la API-ul Mistral. Notele și Ask AI rulează pe Mistral; transcrierea rămâne pe acest dispozitiv.",
+  "ui.mistralKeyRejected": "Cheia API a fost respinsă. Verifică cheia și încearcă din nou.",
+  "ui.useLocalModels": "Folosește modelele locale"
 }

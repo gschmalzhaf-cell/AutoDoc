@@ -9,7 +9,16 @@ export const MISTRAL_NOTES_MODEL_DEFAULT = 'mistral-small-latest'
 export const MISTRAL_EMBEDDING_MODEL_DEFAULT = 'mistral-embed'
 const MISTRAL_API_BASE_URL_DEFAULT = 'https://api.mistral.ai'
 
+let storedKeyProvider: () => string = () => ''
+
+/** Main-process wiring injects the persisted key from the preferences store. */
+export function setMistralApiKeyProvider(provider: () => string): void {
+  storedKeyProvider = provider
+}
+
 export function getMistralApiKey(): string {
+  const stored = storedKeyProvider().trim()
+  if (stored.length > 0) return stored
   return (process.env.MISTRAL_API_KEY ?? '').trim()
 }
 

@@ -35,6 +35,7 @@ import type {
   Transcript,
   TranscriptionStatus,
   MeetingNotesContent,
+  MistralStatus,
   MeetingNotesV2,
   MeetingCopyNotesRequest,
   MeetingCopyNotesResult,
@@ -288,6 +289,9 @@ export interface IpcInvokeEvents {
   'prefs:set-notes-engine-ready-dismissed': [dismissed: boolean]
   'ollama:get-setup-status': []
   'ollama:retry-setup': []
+  'mistral:get-status': []
+  'mistral:set-api-key': [key: string]
+  'mistral:clear-api-key': []
   'whisper:get-setup-status': []
   'whisper:retry-setup': []
   'whisper:get-windows-meeting-language-availability': [language: MeetingLanguageCode]
@@ -466,6 +470,9 @@ export interface IpcInvokeReturns {
   'prefs:set-notes-engine-ready-dismissed': void
   'ollama:get-setup-status': OllamaSetupStatus
   'ollama:retry-setup': void
+  'mistral:get-status': MistralStatus
+  'mistral:set-api-key': MistralStatus & { ok: boolean; error?: 'invalid-key' | 'unavailable' }
+  'mistral:clear-api-key': MistralStatus
   'whisper:get-setup-status': WhisperSetupStatus
   'whisper:retry-setup': void
   'whisper:get-windows-meeting-language-availability': WindowsMeetingLanguageAvailabilityInfo

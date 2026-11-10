@@ -39,6 +39,7 @@ interface PrefsSchema {
   lowSpecMacProcessingBannerDismissed: boolean
   notesEngineUpgradeEligible: boolean
   notesEngineReadyDismissed: boolean
+  mistralApiKey?: string
 }
 
 function createPrefsStore(): Store<PrefsSchema> {
@@ -285,6 +286,18 @@ export class PrefsStore {
     if (dismissed) {
       this.store.set('notesEngineUpgradeEligible', false)
     }
+  }
+
+  getMistralApiKey(): string {
+    return this.store.get('mistralApiKey') ?? ''
+  }
+
+  setMistralApiKey(key: string): void {
+    this.store.set('mistralApiKey', key)
+  }
+
+  clearMistralApiKey(): void {
+    this.store.delete('mistralApiKey')
   }
 
   private applyLaunchAtLogin(): void {

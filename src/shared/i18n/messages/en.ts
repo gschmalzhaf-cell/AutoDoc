@@ -17,6 +17,8 @@ export const en = {
   'nav.emailUnavailable': 'Email isn’t configured in this build.',
   'nav.ollamaConnected': 'Ollama connected',
   'nav.ollamaDisconnected': 'Ollama disconnected',
+  'nav.mistralConnected': 'Mistral connected',
+  'nav.mistralDisconnected': 'Mistral disconnected',
   'nav.recording': 'Recording · {time}',
 
   'appearance.title': 'Appearance',

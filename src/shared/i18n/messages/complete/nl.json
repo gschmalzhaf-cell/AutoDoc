@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Liever een donkerder uiterlijk? Schakel de donkere modus in.",
   "announcement.done": "Gereed",
   "announcement.meetingLanguageBody": "Transcripties en notities ondersteunen nu {count} talen!",
-  "announcement.meetingLanguageDescription": "Kies de taal die tijdens je vergaderingen wordt gesproken. Nieuwe transcripties en notities gebruiken deze taal."
+  "announcement.meetingLanguageDescription": "Kies de taal die tijdens je vergaderingen wordt gesproken. Nieuwe transcripties en notities gebruiken deze taal.",
+  "nav.mistralConnected": "Mistral verbonden",
+  "nav.mistralDisconnected": "Mistral niet verbonden",
+  "ui.mistralUseMistralApi": "Mistral API gebruiken",
+  "ui.mistralDescription": "Notities en Ask AI draaien op de Mistral API in plaats van lokale modellen. Er worden geen lokale AI-modellen gedownload.",
+  "ui.mistralApiKeyPlaceholder": "API-sleutel",
+  "ui.mistralConnect": "Verbinden",
+  "ui.mistralConnecting": "Verbinden…",
+  "ui.mistralConnectedBody": "AutoDoc is verbonden met de Mistral API. Notities en Ask AI draaien op Mistral; transcriptie blijft op dit apparaat.",
+  "ui.mistralKeyRejected": "De API-sleutel is geweigerd. Controleer de sleutel en probeer het opnieuw.",
+  "ui.useLocalModels": "Lokale modellen gebruiken"
 }

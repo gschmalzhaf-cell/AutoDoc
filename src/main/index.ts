@@ -53,7 +53,12 @@ import {
 } from './services/llm'
 import { isOllamaStartCancelledError, OllamaManager } from './services/ollama-manager'
 import { OllamaSetupCoordinator } from './services/ollama-setup-coordinator'
-import { isMistralModeEnabled } from './services/mistral-config'
+import {
+  getMistralNotesModel,
+  isMistralModeEnabled,
+  setMistralApiKeyProvider
+} from './services/mistral-config'
+import { registerMistralIpc } from './ipc/mistral-ipc'
 import { ensureMistralOllamaAdapter } from './services/mistral-ollama-adapter'
 import {
   createOllamaRuntimeRecovery,
@@ -647,6 +652,7 @@ app.whenReady().then(async () => {
   recordMainDiagnosticAction({ category: 'app', action: 'app_ready' })
 
   const prefsStore = new PrefsStore()
+  setMistralApiKeyProvider(() => prefsStore.getMistralApiKey())
   const analyticsStateStore = new AnalyticsStateStore()
   analyticsStateStore.observeAppVersion(app.getVersion())
   registerAnalyticsIpc(analyticsStateStore)
@@ -1455,6 +1461,8 @@ app.whenReady().then(async () => {
       whisperModel: whisperManager.getModelName(),
       transcriptionBackend: whisperManager.getTranscriptionBackend(),
       ollamaModel: managedOllamaManager.getModel(),
+      mistralEnabled: isMistralModeEnabled(),
+      mistralModel: isMistralModeEnabled() ? getMistralNotesModel() : undefined,
       ...getRuntimeAnalyticsHardware(whisperManager)
     })
   )
@@ -1623,7 +1631,7 @@ app.whenReady().then(async () => {
           await pendingRecoveryPromise
         }
         const requestedModel = process.env.AUTODOC_TEST_NOTES_MODEL?.trim()
-        if (requestedModel) {
+        if (requestedModel && !isMistralModeEnabled()) {
           await ollamaManager?.pullModel(requestedModel)
         }
         markReprocessNotificationPending(meetingId)
@@ -2313,6 +2321,16 @@ app.whenReady().then(async () => {
       isOllamaPostWakeSchedulerActive(ollamaPostWakeScheduler) ||
       (postWakePolicy.pauseEnabled && areBackgroundOllamaRestartsPaused())
   )
+
+  registerMistralIpc({
+    getStoredApiKey: () => prefsStore.getMistralApiKey(),
+    setStoredApiKey: (key) => prefsStore.setMistralApiKey(key),
+    clearStoredApiKey: () => prefsStore.clearMistralApiKey(),
+    markSetupReady: markOllamaSetupReady,
+    markSetupStarting: markOllamaSetupStarting,
+    markSetupFailed: markOllamaSetupFailed,
+    getSetupStatus: () => ({ ...ollamaSetupState })
+  })
   let preparedMeetingLanguage = 'en'
   // A failed preparation must read as an error, not as "checking", so the
   // setup screens can offer Retry instead of waiting forever.

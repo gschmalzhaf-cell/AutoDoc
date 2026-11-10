@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Wolisz ciemniejszy wygląd? Włącz tryb ciemny.",
   "announcement.done": "Gotowe",
   "announcement.meetingLanguageBody": "Transkrypcje i notatki są teraz dostępne w {count} językach!",
-  "announcement.meetingLanguageDescription": "Wybierz język używany podczas spotkań. Nowe transkrypcje i notatki będą tworzone w tym języku."
+  "announcement.meetingLanguageDescription": "Wybierz język używany podczas spotkań. Nowe transkrypcje i notatki będą tworzone w tym języku.",
+  "nav.mistralConnected": "Mistral połączony",
+  "nav.mistralDisconnected": "Mistral rozłączony",
+  "ui.mistralUseMistralApi": "Użyj API Mistral",
+  "ui.mistralDescription": "Notatki i Ask AI działają przez API Mistral zamiast modeli lokalnych. Żadne lokalne modele AI nie są pobierane.",
+  "ui.mistralApiKeyPlaceholder": "Klucz API",
+  "ui.mistralConnect": "Połącz",
+  "ui.mistralConnecting": "Łączenie…",
+  "ui.mistralConnectedBody": "AutoDoc jest połączony z API Mistral. Notatki i Ask AI działają w Mistralu; transkrypcja pozostaje na tym urządzeniu.",
+  "ui.mistralKeyRejected": "Klucz API został odrzucony. Sprawdź klucz i spróbuj ponownie.",
+  "ui.useLocalModels": "Użyj modeli lokalnych"
 }

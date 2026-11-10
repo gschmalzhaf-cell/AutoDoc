@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Föredrar du ett mörkare utseende? Slå på mörkt läge.",
   "announcement.done": "Klart",
   "announcement.meetingLanguageBody": "Transkriptioner och anteckningar stöder nu {count} språk!",
-  "announcement.meetingLanguageDescription": "Välj det språk som talas på dina möten. Nya transkriptioner och anteckningar kommer att använda detta språk."
+  "announcement.meetingLanguageDescription": "Välj det språk som talas på dina möten. Nya transkriptioner och anteckningar kommer att använda detta språk.",
+  "nav.mistralConnected": "Mistral ansluten",
+  "nav.mistralDisconnected": "Mistral frånkopplad",
+  "ui.mistralUseMistralApi": "Använd Mistral API",
+  "ui.mistralDescription": "Anteckningar och Ask AI körs på Mistral API i stället för lokala modeller. Inga lokala AI-modeller laddas ner.",
+  "ui.mistralApiKeyPlaceholder": "API-nyckel",
+  "ui.mistralConnect": "Anslut",
+  "ui.mistralConnecting": "Ansluter…",
+  "ui.mistralConnectedBody": "AutoDoc är ansluten till Mistral API. Anteckningar och Ask AI körs på Mistral; transkriberingen finns kvar på den här enheten.",
+  "ui.mistralKeyRejected": "API-nyckeln avvisades. Kontrollera nyckeln och försök igen.",
+  "ui.useLocalModels": "Använd lokala modeller"
 }

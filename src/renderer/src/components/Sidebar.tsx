@@ -36,6 +36,7 @@ export function Sidebar() {
   const isRecording = useRecordingStore((s) => s.isRecording)
   const recordingSeconds = useRecordingStore((s) => s.elapsedSeconds)
   const [ollamaConnected, setOllamaConnected] = useState<boolean | null>(null)
+  const [mistralEnabled, setMistralEnabled] = useState(false)
   const [setupPhase, setSetupPhase] = useState<string | null>(null)
   const [setupPercent, setSetupPercent] = useState(0)
   // The serve can answer while the notes model cannot be loaded; never call that "connected".
@@ -99,6 +100,15 @@ export function Sidebar() {
       .invoke('support:get-availability')
       .then(setSupportAvailable)
       .catch(() => setSupportAvailable(false))
+  }, [])
+
+  useEffect(() => {
+    window.electronAPI
+      .invoke('mistral:get-status')
+      .then((status) => {
+        setMistralEnabled(status?.enabled === true)
+      })
+      .catch(() => setMistralEnabled(false))
   }, [])
 
   useEffect(() => {
@@ -284,7 +294,13 @@ export function Sidebar() {
             <div className="flex items-center gap-2 px-2.5 py-2">
               <div className={`w-2 h-2 rounded-full ${ollamaConnected ? 'bg-sage' : 'bg-clay'}`} />
               <span className="min-w-0 text-[11px] text-ink-faint leading-snug text-pretty">
-                {ollamaConnected ? t('nav.ollamaConnected') : t('nav.ollamaDisconnected')}
+                {ollamaConnected
+                  ? mistralEnabled
+                    ? t('nav.mistralConnected')
+                    : t('nav.ollamaConnected')
+                  : mistralEnabled
+                    ? t('nav.mistralDisconnected')
+                    : t('nav.ollamaDisconnected')}
               </span>
             </div>
           ) : null}

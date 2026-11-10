@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Foretrækker du et mørkere udseende? Slå mørk tilstand til.",
   "announcement.done": "Færdig",
   "announcement.meetingLanguageBody": "Transskriptioner og noter understøtter nu {count} sprog!",
-  "announcement.meetingLanguageDescription": "Vælg det sprog, der tales på dine møder. Nye transskriptioner og noter vil være på dette sprog."
+  "announcement.meetingLanguageDescription": "Vælg det sprog, der tales på dine møder. Nye transskriptioner og noter vil være på dette sprog.",
+  "nav.mistralConnected": "Mistral forbundet",
+  "nav.mistralDisconnected": "Mistral afbrudt",
+  "ui.mistralUseMistralApi": "Brug Mistral API",
+  "ui.mistralDescription": "Noter og Ask AI kører på Mistral API i stedet for lokale modeller. Der downloades ingen lokale AI-modeller.",
+  "ui.mistralApiKeyPlaceholder": "API-nøgle",
+  "ui.mistralConnect": "Forbind",
+  "ui.mistralConnecting": "Forbinder…",
+  "ui.mistralConnectedBody": "AutoDoc er forbundet til Mistral API. Noter og Ask AI kører på Mistral; transskriptionen forbliver på denne enhed.",
+  "ui.mistralKeyRejected": "API-nøglen blev afvist. Tjek nøglen, og prøv igen.",
+  "ui.useLocalModels": "Brug lokale modeller"
 }

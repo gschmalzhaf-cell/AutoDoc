@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Vēlaties tumšāku izskatu? Ieslēdziet tumšo režīmu.",
   "announcement.done": "Gatavs",
   "announcement.meetingLanguageBody": "Transkripti un piezīmes tagad atbalsta {count} valodas!",
-  "announcement.meetingLanguageDescription": "Izvēlieties valodu, kurā runājat sapulcēs. Jaunie transkripti un piezīmes tiks veidoti šajā valodā."
+  "announcement.meetingLanguageDescription": "Izvēlieties valodu, kurā runājat sapulcēs. Jaunie transkripti un piezīmes tiks veidoti šajā valodā.",
+  "nav.mistralConnected": "Mistral savienots",
+  "nav.mistralDisconnected": "Mistral nav savienots",
+  "ui.mistralUseMistralApi": "Izmantot Mistral API",
+  "ui.mistralDescription": "Piezīmes un Ask AI darbojas caur Mistral API vietējo modeļu vietā. Vietējie AI modeļi netiek lejupielādēti.",
+  "ui.mistralApiKeyPlaceholder": "API atslēga",
+  "ui.mistralConnect": "Savienot",
+  "ui.mistralConnecting": "Savieno…",
+  "ui.mistralConnectedBody": "AutoDoc ir savienots ar Mistral API. Piezīmes un Ask AI darbojas Mistral; transkripcija paliek uz šīs ierīces.",
+  "ui.mistralKeyRejected": "API atslēga tika noraidīta. Pārbaudiet atslēgu un mēģiniet vēlreiz.",
+  "ui.useLocalModels": "Izmantot vietējos modeļus"
 }

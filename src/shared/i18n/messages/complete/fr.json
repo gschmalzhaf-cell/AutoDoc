@@ -467,5 +467,15 @@
   "announcement.darkModeBody": "Vous préférez un affichage plus sombre ? Activez le mode sombre.",
   "announcement.done": "Terminé",
   "announcement.meetingLanguageBody": "Les transcriptions et les notes sont désormais disponibles en {count} langues !",
-  "announcement.meetingLanguageDescription": "Choisissez la langue parlée pendant vos réunions. Les nouvelles transcriptions et notes utiliseront cette langue."
+  "announcement.meetingLanguageDescription": "Choisissez la langue parlée pendant vos réunions. Les nouvelles transcriptions et notes utiliseront cette langue.",
+  "nav.mistralConnected": "Mistral connecté",
+  "nav.mistralDisconnected": "Mistral déconnecté",
+  "ui.mistralUseMistralApi": "Utiliser l’API Mistral",
+  "ui.mistralDescription": "Les notes et Ask AI fonctionnent via l’API Mistral au lieu de modèles locaux. Aucun modèle d’IA local n’est téléchargé.",
+  "ui.mistralApiKeyPlaceholder": "Clé API",
+  "ui.mistralConnect": "Connecter",
+  "ui.mistralConnecting": "Connexion…",
+  "ui.mistralConnectedBody": "AutoDoc est connecté à l’API Mistral. Les notes et Ask AI fonctionnent sur Mistral ; la transcription reste sur cet appareil.",
+  "ui.mistralKeyRejected": "La clé API a été refusée. Vérifiez la clé et réessayez.",
+  "ui.useLocalModels": "Utiliser les modèles locaux"
 }
