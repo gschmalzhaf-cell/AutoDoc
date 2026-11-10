@@ -322,7 +322,7 @@ jobs:
       }}
     runs-on: windows-2022
     permissions:
-      contents: read
+      contents: write
     env:
       AUTODOC_SENTRY_DSN: ${{ inputs.staging_test_version == '' && secrets.AUTODOC_SENTRY_DSN || '' }}
       AUTODOC_PUBLIC_UPDATE_FEED_URL: ${{ inputs.staging_test_version != '' && format('{0}/stable/', vars.UPDATE_MIRROR_STAGING_ORIGIN) || vars.AUTODOC_PUBLIC_UPDATE_FEED_URL }}
@@ -334,7 +334,7 @@ jobs:
       VITE_POSTHOG_HOST: ${{ inputs.staging_test_version == '' && secrets.VITE_POSTHOG_HOST || '' }}
       HF_TOKEN: ${{ secrets.HUGGINGFACE_TOKEN }}
       HUGGINGFACE_TOKEN: ${{ secrets.HUGGINGFACE_TOKEN }}
-      AUTODOC_SIGNED_RELEASE: ${{ needs.validate-release-request.result == 'success' && 'true' || 'false' }}
+      AUTODOC_SIGNED_RELEASE: ${{ needs.validate-release-request.result == 'success' && secrets.DD_SM_API_KEY != '' && secrets.DD_SM_CLIENT_CERT_PASSWORD != '' && secrets.DD_SM_KEYPAIR_ALIAS != '' && 'true' || 'false' }}
 
     steps:
       - uses: actions/checkout@v6.0.2
@@ -595,6 +595,14 @@ jobs:
             dist/*-setup.exe
           if-no-files-found: warn
           retention-days: 14
+
+      - name: Attach unsigned installer to the release
+        if: env.AUTODOC_SIGNED_RELEASE != 'true' && github.event_name == 'push' && github.ref_type == 'tag' && success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        shell: bash
+        run: gh release upload "$RELEASE_TAG" dist/*-setup.exe --clobber
 
       - name: Upload Windows release assets
         if: env.AUTODOC_SIGNED_RELEASE == 'true' && success()
