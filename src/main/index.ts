@@ -53,6 +53,8 @@ import {
 } from './services/llm'
 import { isOllamaStartCancelledError, OllamaManager } from './services/ollama-manager'
 import { OllamaSetupCoordinator } from './services/ollama-setup-coordinator'
+import { isMistralModeEnabled } from './services/mistral-config'
+import { ensureMistralOllamaAdapter } from './services/mistral-ollama-adapter'
 import {
   createOllamaRuntimeRecovery,
   OLLAMA_MODEL_LOAD_FAILED_MESSAGE
@@ -1204,6 +1206,18 @@ app.whenReady().then(async () => {
     if (options.userInitiated) {
       ollamaRuntimeRecovery.clearModelLoadLatch()
     }
+    if (isMistralModeEnabled()) {
+      markOllamaSetupStarting()
+      return ensureMistralOllamaAdapter().then(
+        () => {
+          markOllamaSetupReady()
+        },
+        (err) => {
+          markOllamaSetupFailed(err)
+          throw err
+        }
+      )
+    }
     if (windowsOllamaSetupCoordinator) {
       return windowsOllamaSetupCoordinator.ensureRunning(options).then(() => {
         markOllamaSetupReady()
@@ -1273,6 +1287,11 @@ app.whenReady().then(async () => {
   })
   const ollamaReadiness = windowsOllamaSetupCoordinator ?? managedOllamaManager
   const waitUntilOllamaReady = async (): Promise<void> => {
+    if (isMistralModeEnabled()) {
+      await ensureMistralOllamaAdapter()
+      markOllamaSetupReady()
+      return
+    }
     const lifecycleEpoch = managedOllamaManager.captureLifecycleEpoch()
     managedOllamaManager.assertLifecycleEpoch(lifecycleEpoch)
     await ollamaReadiness.waitUntilReady()
@@ -1296,7 +1315,12 @@ app.whenReady().then(async () => {
       ollamaModelLoadLatched = latched
     }
   })
-  const recoverUnhealthyOllamaRuntime = (): Promise<void> => ollamaRuntimeRecovery.recover()
+  const recoverUnhealthyOllamaRuntime = (): Promise<void> =>
+    isMistralModeEnabled()
+      ? ensureMistralOllamaAdapter().then(() => {
+          markOllamaSetupReady()
+        })
+      : ollamaRuntimeRecovery.recover()
   const postWakePolicy = getOllamaPostWakePolicy()
   const ensureOllamaRunningIfNeeded = async (): Promise<void> => {
     const lifecycleEpoch = managedOllamaManager.captureLifecycleEpoch()

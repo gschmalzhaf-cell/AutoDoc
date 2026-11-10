@@ -234,6 +234,7 @@ AutoDoc stands on the shoulders of excellent open-source work:
 - [ONNX Runtime](https://onnxruntime.ai/) and [DirectML](https://github.com/microsoft/DirectML) — Windows inference
 - [faster-whisper](https://github.com/SYSTRAN/faster-whisper) and [CTranslate2](https://github.com/OpenNMT/CTranslate2) — compatibility transcription
 - [Ollama](https://ollama.com) — local LLM runtime
+- [Mistral API](https://mistral.ai) — optional cloud notes and Ask AI backend (see [docs/MISTRAL.md](docs/MISTRAL.md))
 - [Apple MLX](https://github.com/ml-explore/mlx) — Apple Silicon acceleration
 - [FFmpeg](https://ffmpeg.org) — audio/video processing
 - [Electron](https://www.electronjs.org) + [electron-vite](https://electron-vite.org) — desktop app foundation
