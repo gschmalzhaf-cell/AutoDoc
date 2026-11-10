@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.4] — 2026-11-10
+
+### Added
+
+- The Mistral chat model picker is now a visible dropdown listing the models
+  fetched for the connected key, with an "Other model…" entry for typing any
+  model ID. Selecting a model applies it immediately, and the section shows how
+  many models the key can access — a direct confirmation that the Mistral
+  connection works.
+
+### Fixed
+
+- Connecting a key now distinguishes "Mistral could not be reached" (network
+  problems) from "The API key was rejected" (invalid credentials), so failures
+  are no longer misreported as a bad key.
+
+
 ## [1.5.3] — 2026-11-10
 
 ### Added

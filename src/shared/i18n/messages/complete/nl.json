@@ -480,5 +480,8 @@
   "ui.useLocalModels": "Lokale modellen gebruiken",
   "settings.mistralApi": "Mistral API",
   "ui.mistralChangeApiKey": "API-sleutel wijzigen",
-  "ui.mistralModel": "Chatmodel"
+  "ui.mistralModel": "Chatmodel",
+  "ui.mistralCustomModel": "Ander model…",
+  "ui.mistralAvailableModels": "{count} modellen beschikbaar via Mistral",
+  "ui.mistralUnavailable": "Mistral is onbereikbaar. Controleer uw internetverbinding en probeer het opnieuw."
 }

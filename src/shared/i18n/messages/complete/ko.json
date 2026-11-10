@@ -480,5 +480,8 @@
   "ui.useLocalModels": "로컬 모델 사용",
   "settings.mistralApi": "Mistral API",
   "ui.mistralChangeApiKey": "API 키 변경",
-  "ui.mistralModel": "채팅 모델"
+  "ui.mistralModel": "채팅 모델",
+  "ui.mistralCustomModel": "다른 모델…",
+  "ui.mistralAvailableModels": "Mistral에서 {count}개의 모델 사용 가능",
+  "ui.mistralUnavailable": "Mistral에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요."
 }

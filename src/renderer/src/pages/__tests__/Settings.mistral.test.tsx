@@ -134,12 +134,11 @@ describe('Settings Mistral API section', () => {
       await Promise.resolve()
     })
 
-    const modelInput = screen.getByLabelText('Chat model')
-    expect(modelInput).toHaveValue('mistral-small-latest')
+    const modelSelect = screen.getByLabelText('Chat model') as HTMLSelectElement
+    expect(modelSelect.value).toBe('mistral-small-latest')
 
     await act(async () => {
-      fireEvent.change(modelInput, { target: { value: 'mistral-large-latest' } })
-      screen.getByRole('button', { name: 'Save' }).click()
+      fireEvent.change(modelSelect, { target: { value: 'mistral-large-latest' } })
       await Promise.resolve()
     })
 
@@ -147,7 +146,7 @@ describe('Settings Mistral API section', () => {
       'mistral:set-model',
       'mistral-large-latest'
     )
-    expect(modelInput).toHaveValue('mistral-large-latest')
+    expect(modelSelect.value).toBe('mistral-large-latest')
   })
 
   it('offers the models available to the key after connecting', async () => {
@@ -186,12 +185,11 @@ describe('Settings Mistral API section', () => {
       await Promise.resolve()
     })
 
-    const datalist = document.getElementById('mistral-model-options')
-    expect(datalist).not.toBeNull()
-    const values = Array.from(datalist!.querySelectorAll('option')).map((option) =>
-      option.getAttribute('value')
-    )
-    expect(values).toEqual(['mistral-large-latest', 'mistral-small-latest'])
+    const select = screen.getByLabelText('Chat model') as HTMLSelectElement
+    const values = Array.from(select.querySelectorAll('option')).map((option) => option.value)
+    expect(values).toEqual(['mistral-large-latest', 'mistral-small-latest', '__custom__'])
+    expect(select.value).toBe('mistral-small-latest')
+    expect(screen.getByText('2 models available from Mistral')).toBeInTheDocument()
   })
 
   it('reveals the API key input when changing the key', async () => {

@@ -480,5 +480,8 @@
   "ui.useLocalModels": "Kasuta kohalikke mudeleid",
   "settings.mistralApi": "Mistral API",
   "ui.mistralChangeApiKey": "Muuda API-võtit",
-  "ui.mistralModel": "Vestlusmall"
+  "ui.mistralModel": "Vestlusmall",
+  "ui.mistralCustomModel": "Muu mudel…",
+  "ui.mistralAvailableModels": "Mistralilt on saadaval {count} mudelit",
+  "ui.mistralUnavailable": "Mistraliga ei õnnestunud ühenduda. Kontrollige internetiühendust ja proovige uuesti."
 }

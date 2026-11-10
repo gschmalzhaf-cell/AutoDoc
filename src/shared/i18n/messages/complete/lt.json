@@ -480,5 +480,8 @@
   "ui.useLocalModels": "Naudoti vietinius modelius",
   "settings.mistralApi": "Mistral API",
   "ui.mistralChangeApiKey": "Keisti API raktą",
-  "ui.mistralModel": "Pokalbių modelis"
+  "ui.mistralModel": "Pokalbių modelis",
+  "ui.mistralCustomModel": "Kitas modelis…",
+  "ui.mistralAvailableModels": "Iš Mistral prieinama {count} modelių",
+  "ui.mistralUnavailable": "Nepavyko pasiekti Mistral. Patikrinkite interneto ryšį ir bandykite dar kartą."
 }

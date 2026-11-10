@@ -480,5 +480,8 @@
   "ui.useLocalModels": "Използване на локални модели",
   "settings.mistralApi": "API на Mistral",
   "ui.mistralChangeApiKey": "Промяна на API ключа",
-  "ui.mistralModel": "Чат модел"
+  "ui.mistralModel": "Чат модел",
+  "ui.mistralCustomModel": "Друг модел…",
+  "ui.mistralAvailableModels": "{count} модела са налични от Mistral",
+  "ui.mistralUnavailable": "Mistral е недостъпен. Проверете интернет връзката си и опитайте отново."
 }

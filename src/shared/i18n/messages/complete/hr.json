@@ -480,5 +480,8 @@
   "ui.useLocalModels": "Koristi lokalne modele",
   "settings.mistralApi": "Mistral API",
   "ui.mistralChangeApiKey": "Promijeni API ključ",
-  "ui.mistralModel": "Model razgovora"
+  "ui.mistralModel": "Model razgovora",
+  "ui.mistralCustomModel": "Drugi model…",
+  "ui.mistralAvailableModels": "Dostupno {count} modela putem Mistrala",
+  "ui.mistralUnavailable": "Mistral nije dostupan. Provjerite internetsku vezu i pokušajte ponovno."
 }

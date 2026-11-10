@@ -480,5 +480,8 @@
   "ui.useLocalModels": "Folosește modelele locale",
   "settings.mistralApi": "API-ul Mistral",
   "ui.mistralChangeApiKey": "Schimbă cheia API",
-  "ui.mistralModel": "Model de chat"
+  "ui.mistralModel": "Model de chat",
+  "ui.mistralCustomModel": "Alt model…",
+  "ui.mistralAvailableModels": "{count} modele disponibile de la Mistral",
+  "ui.mistralUnavailable": "Mistral nu a putut fi contactat. Verificați conexiunea la internet și încercați din nou."
 }

@@ -480,5 +480,8 @@
   "ui.useLocalModels": "Brug lokale modeller",
   "settings.mistralApi": "Mistral API",
   "ui.mistralChangeApiKey": "Skift API-nøgle",
-  "ui.mistralModel": "Chatmodel"
+  "ui.mistralModel": "Chatmodel",
+  "ui.mistralCustomModel": "Anden model…",
+  "ui.mistralAvailableModels": "{count} modeller tilgængelige fra Mistral",
+  "ui.mistralUnavailable": "Mistral kunne ikke nås. Tjek din internetforbindelse, og prøv igen."
 }

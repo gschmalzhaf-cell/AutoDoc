@@ -480,5 +480,8 @@
   "ui.useLocalModels": "Użyj modeli lokalnych",
   "settings.mistralApi": "API Mistral",
   "ui.mistralChangeApiKey": "Zmień klucz API",
-  "ui.mistralModel": "Model czatu"
+  "ui.mistralModel": "Model czatu",
+  "ui.mistralCustomModel": "Inny model…",
+  "ui.mistralAvailableModels": "Dostępne modele od Mistral: {count}",
+  "ui.mistralUnavailable": "Nie można połączyć się z Mistral. Sprawdź połączenie internetowe i spróbuj ponownie."
 }

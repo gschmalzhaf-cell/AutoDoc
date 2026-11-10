@@ -185,6 +185,10 @@ export const completeEn = {
   'ui.useLocalModels': 'Use local models',
   'ui.mistralChangeApiKey': 'Change API key',
   'ui.mistralModel': 'Chat model',
+  'ui.mistralCustomModel': 'Custom model…',
+  'ui.mistralAvailableModels': '{count} models available from Mistral',
+  'ui.mistralUnavailable':
+    'Mistral could not be reached. Check your internet connection and try again.',
   'ui.continue': 'Continue',
   'ui.aI': 'AI',
   'ui.settingUpAI': 'Setting Up AI',

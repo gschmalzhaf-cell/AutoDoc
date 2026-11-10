@@ -480,5 +480,8 @@
   "ui.useLocalModels": "Helyi modellek használata",
   "settings.mistralApi": "Mistral API",
   "ui.mistralChangeApiKey": "API-kulcs módosítása",
-  "ui.mistralModel": "Csevegőmodell"
+  "ui.mistralModel": "Csevegőmodell",
+  "ui.mistralCustomModel": "Egyéb modell…",
+  "ui.mistralAvailableModels": "{count} modell érhető el a Mistralon",
+  "ui.mistralUnavailable": "A Mistral nem érhető el. Ellenőrizze az internetkapcsolatot, és próbálja újra."
 }

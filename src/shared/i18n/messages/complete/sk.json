@@ -480,5 +480,8 @@
   "ui.useLocalModels": "Použiť lokálne modely",
   "settings.mistralApi": "API Mistral",
   "ui.mistralChangeApiKey": "Zmeniť kľúč API",
-  "ui.mistralModel": "Chatovací model"
+  "ui.mistralModel": "Chatovací model",
+  "ui.mistralCustomModel": "Iný model…",
+  "ui.mistralAvailableModels": "Od Mistralu je k dispozícii {count} modelov",
+  "ui.mistralUnavailable": "Mistral sa nepodarilo spojiť. Skontrolujte pripojenie k internetu a skúste to znova."
 }

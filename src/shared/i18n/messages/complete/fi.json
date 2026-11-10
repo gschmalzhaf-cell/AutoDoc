@@ -480,5 +480,8 @@
   "ui.useLocalModels": "Käytä paikallisia malleja",
   "settings.mistralApi": "Mistral API",
   "ui.mistralChangeApiKey": "Vaihda API-avain",
-  "ui.mistralModel": "Keskustelumalli"
+  "ui.mistralModel": "Keskustelumalli",
+  "ui.mistralCustomModel": "Muu malli…",
+  "ui.mistralAvailableModels": "Mistralilta saatavilla {count} mallia",
+  "ui.mistralUnavailable": "Mistraliin ei saatu yhteyttä. Tarkista internetyhteys ja yritä uudelleen."
 }

@@ -480,5 +480,8 @@
   "ui.useLocalModels": "Izmantot vietējos modeļus",
   "settings.mistralApi": "Mistral API",
   "ui.mistralChangeApiKey": "Mainīt API atslēgu",
-  "ui.mistralModel": "Tērzēšanas modelis"
+  "ui.mistralModel": "Tērzēšanas modelis",
+  "ui.mistralCustomModel": "Cits modelis…",
+  "ui.mistralAvailableModels": "No Mistral pieejami {count} modeļi",
+  "ui.mistralUnavailable": "Mistral nav sasniedzams. Pārbaudiet interneta savienojumu un mēģiniet vēlreiz."
 }

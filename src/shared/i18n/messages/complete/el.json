@@ -480,5 +480,8 @@
   "ui.useLocalModels": "Χρήση τοπικών μοντέλων",
   "settings.mistralApi": "Mistral API",
   "ui.mistralChangeApiKey": "Αλλαγή κλειδιού API",
-  "ui.mistralModel": "Μοντέλο συνομιλίας"
+  "ui.mistralModel": "Μοντέλο συνομιλίας",
+  "ui.mistralCustomModel": "Άλλο μοντέλο…",
+  "ui.mistralAvailableModels": "{count} μοντέλα διαθέσιμα από το Mistral",
+  "ui.mistralUnavailable": "Το Mistral δεν ήταν προσβάσιμο. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά."
 }

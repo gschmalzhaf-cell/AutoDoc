@@ -480,5 +480,8 @@
   "ui.useLocalModels": "使用本地模型",
   "settings.mistralApi": "Mistral API",
   "ui.mistralChangeApiKey": "更改 API 密钥",
-  "ui.mistralModel": "聊天模型"
+  "ui.mistralModel": "聊天模型",
+  "ui.mistralCustomModel": "其他模型…",
+  "ui.mistralAvailableModels": "Mistral 提供 {count} 个可用模型",
+  "ui.mistralUnavailable": "无法连接到 Mistral。请检查您的互联网连接，然后重试。"
 }

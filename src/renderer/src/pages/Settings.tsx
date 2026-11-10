@@ -135,9 +135,11 @@ export function Settings() {
   const [mistralApiKeyInput, setMistralApiKeyInput] = useState('')
   const [mistralConnecting, setMistralConnecting] = useState(false)
   const [mistralKeyRejected, setMistralKeyRejected] = useState(false)
+  const [mistralUnavailable, setMistralUnavailable] = useState(false)
   const [mistralShowKeyInput, setMistralShowKeyInput] = useState(false)
   const [mistralModelInput, setMistralModelInput] = useState('')
   const [mistralModelOptions, setMistralModelOptions] = useState<string[]>([])
+  const [mistralShowCustomModel, setMistralShowCustomModel] = useState(false)
   const [storageInfo, setStorageInfo] = useState<AppStorageInfo | null>(null)
   const [analyticsConsent, setAnalyticsConsentState] = useState<boolean | null>(null)
   const [diagnosticLogUploadConsent, setDiagnosticLogUploadConsentState] = useState(false)
@@ -195,6 +197,7 @@ export function Settings() {
     if (mistralConnecting || trimmed.length === 0) return
     setMistralConnecting(true)
     setMistralKeyRejected(false)
+    setMistralUnavailable(false)
     try {
       const result = await window.electronAPI.invoke('mistral:set-api-key', trimmed)
       if (result?.ok) {
@@ -202,11 +205,13 @@ export function Settings() {
         setMistralShowKeyInput(false)
         refreshMistralStatus()
         refreshRuntimeInfo()
+      } else if (result?.error === 'unavailable') {
+        setMistralUnavailable(true)
       } else {
         setMistralKeyRejected(true)
       }
     } catch {
-      setMistralKeyRejected(true)
+      setMistralUnavailable(true)
     } finally {
       setMistralConnecting(false)
     }
@@ -922,38 +927,78 @@ export function Settings() {
                 <div className="i18n-setting-control flex flex-col items-end gap-2">
                   <div className="flex items-center gap-2">
                     <label
-                      htmlFor="mistral-model-input"
+                      htmlFor="mistral-model-select"
                       className="text-[12px] text-ink-muted leading-snug"
                     >
                       {t('ui.mistralModel')}
                     </label>
-                    <input
-                      id="mistral-model-input"
-                      list="mistral-model-options"
-                      value={mistralModelInput}
-                      onChange={(event) => setMistralModelInput(event.target.value)}
-                      onKeyDown={(event) => {
-                        if (event.key === 'Enter') void applyMistralModel()
-                      }}
-                      className="w-[200px] rounded-lg border border-border bg-bg-card px-3 py-1.5 text-[12px] text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage"
-                    />
-                    <datalist id="mistral-model-options">
-                      {(mistralModelOptions.length > 0
-                        ? mistralModelOptions
-                        : MISTRAL_CHAT_MODEL_OPTIONS
-                      ).map((model) => (
-                        <option key={model} value={model} />
-                      ))}
-                    </datalist>
-                    <button
-                      type="button"
-                      onClick={() => void applyMistralModel()}
-                      disabled={mistralModelInput.trim().length === 0}
-                      className="i18n-btn rounded-lg bg-sage px-3 py-1.5 text-[12px] font-medium leading-snug text-on-brand disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {t('common.save')}
-                    </button>
+                    {mistralShowCustomModel ? (
+                      <>
+                        <input
+                          id="mistral-model-select"
+                          value={mistralModelInput}
+                          onChange={(event) => setMistralModelInput(event.target.value)}
+                          onKeyDown={(event) => {
+                            if (event.key === 'Enter') void applyMistralModel()
+                          }}
+                          placeholder={t('ui.mistralCustomModel')}
+                          className="w-[220px] rounded-lg border border-border bg-bg-card px-3 py-1.5 text-[12px] text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => void applyMistralModel()}
+                          disabled={mistralModelInput.trim().length === 0}
+                          className="i18n-btn rounded-lg bg-sage px-3 py-1.5 text-[12px] font-medium leading-snug text-on-brand disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                          {t('common.save')}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setMistralShowCustomModel(false)
+                            if (mistralStatus?.model) setMistralModelInput(mistralStatus.model)
+                          }}
+                          className="i18n-btn text-[12px] font-medium leading-snug text-ink-muted hover:text-ink transition-colors"
+                        >
+                          {t('common.cancel')}
+                        </button>
+                      </>
+                    ) : (
+                      <select
+                        id="mistral-model-select"
+                        value={mistralModelInput}
+                        onChange={(event) => {
+                          if (event.target.value === '__custom__') {
+                            setMistralShowCustomModel(true)
+                            setMistralModelInput('')
+                            return
+                          }
+                          setMistralModelInput(event.target.value)
+                          void window.electronAPI
+                            .invoke('mistral:set-model', event.target.value)
+                            .then((status) => setMistralStatus(status))
+                            .then(() => refreshRuntimeInfo())
+                            .catch(() => {})
+                        }}
+                        className="w-[220px] rounded-lg border border-border bg-bg-card px-3 py-1.5 text-[12px] text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage"
+                      >
+                        {(mistralModelOptions.length > 0
+                          ? mistralModelOptions
+                          : [...MISTRAL_CHAT_MODEL_OPTIONS]
+                        ).map((model) => (
+                          <option key={model} value={model}>
+                            {model}
+                          </option>
+                        ))}
+                        <option value="__custom__">{t('ui.mistralCustomModel')}</option>
+                      </select>
+                    )}
                   </div>
+                  {mistralStatus?.enabled === true && mistralModelOptions.length > 0 && (
+                    <p className="text-[12px] text-ink-faint leading-relaxed text-right">
+                      {t('ui.mistralAvailableModels', { count: mistralModelOptions.length })}
+                    </p>
+                  )}
                   {mistralShowKeyInput ? (
                     <div className="flex items-center gap-2">
                       <input
@@ -1007,6 +1052,11 @@ export function Settings() {
                   {mistralKeyRejected && (
                     <p className="text-[12px] text-clay leading-relaxed text-right">
                       {t('ui.mistralKeyRejected')}
+                    </p>
+                  )}
+                  {mistralUnavailable && (
+                    <p className="text-[12px] text-clay leading-relaxed text-right">
+                      {t('ui.mistralUnavailable')}
                     </p>
                   )}
                 </div>

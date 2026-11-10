@@ -480,5 +480,8 @@
   "ui.useLocalModels": "Uporabi lokalne modele",
   "settings.mistralApi": "Mistral API",
   "ui.mistralChangeApiKey": "Spremeni ključ API",
-  "ui.mistralModel": "Model klepeta"
+  "ui.mistralModel": "Model klepeta",
+  "ui.mistralCustomModel": "Drugi model…",
+  "ui.mistralAvailableModels": "Na voljo {count} modelov prek Mistrala",
+  "ui.mistralUnavailable": "Mistral ni dosegljiv. Preverite internetno povezavo in poskusite znova."
 }
