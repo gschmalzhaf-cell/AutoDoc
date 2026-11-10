@@ -35,6 +35,14 @@ export const DEFAULT_OLLAMA_MODEL = 'qwen3:4b-instruct'
 export const LEGACY_OLLAMA_MODEL = 'llama3.1'
 export const LOW_SPEC_MAC_OLLAMA_MODEL = 'llama3.2:3b'
 export const DEFAULT_OLLAMA_EMBEDDING_MODEL = 'qwen3-embedding:0.6b'
+export const MISTRAL_CHAT_MODEL_OPTIONS = [
+  'mistral-small-latest',
+  'mistral-medium-latest',
+  'mistral-large-latest',
+  'ministral-8b-latest',
+  'magistral-medium-latest'
+] as const
+
 export const OLLAMA_RUNTIME_LABEL = 'Ollama runtime'
 export const OLLAMA_NOTES_MODEL_LABEL = 'notes model'
 export const OLLAMA_ASK_AI_EMBEDDING_MODEL_LABEL = 'Ask AI search model'

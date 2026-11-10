@@ -291,6 +291,7 @@ export interface IpcInvokeEvents {
   'ollama:retry-setup': []
   'mistral:get-status': []
   'mistral:set-api-key': [key: string]
+  'mistral:set-model': [model: string]
   'mistral:clear-api-key': []
   'whisper:get-setup-status': []
   'whisper:retry-setup': []
@@ -472,6 +473,7 @@ export interface IpcInvokeReturns {
   'ollama:retry-setup': void
   'mistral:get-status': MistralStatus
   'mistral:set-api-key': MistralStatus & { ok: boolean; error?: 'invalid-key' | 'unavailable' }
+  'mistral:set-model': MistralStatus
   'mistral:clear-api-key': MistralStatus
   'whisper:get-setup-status': WhisperSetupStatus
   'whisper:retry-setup': void

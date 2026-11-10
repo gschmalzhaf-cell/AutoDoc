@@ -478,5 +478,7 @@
   "ui.mistralConnectedBody": "AutoDoc on yhdistetty Mistral API:aan. Muistiinpanot ja Ask AI toimivat Mistralissa; transkriptio pysyy tällä laitteella.",
   "ui.mistralKeyRejected": "API-avain hylättiin. Tarkista avain ja yritä uudelleen.",
   "ui.useLocalModels": "Käytä paikallisia malleja",
-  "settings.mistralApi": "Mistral API"
+  "settings.mistralApi": "Mistral API",
+  "ui.mistralChangeApiKey": "Vaihda API-avain",
+  "ui.mistralModel": "Keskustelumalli"
 }

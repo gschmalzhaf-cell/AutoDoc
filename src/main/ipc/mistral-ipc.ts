@@ -12,6 +12,8 @@ export interface MistralIpcDeps {
   getStoredApiKey: () => string
   setStoredApiKey: (key: string) => void
   clearStoredApiKey: () => void
+  getStoredModel: () => string | undefined
+  setStoredModel: (model: string) => void
   markSetupReady: () => void
   markSetupStarting: () => void
   markSetupFailed: (error: unknown) => void
@@ -65,8 +67,19 @@ export function registerMistralIpc(deps: MistralIpcDeps): void {
     }
   )
 
+  ipcMain.handle('mistral:set-model', (_event, model: unknown): MistralStatus => {
+    const trimmed = typeof model === 'string' ? model.trim() : ''
+    if (trimmed.length > 0) {
+      deps.setStoredModel(trimmed)
+    }
+    return status()
+  })
+
   ipcMain.handle('mistral:clear-api-key', async (): Promise<MistralStatus> => {
     deps.clearStoredApiKey()
+    // Disconnect must win over an inherited MISTRAL_API_KEY for this session,
+    // otherwise the env fallback would immediately re-enable Mistral mode.
+    delete process.env.MISTRAL_API_KEY
     await closeMistralOllamaAdapter()
     return status()
   })

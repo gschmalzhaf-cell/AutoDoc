@@ -56,7 +56,8 @@ import { OllamaSetupCoordinator } from './services/ollama-setup-coordinator'
 import {
   getMistralNotesModel,
   isMistralModeEnabled,
-  setMistralApiKeyProvider
+  setMistralApiKeyProvider,
+  setMistralModelProvider
 } from './services/mistral-config'
 import { registerMistralIpc } from './ipc/mistral-ipc'
 import { ensureMistralOllamaAdapter } from './services/mistral-ollama-adapter'
@@ -653,6 +654,7 @@ app.whenReady().then(async () => {
 
   const prefsStore = new PrefsStore()
   setMistralApiKeyProvider(() => prefsStore.getMistralApiKey())
+  setMistralModelProvider(() => prefsStore.getMistralModel())
   const analyticsStateStore = new AnalyticsStateStore()
   analyticsStateStore.observeAppVersion(app.getVersion())
   registerAnalyticsIpc(analyticsStateStore)
@@ -2326,6 +2328,8 @@ app.whenReady().then(async () => {
     getStoredApiKey: () => prefsStore.getMistralApiKey(),
     setStoredApiKey: (key) => prefsStore.setMistralApiKey(key),
     clearStoredApiKey: () => prefsStore.clearMistralApiKey(),
+    getStoredModel: () => prefsStore.getMistralModel(),
+    setStoredModel: (model) => prefsStore.setMistralModel(model),
     markSetupReady: markOllamaSetupReady,
     markSetupStarting: markOllamaSetupStarting,
     markSetupFailed: markOllamaSetupFailed,

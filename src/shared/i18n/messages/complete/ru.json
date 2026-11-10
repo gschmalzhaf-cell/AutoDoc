@@ -478,5 +478,7 @@
   "ui.mistralConnectedBody": "AutoDoc подключён к API Mistral. Заметки и Ask AI работают в Mistral; расшифровка выполняется на этом устройстве.",
   "ui.mistralKeyRejected": "API-ключ отклонён. Проверьте ключ и попробуйте ещё раз.",
   "ui.useLocalModels": "Использовать локальные модели",
-  "settings.mistralApi": "API Mistral"
+  "settings.mistralApi": "API Mistral",
+  "ui.mistralChangeApiKey": "Изменить API-ключ",
+  "ui.mistralModel": "Модель чата"
 }

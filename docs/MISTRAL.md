@@ -20,7 +20,7 @@ Ollama request options map onto Mistral parameters as follows: `num_predict` →
 
 The recommended way to enable Mistral mode is the **in-app option**. It is available in two places:
 
-- **Settings → Mistral API**: enter or disconnect the API key at any time.
+- **Settings → Mistral API**: enter, change, or disconnect the API key at any time, and pick the chat model (for example `mistral-small-latest` or `mistral-large-latest`; any Mistral model ID can be typed in).
 - **Onboarding**: the AI setup step offers **Use Mistral API** with an API key field.
 
 In both places the key is validated against the Mistral API, stored in AutoDoc's preferences, and the app switches immediately — no environment variables needed.
@@ -31,7 +31,7 @@ Alternatively, set `MISTRAL_API_KEY` before launching the app. A key entered in 
 | --- | --- | --- |
 | `MISTRAL_API_KEY` | — | Enables Mistral mode when no key is stored in the app. |
 | `AUTODOC_LLM_PROVIDER` | auto | Set to `ollama` to force the local runtime even when a key is present. |
-| `AUTODOC_MISTRAL_MODEL` | `mistral-small-latest` | Chat model used for notes and Ask AI. |
+| `AUTODOC_MISTRAL_MODEL` | `mistral-small-latest` | Chat model used for notes and Ask AI when no model is selected in Settings; a selection in Settings takes precedence. |
 | `AUTODOC_MISTRAL_EMBEDDING_MODEL` | `mistral-embed` | Embedding model used for Ask AI search. |
 | `MISTRAL_BASE_URL` | `https://api.mistral.ai` | Override for proxies or Mistral-compatible gateways. |
 

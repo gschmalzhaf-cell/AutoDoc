@@ -41,6 +41,8 @@ function createDeps() {
     getStoredApiKey: vi.fn().mockReturnValue(''),
     setStoredApiKey: vi.fn(),
     clearStoredApiKey: vi.fn(),
+    getStoredModel: vi.fn().mockReturnValue(undefined),
+    setStoredModel: vi.fn(),
     markSetupReady: vi.fn(),
     markSetupStarting: vi.fn(),
     markSetupFailed: vi.fn(),
@@ -129,10 +131,31 @@ describe('mistral IPC', () => {
 
   it('clears the stored key and stops the adapter', async () => {
     const deps = register()
+    process.env.MISTRAL_API_KEY = 'env-key'
 
     await handler('mistral:clear-api-key')()
 
     expect(deps.clearStoredApiKey).toHaveBeenCalled()
     expect(closeMistralOllamaAdapter).toHaveBeenCalled()
+    expect(process.env.MISTRAL_API_KEY).toBeUndefined()
+  })
+
+  it('stores a selected chat model', async () => {
+    const deps = register()
+
+    const status = (await handler('mistral:set-model')(undefined, ' mistral-large-latest ')) as {
+      model: string
+    }
+
+    expect(deps.setStoredModel).toHaveBeenCalledWith('mistral-large-latest')
+    expect(status.model).toBe('mistral-small-latest')
+  })
+
+  it('ignores an empty model', async () => {
+    const deps = register()
+
+    await handler('mistral:set-model')(undefined, '   ')
+
+    expect(deps.setStoredModel).not.toHaveBeenCalled()
   })
 })

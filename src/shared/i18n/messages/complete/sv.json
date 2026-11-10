@@ -478,5 +478,7 @@
   "ui.mistralConnectedBody": "AutoDoc är ansluten till Mistral API. Anteckningar och Ask AI körs på Mistral; transkriberingen finns kvar på den här enheten.",
   "ui.mistralKeyRejected": "API-nyckeln avvisades. Kontrollera nyckeln och försök igen.",
   "ui.useLocalModels": "Använd lokala modeller",
-  "settings.mistralApi": "Mistral API"
+  "settings.mistralApi": "Mistral API",
+  "ui.mistralChangeApiKey": "Ändra API-nyckel",
+  "ui.mistralModel": "Chattmodell"
 }

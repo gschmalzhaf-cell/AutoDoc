@@ -478,5 +478,7 @@
   "ui.mistralConnectedBody": "AutoDoc er forbundet til Mistral API. Noter og Ask AI kører på Mistral; transskriptionen forbliver på denne enhed.",
   "ui.mistralKeyRejected": "API-nøglen blev afvist. Tjek nøglen, og prøv igen.",
   "ui.useLocalModels": "Brug lokale modeller",
-  "settings.mistralApi": "Mistral API"
+  "settings.mistralApi": "Mistral API",
+  "ui.mistralChangeApiKey": "Skift API-nøgle",
+  "ui.mistralModel": "Chatmodel"
 }

@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.2] — 2026-11-10
+
+### Added
+
+- Settings → Mistral API now includes a chat model picker: choose
+  `mistral-small-latest`, `mistral-medium-latest`, `mistral-large-latest`, and
+  other suggested models, or type any Mistral model ID. The selection is saved
+  with the app's preferences and used for notes and Ask AI.
+- A **Change API key** action replaces a stored Mistral API key with a new one
+  without disconnecting first.
+
+### Fixed
+
+- **Disconnect** in Settings now wins over a `MISTRAL_API_KEY` environment
+  variable for the current session, so the app no longer silently reconnects
+  to Mistral after disconnecting.
+
+
 ## [1.5.1] — 2026-11-10
 
 ### Added

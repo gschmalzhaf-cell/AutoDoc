@@ -478,5 +478,7 @@
   "ui.mistralConnectedBody": "AutoDoc on Mistral API-ga ühendatud. Märkmed ja Ask AI töötavad Mistralis; transkriptsioon jääb sellesse seadmesse.",
   "ui.mistralKeyRejected": "API-võti lükati tagasi. Kontrolli võtit ja proovi uuesti.",
   "ui.useLocalModels": "Kasuta kohalikke mudeleid",
-  "settings.mistralApi": "Mistral API"
+  "settings.mistralApi": "Mistral API",
+  "ui.mistralChangeApiKey": "Muuda API-võtit",
+  "ui.mistralModel": "Vestlusmall"
 }

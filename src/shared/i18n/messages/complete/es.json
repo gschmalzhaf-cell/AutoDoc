@@ -478,5 +478,7 @@
   "ui.mistralConnectedBody": "AutoDoc está conectado a la API de Mistral. Las notas y Ask AI se ejecutan en Mistral; la transcripción permanece en este dispositivo.",
   "ui.mistralKeyRejected": "La clave de API fue rechazada. Comprueba la clave e inténtalo de nuevo.",
   "ui.useLocalModels": "Usar modelos locales",
-  "settings.mistralApi": "API de Mistral"
+  "settings.mistralApi": "API de Mistral",
+  "ui.mistralChangeApiKey": "Cambiar la clave de API",
+  "ui.mistralModel": "Modelo de chat"
 }

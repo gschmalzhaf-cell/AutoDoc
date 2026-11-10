@@ -1,6 +1,6 @@
 import { isDiskFullError } from '../../../shared/disk-full'
 import { updateInstallBlockMessage } from '../services/update-install-status'
-import { AUTODOC_GITHUB_URL } from '../../../shared/constants'
+import { AUTODOC_GITHUB_URL, MISTRAL_CHAT_MODEL_OPTIONS } from '../../../shared/constants'
 import type { MessageKey } from '../../../shared/i18n'
 import { meetingLanguageName } from '../services/meeting-language-name'
 import { lazy, Suspense, useState, useEffect, useCallback, useRef } from 'react'
@@ -135,6 +135,8 @@ export function Settings() {
   const [mistralApiKeyInput, setMistralApiKeyInput] = useState('')
   const [mistralConnecting, setMistralConnecting] = useState(false)
   const [mistralKeyRejected, setMistralKeyRejected] = useState(false)
+  const [mistralShowKeyInput, setMistralShowKeyInput] = useState(false)
+  const [mistralModelInput, setMistralModelInput] = useState('')
   const [storageInfo, setStorageInfo] = useState<AppStorageInfo | null>(null)
   const [analyticsConsent, setAnalyticsConsentState] = useState<boolean | null>(null)
   const [diagnosticLogUploadConsent, setDiagnosticLogUploadConsentState] = useState(false)
@@ -196,6 +198,7 @@ export function Settings() {
       const result = await window.electronAPI.invoke('mistral:set-api-key', trimmed)
       if (result?.ok) {
         setMistralApiKeyInput('')
+        setMistralShowKeyInput(false)
         refreshMistralStatus()
         refreshRuntimeInfo()
       } else {
@@ -208,12 +211,27 @@ export function Settings() {
     }
   }, [mistralApiKeyInput, mistralConnecting, refreshMistralStatus, refreshRuntimeInfo])
 
+  const applyMistralModel = useCallback(async () => {
+    const trimmed = mistralModelInput.trim()
+    if (trimmed.length === 0) return
+    try {
+      const status = await window.electronAPI.invoke('mistral:set-model', trimmed)
+      setMistralStatus(status)
+    } catch {
+      // Keeping the previous model is safe; the status refresh reflects it.
+      refreshMistralStatus()
+      return
+    }
+    refreshRuntimeInfo()
+  }, [mistralModelInput, refreshMistralStatus, refreshRuntimeInfo])
+
   const disconnectMistral = useCallback(async () => {
     try {
       await window.electronAPI.invoke('mistral:clear-api-key')
     } catch {
       // Clearing is best-effort; the status refresh reflects the outcome.
     }
+    setMistralShowKeyInput(false)
     refreshMistralStatus()
     refreshRuntimeInfo()
   }, [refreshMistralStatus, refreshRuntimeInfo])
@@ -221,6 +239,10 @@ export function Settings() {
   useEffect(() => {
     refreshMistralStatus()
   }, [refreshMistralStatus])
+
+  useEffect(() => {
+    if (mistralStatus?.model) setMistralModelInput(mistralStatus.model)
+  }, [mistralStatus?.model])
 
   useEffect(() => {
     window.electronAPI.invoke('app:get-version').then(setAppVersion)
@@ -877,13 +899,94 @@ export function Settings() {
                 {mistralStatus?.enabled ? t('ui.mistralConnectedBody') : t('ui.mistralDescription')}
               </p>
               {mistralStatus?.enabled ? (
-                <button
-                  type="button"
-                  onClick={() => void disconnectMistral()}
-                  className="i18n-btn text-[12px] font-medium leading-snug text-ink-muted bg-bg-accent px-3 py-1.5 rounded-lg border border-border-subtle hover:border-ink-muted transition-colors"
-                >
-                  {t('settings.disconnect')}
-                </button>
+                <div className="i18n-setting-control flex flex-col items-end gap-2">
+                  <div className="flex items-center gap-2">
+                    <label
+                      htmlFor="mistral-model-input"
+                      className="text-[12px] text-ink-muted leading-snug"
+                    >
+                      {t('ui.mistralModel')}
+                    </label>
+                    <input
+                      id="mistral-model-input"
+                      list="mistral-model-options"
+                      value={mistralModelInput}
+                      onChange={(event) => setMistralModelInput(event.target.value)}
+                      onKeyDown={(event) => {
+                        if (event.key === 'Enter') void applyMistralModel()
+                      }}
+                      className="w-[200px] rounded-lg border border-border bg-bg-card px-3 py-1.5 text-[12px] text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage"
+                    />
+                    <datalist id="mistral-model-options">
+                      {MISTRAL_CHAT_MODEL_OPTIONS.map((model) => (
+                        <option key={model} value={model} />
+                      ))}
+                    </datalist>
+                    <button
+                      type="button"
+                      onClick={() => void applyMistralModel()}
+                      disabled={mistralModelInput.trim().length === 0}
+                      className="i18n-btn rounded-lg bg-sage px-3 py-1.5 text-[12px] font-medium leading-snug text-on-brand disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {t('common.save')}
+                    </button>
+                  </div>
+                  {mistralShowKeyInput ? (
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="password"
+                        value={mistralApiKeyInput}
+                        onChange={(event) => setMistralApiKeyInput(event.target.value)}
+                        onKeyDown={(event) => {
+                          if (event.key === 'Enter') void connectMistral()
+                        }}
+                        placeholder={t('ui.mistralApiKeyPlaceholder')}
+                        className="w-[200px] rounded-lg border border-border bg-bg-card px-3 py-1.5 text-[12px] text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => void connectMistral()}
+                        disabled={mistralConnecting || mistralApiKeyInput.trim().length === 0}
+                        className="i18n-btn rounded-lg bg-sage px-3 py-1.5 text-[12px] font-medium leading-snug text-on-brand disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {mistralConnecting ? t('ui.mistralConnecting') : t('ui.mistralConnect')}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setMistralShowKeyInput(false)
+                          setMistralApiKeyInput('')
+                          setMistralKeyRejected(false)
+                        }}
+                        className="i18n-btn text-[12px] font-medium leading-snug text-ink-muted hover:text-ink transition-colors"
+                      >
+                        {t('common.cancel')}
+                      </button>
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setMistralShowKeyInput(true)}
+                        className="i18n-btn text-[12px] font-medium leading-snug text-ink-muted bg-bg-accent px-3 py-1.5 rounded-lg border border-border-subtle hover:border-ink-muted transition-colors"
+                      >
+                        {t('ui.mistralChangeApiKey')}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => void disconnectMistral()}
+                        className="i18n-btn text-[12px] font-medium leading-snug text-ink-muted bg-bg-accent px-3 py-1.5 rounded-lg border border-border-subtle hover:border-ink-muted transition-colors"
+                      >
+                        {t('settings.disconnect')}
+                      </button>
+                    </div>
+                  )}
+                  {mistralKeyRejected && (
+                    <p className="text-[12px] text-clay leading-relaxed text-right">
+                      {t('ui.mistralKeyRejected')}
+                    </p>
+                  )}
+                </div>
               ) : (
                 <div className="i18n-setting-control flex flex-col items-end gap-2">
                   <input

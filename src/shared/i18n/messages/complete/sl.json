@@ -478,5 +478,7 @@
   "ui.mistralConnectedBody": "AutoDoc je povezan z Mistral API. Zapiski in Ask AI delujejo na Mistralu; prepis ostane na tej napravi.",
   "ui.mistralKeyRejected": "Ključ API je bil zavrnjen. Preverite ključ in poskusite znova.",
   "ui.useLocalModels": "Uporabi lokalne modele",
-  "settings.mistralApi": "Mistral API"
+  "settings.mistralApi": "Mistral API",
+  "ui.mistralChangeApiKey": "Spremeni ključ API",
+  "ui.mistralModel": "Model klepeta"
 }

@@ -40,6 +40,7 @@ interface PrefsSchema {
   notesEngineUpgradeEligible: boolean
   notesEngineReadyDismissed: boolean
   mistralApiKey?: string
+  mistralModel?: string
 }
 
 function createPrefsStore(): Store<PrefsSchema> {
@@ -298,6 +299,14 @@ export class PrefsStore {
 
   clearMistralApiKey(): void {
     this.store.delete('mistralApiKey')
+  }
+
+  getMistralModel(): string | undefined {
+    return this.store.get('mistralModel') || undefined
+  }
+
+  setMistralModel(model: string): void {
+    this.store.set('mistralModel', model)
   }
 
   private applyLaunchAtLogin(): void {

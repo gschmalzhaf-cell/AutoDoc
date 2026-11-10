@@ -183,6 +183,8 @@ export const completeEn = {
     'AutoDoc is connected to the Mistral API. Notes and Ask AI run on Mistral; transcription stays on this device.',
   'ui.mistralKeyRejected': 'The API key was rejected. Check the key and try again.',
   'ui.useLocalModels': 'Use local models',
+  'ui.mistralChangeApiKey': 'Change API key',
+  'ui.mistralModel': 'Chat model',
   'ui.continue': 'Continue',
   'ui.aI': 'AI',
   'ui.settingUpAI': 'Setting Up AI',

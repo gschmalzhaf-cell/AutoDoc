@@ -478,5 +478,7 @@
   "ui.mistralConnectedBody": "AutoDoc이 Mistral API에 연결되어 있습니다. 노트와 Ask AI는 Mistral에서 실행되며, 전사는 이 기기에서 이루어집니다.",
   "ui.mistralKeyRejected": "API 키가 거부되었습니다. 키를 확인하고 다시 시도하세요.",
   "ui.useLocalModels": "로컬 모델 사용",
-  "settings.mistralApi": "Mistral API"
+  "settings.mistralApi": "Mistral API",
+  "ui.mistralChangeApiKey": "API 키 변경",
+  "ui.mistralModel": "채팅 모델"
 }

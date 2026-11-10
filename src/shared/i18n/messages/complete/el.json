@@ -478,5 +478,7 @@
   "ui.mistralConnectedBody": "Το AutoDoc είναι συνδεδεμένο στο Mistral API. Οι σημειώσεις και το Ask AI εκτελούνται στο Mistral· η μεταγραφή παραμένει σε αυτή τη συσκευή.",
   "ui.mistralKeyRejected": "Το κλειδί API απορρίφθηκε. Ελέγξτε το κλειδί και δοκιμάστε ξανά.",
   "ui.useLocalModels": "Χρήση τοπικών μοντέλων",
-  "settings.mistralApi": "Mistral API"
+  "settings.mistralApi": "Mistral API",
+  "ui.mistralChangeApiKey": "Αλλαγή κλειδιού API",
+  "ui.mistralModel": "Μοντέλο συνομιλίας"
 }

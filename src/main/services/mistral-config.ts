@@ -26,8 +26,15 @@ export function getMistralApiBaseUrl(): string {
   return (process.env.MISTRAL_BASE_URL ?? MISTRAL_API_BASE_URL_DEFAULT).trim().replace(/\/+$/, '')
 }
 
+let storedModelProvider: () => string | undefined = () => undefined
+
+/** Main-process wiring injects the persisted model choice from the preferences store. */
+export function setMistralModelProvider(provider: () => string | undefined): void {
+  storedModelProvider = provider
+}
+
 export function getMistralNotesModel(): string {
-  return process.env.AUTODOC_MISTRAL_MODEL ?? MISTRAL_NOTES_MODEL_DEFAULT
+  return storedModelProvider() ?? process.env.AUTODOC_MISTRAL_MODEL ?? MISTRAL_NOTES_MODEL_DEFAULT
 }
 
 export function getMistralEmbeddingModel(): string {

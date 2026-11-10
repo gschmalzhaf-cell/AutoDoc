@@ -478,5 +478,7 @@
   "ui.mistralConnectedBody": "AutoDoc este conectat la API-ul Mistral. Notele și Ask AI rulează pe Mistral; transcrierea rămâne pe acest dispozitiv.",
   "ui.mistralKeyRejected": "Cheia API a fost respinsă. Verifică cheia și încearcă din nou.",
   "ui.useLocalModels": "Folosește modelele locale",
-  "settings.mistralApi": "API-ul Mistral"
+  "settings.mistralApi": "API-ul Mistral",
+  "ui.mistralChangeApiKey": "Schimbă cheia API",
+  "ui.mistralModel": "Model de chat"
 }
