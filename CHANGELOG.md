@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] — 2026-11-10
+
+### Added
+
+- AutoDoc can run its notes and Ask AI on the [Mistral API](https://mistral.ai)
+  instead of the managed local Ollama runtime. Set `MISTRAL_API_KEY` to switch;
+  `AUTODOC_MISTRAL_MODEL`, `AUTODOC_MISTRAL_EMBEDDING_MODEL`, and
+  `MISTRAL_BASE_URL` control the models and endpoint, and
+  `AUTODOC_LLM_PROVIDER=ollama` restores the local runtime. Meeting audio
+  still transcribes on-device; see `docs/MISTRAL.md` for details.
+
+
 ## [1.3.3] — 2026-10-30
 
 ### Added
