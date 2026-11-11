@@ -483,5 +483,8 @@
   "ui.mistralModel": "Modelo de chat",
   "ui.mistralCustomModel": "Otro modelo…",
   "ui.mistralAvailableModels": "{count} modelos disponibles en Mistral",
-  "ui.mistralUnavailable": "No se pudo conectar con Mistral. Comprueba tu conexión a internet e inténtalo de nuevo."
+  "ui.mistralUnavailable": "No se pudo conectar con Mistral. Comprueba tu conexión a internet e inténtalo de nuevo.",
+  "settings.launchAtLogin": "Iniciar al iniciar sesión",
+  "settings.launchAtLoginDescription": "Inicie AutoDoc automáticamente cuando inicie sesión en su equipo.",
+  "settings.launchAtLoginAria": "Activar o desactivar el inicio de AutoDoc al iniciar sesión"
 }

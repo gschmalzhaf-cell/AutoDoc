@@ -483,5 +483,8 @@
   "ui.mistralModel": "Model de chat",
   "ui.mistralCustomModel": "Alt model…",
   "ui.mistralAvailableModels": "{count} modele disponibile de la Mistral",
-  "ui.mistralUnavailable": "Mistral nu a putut fi contactat. Verificați conexiunea la internet și încercați din nou."
+  "ui.mistralUnavailable": "Mistral nu a putut fi contactat. Verificați conexiunea la internet și încercați din nou.",
+  "settings.launchAtLogin": "Pornire la autentificare",
+  "settings.launchAtLoginDescription": "Porniți AutoDoc automat când vă autentificați la computer.",
+  "settings.launchAtLoginAria": "Comutați pornirea automată a AutoDoc la autentificare"
 }

@@ -483,5 +483,8 @@
   "ui.mistralModel": "Μοντέλο συνομιλίας",
   "ui.mistralCustomModel": "Άλλο μοντέλο…",
   "ui.mistralAvailableModels": "{count} μοντέλα διαθέσιμα από το Mistral",
-  "ui.mistralUnavailable": "Το Mistral δεν ήταν προσβάσιμο. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά."
+  "ui.mistralUnavailable": "Το Mistral δεν ήταν προσβάσιμο. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά.",
+  "settings.launchAtLogin": "Εκκίνηση κατά τη σύνδεση",
+  "settings.launchAtLoginDescription": "Ξεκινήστε το AutoDoc αυτόματα όταν συνδέεστε στον υπολογιστή σας.",
+  "settings.launchAtLoginAria": "Εναλλαγή αυτόματης εκκίνησης του AutoDoc κατά τη σύνδεση"
 }

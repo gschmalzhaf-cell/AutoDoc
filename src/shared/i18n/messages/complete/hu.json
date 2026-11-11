@@ -483,5 +483,8 @@
   "ui.mistralModel": "Csevegőmodell",
   "ui.mistralCustomModel": "Egyéb modell…",
   "ui.mistralAvailableModels": "{count} modell érhető el a Mistralon",
-  "ui.mistralUnavailable": "A Mistral nem érhető el. Ellenőrizze az internetkapcsolatot, és próbálja újra."
+  "ui.mistralUnavailable": "A Mistral nem érhető el. Ellenőrizze az internetkapcsolatot, és próbálja újra.",
+  "settings.launchAtLogin": "Indítás bejelentkezéskor",
+  "settings.launchAtLoginDescription": "Az AutoDoc automatikusan elindul, amikor bejelentkezik a számítógépére.",
+  "settings.launchAtLoginAria": "Az AutoDoc bejelentkezéskori automatikus indításának be/ki kapcsolása"
 }

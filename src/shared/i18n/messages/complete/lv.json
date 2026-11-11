@@ -483,5 +483,8 @@
   "ui.mistralModel": "Tērzēšanas modelis",
   "ui.mistralCustomModel": "Cits modelis…",
   "ui.mistralAvailableModels": "No Mistral pieejami {count} modeļi",
-  "ui.mistralUnavailable": "Mistral nav sasniedzams. Pārbaudiet interneta savienojumu un mēģiniet vēlreiz."
+  "ui.mistralUnavailable": "Mistral nav sasniedzams. Pārbaudiet interneta savienojumu un mēģiniet vēlreiz.",
+  "settings.launchAtLogin": "Palaist pieteikšanās laikā",
+  "settings.launchAtLoginDescription": "Palaidiet AutoDoc automātiski, kad pierakstāties datorā.",
+  "settings.launchAtLoginAria": "Pārslēgt AutoDoc automātisku palaišanu pieteikšanās laikā"
 }

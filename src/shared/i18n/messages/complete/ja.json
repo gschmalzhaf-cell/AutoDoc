@@ -483,5 +483,8 @@
   "ui.mistralModel": "チャットモデル",
   "ui.mistralCustomModel": "その他のモデル…",
   "ui.mistralAvailableModels": "Mistralから{count}個のモデルが利用可能",
-  "ui.mistralUnavailable": "Mistralに接続できませんでした。インターネット接続を確認して、もう一度お試しください。"
+  "ui.mistralUnavailable": "Mistralに接続できませんでした。インターネット接続を確認して、もう一度お試しください。",
+  "settings.launchAtLogin": "ログイン時に起動",
+  "settings.launchAtLoginDescription": "コンピューターへのサインイン時にAutoDocを自動的に起動します。",
+  "settings.launchAtLoginAria": "ログイン時のAutoDoc起動を切り替える"
 }

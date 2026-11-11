@@ -483,5 +483,8 @@
   "ui.mistralModel": "채팅 모델",
   "ui.mistralCustomModel": "다른 모델…",
   "ui.mistralAvailableModels": "Mistral에서 {count}개의 모델 사용 가능",
-  "ui.mistralUnavailable": "Mistral에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요."
+  "ui.mistralUnavailable": "Mistral에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
+  "settings.launchAtLogin": "로그인 시 시작",
+  "settings.launchAtLoginDescription": "컴퓨터에 로그인할 때 AutoDoc를 자동으로 시작합니다.",
+  "settings.launchAtLoginAria": "로그인 시 AutoDoc 자동 시작 전환"
 }

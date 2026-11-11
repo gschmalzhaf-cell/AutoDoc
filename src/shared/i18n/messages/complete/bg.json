@@ -483,5 +483,8 @@
   "ui.mistralModel": "Чат модел",
   "ui.mistralCustomModel": "Друг модел…",
   "ui.mistralAvailableModels": "{count} модела са налични от Mistral",
-  "ui.mistralUnavailable": "Mistral е недостъпен. Проверете интернет връзката си и опитайте отново."
+  "ui.mistralUnavailable": "Mistral е недостъпен. Проверете интернет връзката си и опитайте отново.",
+  "settings.launchAtLogin": "Стартиране при влизане",
+  "settings.launchAtLoginDescription": "Стартирайте AutoDoc автоматично, когато влезете в компютъра си.",
+  "settings.launchAtLoginAria": "Превключване на автоматичното стартиране на AutoDoc при влизане"
 }

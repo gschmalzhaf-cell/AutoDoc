@@ -483,5 +483,8 @@
   "ui.mistralModel": "Vestlusmall",
   "ui.mistralCustomModel": "Muu mudel…",
   "ui.mistralAvailableModels": "Mistralilt on saadaval {count} mudelit",
-  "ui.mistralUnavailable": "Mistraliga ei õnnestunud ühenduda. Kontrollige internetiühendust ja proovige uuesti."
+  "ui.mistralUnavailable": "Mistraliga ei õnnestunud ühenduda. Kontrollige internetiühendust ja proovige uuesti.",
+  "settings.launchAtLogin": "Käivita sisselogimisel",
+  "settings.launchAtLoginDescription": "Käivitage AutoDoc automaatselt, kui logite arvutisse sisse.",
+  "settings.launchAtLoginAria": "Lülitage AutoDoci automaatne käivitamine sisselogimisel sisse/välja"
 }

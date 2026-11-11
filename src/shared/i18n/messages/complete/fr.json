@@ -483,5 +483,8 @@
   "ui.mistralModel": "Modèle de chat",
   "ui.mistralCustomModel": "Autre modèle…",
   "ui.mistralAvailableModels": "{count} modèles(s) disponible(s) via Mistral",
-  "ui.mistralUnavailable": "Mistral est injoignable. Vérifiez votre connexion Internet et réessayez."
+  "ui.mistralUnavailable": "Mistral est injoignable. Vérifiez votre connexion Internet et réessayez.",
+  "settings.launchAtLogin": "Lancer à la connexion",
+  "settings.launchAtLoginDescription": "Démarrez AutoDoc automatiquement lorsque vous vous connectez à votre ordinateur.",
+  "settings.launchAtLoginAria": "Activer/désactiver le lancement d’AutoDoc à la connexion"
 }

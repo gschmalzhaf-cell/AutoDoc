@@ -483,5 +483,8 @@
   "ui.mistralModel": "Model czatu",
   "ui.mistralCustomModel": "Inny model…",
   "ui.mistralAvailableModels": "Dostępne modele od Mistral: {count}",
-  "ui.mistralUnavailable": "Nie można połączyć się z Mistral. Sprawdź połączenie internetowe i spróbuj ponownie."
+  "ui.mistralUnavailable": "Nie można połączyć się z Mistral. Sprawdź połączenie internetowe i spróbuj ponownie.",
+  "settings.launchAtLogin": "Uruchamianie przy logowaniu",
+  "settings.launchAtLoginDescription": "Uruchamiaj AutoDoc automatycznie po zalogowaniu na komputerze.",
+  "settings.launchAtLoginAria": "Przełącz automatyczne uruchamianie AutoDoc przy logowaniu"
 }

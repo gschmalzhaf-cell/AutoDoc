@@ -483,5 +483,8 @@
   "ui.mistralModel": "Keskustelumalli",
   "ui.mistralCustomModel": "Muu malli…",
   "ui.mistralAvailableModels": "Mistralilta saatavilla {count} mallia",
-  "ui.mistralUnavailable": "Mistraliin ei saatu yhteyttä. Tarkista internetyhteys ja yritä uudelleen."
+  "ui.mistralUnavailable": "Mistraliin ei saatu yhteyttä. Tarkista internetyhteys ja yritä uudelleen.",
+  "settings.launchAtLogin": "Käynnistä kirjautuessa",
+  "settings.launchAtLoginDescription": "Käynnistä AutoDoc automaattisesti, kun kirjaudut tietokoneeseen.",
+  "settings.launchAtLoginAria": "Ota AutoDocin automaattinen käynnistys kirjautuessa käyttöön tai pois käytöstä"
 }

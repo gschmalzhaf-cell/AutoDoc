@@ -289,3 +289,60 @@ describe('Settings Mistral API section', () => {
     expect(screen.getByText(/The API key was rejected./i)).toBeInTheDocument()
   })
 })
+
+describe('Settings launch-at-login toggle', () => {
+  it('reflects the stored preference and toggles it', async () => {
+    let launchAtLogin = true
+    vi.mocked(window.electronAPI.invoke).mockImplementation(
+      (channel: string, enabled?: unknown) => {
+        if (channel === 'prefs:get-launch-at-login') {
+          return Promise.resolve(launchAtLogin)
+        }
+        if (channel === 'prefs:set-launch-at-login') {
+          launchAtLogin = Boolean(enabled)
+          return Promise.resolve()
+        }
+        if (channel === 'mistral:get-status') {
+          return Promise.resolve({
+            enabled: false,
+            keyStored: false,
+            keyFromEnv: false,
+            model: 'mistral-small-latest'
+          })
+        }
+        if (channel === 'app:get-runtime-info') {
+          return Promise.resolve({ platform: 'win32', ollamaModel: 'qwen3:4b-instruct' })
+        }
+        if (channel === 'updater:get-status') {
+          return Promise.resolve({ state: 'idle' })
+        }
+        if (channel === 'app:get-version') {
+          return Promise.resolve('1.5.5')
+        }
+        if (channel === 'calendar:get-accounts') {
+          return Promise.resolve([])
+        }
+        if (channel === 'calendar:get-events') {
+          return Promise.resolve([])
+        }
+        return Promise.resolve()
+      }
+    )
+
+    await act(async () => {
+      render(<Settings />)
+      await Promise.resolve()
+    })
+
+    const toggle = screen.getByRole('button', { name: 'Toggle launching AutoDoc at login' })
+    expect(toggle).toHaveAttribute('aria-pressed', 'true')
+
+    await act(async () => {
+      toggle.click()
+      await Promise.resolve()
+    })
+
+    expect(window.electronAPI.invoke).toHaveBeenCalledWith('prefs:set-launch-at-login', false)
+    expect(toggle).toHaveAttribute('aria-pressed', 'false')
+  })
+})

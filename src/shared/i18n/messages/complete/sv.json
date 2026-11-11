@@ -483,5 +483,8 @@
   "ui.mistralModel": "Chattmodell",
   "ui.mistralCustomModel": "Annan modell…",
   "ui.mistralAvailableModels": "{count} modeller tillgängliga från Mistral",
-  "ui.mistralUnavailable": "Mistral kunde inte nås. Kontrollera din internetanslutning och försök igen."
+  "ui.mistralUnavailable": "Mistral kunde inte nås. Kontrollera din internetanslutning och försök igen.",
+  "settings.launchAtLogin": "Starta vid inloggning",
+  "settings.launchAtLoginDescription": "Starta AutoDoc automatiskt när du loggar in på datorn.",
+  "settings.launchAtLoginAria": "Växla automatisk start av AutoDoc vid inloggning"
 }

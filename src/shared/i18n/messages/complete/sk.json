@@ -483,5 +483,8 @@
   "ui.mistralModel": "Chatovací model",
   "ui.mistralCustomModel": "Iný model…",
   "ui.mistralAvailableModels": "Od Mistralu je k dispozícii {count} modelov",
-  "ui.mistralUnavailable": "Mistral sa nepodarilo spojiť. Skontrolujte pripojenie k internetu a skúste to znova."
+  "ui.mistralUnavailable": "Mistral sa nepodarilo spojiť. Skontrolujte pripojenie k internetu a skúste to znova.",
+  "settings.launchAtLogin": "Spustiť pri prihlásení",
+  "settings.launchAtLoginDescription": "Automaticky spustite AutoDoc, keď sa prihlásite do počítača.",
+  "settings.launchAtLoginAria": "Prepnúť automatické spustenie AutoDocu pri prihlásení"
 }

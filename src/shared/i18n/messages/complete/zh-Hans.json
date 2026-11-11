@@ -483,5 +483,8 @@
   "ui.mistralModel": "聊天模型",
   "ui.mistralCustomModel": "其他模型…",
   "ui.mistralAvailableModels": "Mistral 提供 {count} 个可用模型",
-  "ui.mistralUnavailable": "无法连接到 Mistral。请检查您的互联网连接，然后重试。"
+  "ui.mistralUnavailable": "无法连接到 Mistral。请检查您的互联网连接，然后重试。",
+  "settings.launchAtLogin": "登录时启动",
+  "settings.launchAtLoginDescription": "登录计算机时自动启动 AutoDoc。",
+  "settings.launchAtLoginAria": "切换登录时自动启动 AutoDoc"
 }

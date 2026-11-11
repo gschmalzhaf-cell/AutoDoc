@@ -483,5 +483,8 @@
   "ui.mistralModel": "Pokalbių modelis",
   "ui.mistralCustomModel": "Kitas modelis…",
   "ui.mistralAvailableModels": "Iš Mistral prieinama {count} modelių",
-  "ui.mistralUnavailable": "Nepavyko pasiekti Mistral. Patikrinkite interneto ryšį ir bandykite dar kartą."
+  "ui.mistralUnavailable": "Nepavyko pasiekti Mistral. Patikrinkite interneto ryšį ir bandykite dar kartą.",
+  "settings.launchAtLogin": "Paleisti prisijungus",
+  "settings.launchAtLoginDescription": "Paleiskite AutoDoc automatiškai, kai prisijungiate prie kompiuterio.",
+  "settings.launchAtLoginAria": "Perjungti automatinį AutoDoc paleidimą prisijungus"
 }

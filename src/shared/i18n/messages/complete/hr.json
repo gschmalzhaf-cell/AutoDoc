@@ -483,5 +483,8 @@
   "ui.mistralModel": "Model razgovora",
   "ui.mistralCustomModel": "Drugi model…",
   "ui.mistralAvailableModels": "Dostupno {count} modela putem Mistrala",
-  "ui.mistralUnavailable": "Mistral nije dostupan. Provjerite internetsku vezu i pokušajte ponovno."
+  "ui.mistralUnavailable": "Mistral nije dostupan. Provjerite internetsku vezu i pokušajte ponovno.",
+  "settings.launchAtLogin": "Pokreni pri prijavi",
+  "settings.launchAtLoginDescription": "Automatski pokrenite AutoDoc kad se prijavite na svoje računalo.",
+  "settings.launchAtLoginAria": "Uključite/isključite automatsko pokretanje AutoDoca pri prijavi"
 }

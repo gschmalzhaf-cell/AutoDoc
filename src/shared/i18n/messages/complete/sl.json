@@ -483,5 +483,8 @@
   "ui.mistralModel": "Model klepeta",
   "ui.mistralCustomModel": "Drugi model…",
   "ui.mistralAvailableModels": "Na voljo {count} modelov prek Mistrala",
-  "ui.mistralUnavailable": "Mistral ni dosegljiv. Preverite internetno povezavo in poskusite znova."
+  "ui.mistralUnavailable": "Mistral ni dosegljiv. Preverite internetno povezavo in poskusite znova.",
+  "settings.launchAtLogin": "Zagon ob prijavi",
+  "settings.launchAtLoginDescription": "Samodejno zaženite AutoDoc, ko se prijavite v računalnik.",
+  "settings.launchAtLoginAria": "Preklopi samodejni zagon AutoDoca ob prijavi"
 }

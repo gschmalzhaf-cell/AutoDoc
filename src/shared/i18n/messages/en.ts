@@ -40,6 +40,10 @@ export const en = {
   'settings.microsoftAccount': 'Microsoft account',
   'settings.disconnect': 'Disconnect',
   'settings.mistralApi': 'Mistral API',
+  'settings.launchAtLogin': 'Launch at login',
+  'settings.launchAtLoginDescription':
+    'Start AutoDoc automatically when you sign in to your computer.',
+  'settings.launchAtLoginAria': 'Toggle launching AutoDoc at login',
   'settings.addGoogle': 'Add Google Calendar',
   'settings.addMicrosoft': 'Add Microsoft Outlook',
   'settings.connecting': 'Connecting...',

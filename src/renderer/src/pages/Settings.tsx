@@ -144,6 +144,7 @@ export function Settings() {
   const [analyticsConsent, setAnalyticsConsentState] = useState<boolean | null>(null)
   const [diagnosticLogUploadConsent, setDiagnosticLogUploadConsentState] = useState(false)
   const [videoWatermarkVisible, setVideoWatermarkVisibleState] = useState(true)
+  const [launchAtLogin, setLaunchAtLoginState] = useState(true)
   const [meetingLanguage, setMeetingLanguageState] =
     useState<MeetingLanguageCode>(DEFAULT_MEETING_LANGUAGE)
   const [isSavingMeetingLanguage, setIsSavingMeetingLanguage] = useState(false)
@@ -275,6 +276,7 @@ export function Settings() {
     window.electronAPI.invoke('app:get-runtime-info').then(setRuntimeInfo)
     void refreshStorageInfo()
     window.electronAPI.invoke('prefs:get-analytics-consent').then(setAnalyticsConsentState)
+    window.electronAPI.invoke('prefs:get-launch-at-login').then(setLaunchAtLoginState)
     window.electronAPI
       .invoke('prefs:get-diagnostic-log-upload-consent')
       .then(setDiagnosticLogUploadConsentState)
@@ -470,6 +472,17 @@ export function Settings() {
     })
     await window.electronAPI.invoke('prefs:set-video-watermark-visible', nextValue)
     setVideoWatermarkVisibleState(nextValue)
+  }
+
+  const handleToggleLaunchAtLogin = async (): Promise<void> => {
+    const nextValue = !launchAtLogin
+    recordDiagnosticAction({
+      category: 'settings',
+      action: 'launch_at_login_toggled',
+      details: { enabled: nextValue }
+    })
+    await window.electronAPI.invoke('prefs:set-launch-at-login', nextValue)
+    setLaunchAtLoginState(nextValue)
   }
 
   const handleSetMeetingLanguage = async (language: MeetingLanguageCode): Promise<void> => {
@@ -874,6 +887,29 @@ export function Settings() {
               >
                 <span
                   className={`block h-5 w-5 rounded-full transition-transform ${videoWatermarkVisible ? 'translate-x-5 bg-control-thumb-on' : 'translate-x-0 bg-control-thumb'}`}
+                />
+              </button>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-[13px] font-semibold text-ink mb-2">
+              {t('settings.launchAtLogin')}
+            </h3>
+            <div className="i18n-setting-row rounded-xl border border-border-subtle bg-bg-accent px-4 py-3">
+              <div className="i18n-setting-copy">
+                <p className="text-[12px] text-ink-muted text-pretty">
+                  {t('settings.launchAtLoginDescription')}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => void handleToggleLaunchAtLogin()}
+                className={`i18n-setting-control relative inline-flex h-7 w-12 shrink-0 items-center rounded-full p-1 transition-colors ${launchAtLogin ? 'bg-sage' : 'bg-control-track-off'}`}
+                aria-pressed={launchAtLogin}
+                aria-label={t('settings.launchAtLoginAria')}
+              >
+                <span
+                  className={`block h-5 w-5 rounded-full transition-transform ${launchAtLogin ? 'translate-x-5 bg-control-thumb-on' : 'translate-x-0 bg-control-thumb'}`}
                 />
               </button>
             </div>

@@ -483,5 +483,8 @@
   "ui.mistralModel": "Modello di chat",
   "ui.mistralCustomModel": "Altro modello…",
   "ui.mistralAvailableModels": "{count} modelli disponibili su Mistral",
-  "ui.mistralUnavailable": "Impossibile raggiungere Mistral. Controlla la connessione a Internet e riprova."
+  "ui.mistralUnavailable": "Impossibile raggiungere Mistral. Controlla la connessione a Internet e riprova.",
+  "settings.launchAtLogin": "Avvia all’accesso",
+  "settings.launchAtLoginDescription": "Avvia AutoDoc automaticamente quando accedi al computer.",
+  "settings.launchAtLoginAria": "Attiva/disattiva l’avvio automatico di AutoDoc all’accesso"
 }
