@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Mistral nav sasniedzams. Pārbaudiet interneta savienojumu un mēģiniet vēlreiz.",
   "settings.launchAtLogin": "Palaist pieteikšanās laikā",
   "settings.launchAtLoginDescription": "Palaidiet AutoDoc automātiski, kad pierakstāties datorā.",
-  "settings.launchAtLoginAria": "Pārslēgt AutoDoc automātisku palaišanu pieteikšanās laikā"
+  "settings.launchAtLoginAria": "Pārslēgt AutoDoc automātisku palaišanu pieteikšanās laikā",
+  "ui.notesStyle": "Protokola tips",
+  "ui.notesStyle.full": "Pilnas piezīmes",
+  "ui.notesStyle.summary": "Īss kopsavilkums",
+  "ui.notesStyle.actions": "Darbību saraksts",
+  "ui.notesStyle.decisions": "Lēmumu reģistrs",
+  "ui.notesStyle.minutes": "Hronoloģisks protokols",
+  "ui.notesStyleEmpty": "Šim protokola tipam nav ierakstu."
 }

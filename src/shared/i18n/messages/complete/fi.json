@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Mistraliin ei saatu yhteyttä. Tarkista internetyhteys ja yritä uudelleen.",
   "settings.launchAtLogin": "Käynnistä kirjautuessa",
   "settings.launchAtLoginDescription": "Käynnistä AutoDoc automaattisesti, kun kirjaudut tietokoneeseen.",
-  "settings.launchAtLoginAria": "Ota AutoDocin automaattinen käynnistys kirjautuessa käyttöön tai pois käytöstä"
+  "settings.launchAtLoginAria": "Ota AutoDocin automaattinen käynnistys kirjautuessa käyttöön tai pois käytöstä",
+  "ui.notesStyle": "Muistio tyyppi",
+  "ui.notesStyle.full": "Täydelliset muistiinpanot",
+  "ui.notesStyle.summary": "Lyhyt yhteenveto",
+  "ui.notesStyle.actions": "Toimenpidelista",
+  "ui.notesStyle.decisions": "Päätösloki",
+  "ui.notesStyle.minutes": "Kronologinen muistio",
+  "ui.notesStyleEmpty": "Tämä muistio tyyppi ei sisällä merkintöjä."
 }

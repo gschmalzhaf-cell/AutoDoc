@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Mistral недоступен. Проверьте подключение к интернету и попробуйте ещё раз.",
   "settings.launchAtLogin": "Запуск при входе в систему",
   "settings.launchAtLoginDescription": "Запускать AutoDoc автоматически при входе в систему.",
-  "settings.launchAtLoginAria": "Переключить автозапуск AutoDoc при входе в систему"
+  "settings.launchAtLoginAria": "Переключить автозапуск AutoDoc при входе в систему",
+  "ui.notesStyle": "Тип протокола",
+  "ui.notesStyle.full": "Полные заметки",
+  "ui.notesStyle.summary": "Краткое резюме",
+  "ui.notesStyle.actions": "Список задач",
+  "ui.notesStyle.decisions": "Реестр решений",
+  "ui.notesStyle.minutes": "Хронологический протокол",
+  "ui.notesStyleEmpty": "В этом типе протокола нет записей."
 }

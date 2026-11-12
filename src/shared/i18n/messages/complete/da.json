@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Mistral kunne ikke nås. Tjek din internetforbindelse, og prøv igen.",
   "settings.launchAtLogin": "Start ved login",
   "settings.launchAtLoginDescription": "Start AutoDoc automatisk, når du logger på din computer.",
-  "settings.launchAtLoginAria": "Slå automatisk start af AutoDoc ved login til/fra"
+  "settings.launchAtLoginAria": "Slå automatisk start af AutoDoc ved login til/fra",
+  "ui.notesStyle": "Referattype",
+  "ui.notesStyle.full": "Fulde noter",
+  "ui.notesStyle.summary": "Kort referat",
+  "ui.notesStyle.actions": "Handlingsliste",
+  "ui.notesStyle.decisions": "Beslutningslog",
+  "ui.notesStyle.minutes": "Kronologisk referat",
+  "ui.notesStyleEmpty": "Denne referattype har ingen poster."
 }

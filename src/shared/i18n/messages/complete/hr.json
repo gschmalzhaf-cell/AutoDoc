@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Mistral nije dostupan. Provjerite internetsku vezu i pokušajte ponovno.",
   "settings.launchAtLogin": "Pokreni pri prijavi",
   "settings.launchAtLoginDescription": "Automatski pokrenite AutoDoc kad se prijavite na svoje računalo.",
-  "settings.launchAtLoginAria": "Uključite/isključite automatsko pokretanje AutoDoca pri prijavi"
+  "settings.launchAtLoginAria": "Uključite/isključite automatsko pokretanje AutoDoca pri prijavi",
+  "ui.notesStyle": "Vrsta zapisnika",
+  "ui.notesStyle.full": "Potpune bilješke",
+  "ui.notesStyle.summary": "Kratki sažetak",
+  "ui.notesStyle.actions": "Popis radnji",
+  "ui.notesStyle.decisions": "Evidencija odluka",
+  "ui.notesStyle.minutes": "Kronološki zapisnik",
+  "ui.notesStyleEmpty": "Ova vrsta zapisnika nema stavki."
 }

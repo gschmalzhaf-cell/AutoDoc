@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Nie można połączyć się z Mistral. Sprawdź połączenie internetowe i spróbuj ponownie.",
   "settings.launchAtLogin": "Uruchamianie przy logowaniu",
   "settings.launchAtLoginDescription": "Uruchamiaj AutoDoc automatycznie po zalogowaniu na komputerze.",
-  "settings.launchAtLoginAria": "Przełącz automatyczne uruchamianie AutoDoc przy logowaniu"
+  "settings.launchAtLoginAria": "Przełącz automatyczne uruchamianie AutoDoc przy logowaniu",
+  "ui.notesStyle": "Typ protokołu",
+  "ui.notesStyle.full": "Pełne notatki",
+  "ui.notesStyle.summary": "Krótkie podsumowanie",
+  "ui.notesStyle.actions": "Lista zadań",
+  "ui.notesStyle.decisions": "Rejestr decyzji",
+  "ui.notesStyle.minutes": "Protokół chronologiczny",
+  "ui.notesStyleEmpty": "Ten typ protokołu nie ma wpisów."
 }

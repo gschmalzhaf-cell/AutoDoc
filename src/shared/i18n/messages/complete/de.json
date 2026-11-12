@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Mistral ist nicht erreichbar. Prüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
   "settings.launchAtLogin": "Beim Anmelden starten",
   "settings.launchAtLoginDescription": "AutoDoc automatisch starten, wenn Sie sich an Ihrem Computer anmelden.",
-  "settings.launchAtLoginAria": "Autostart von AutoDoc bei der Anmeldung umschalten"
+  "settings.launchAtLoginAria": "Autostart von AutoDoc bei der Anmeldung umschalten",
+  "ui.notesStyle": "Protokolltyp",
+  "ui.notesStyle.full": "Vollständige Notizen",
+  "ui.notesStyle.summary": "Kurzprotokoll",
+  "ui.notesStyle.actions": "Aktionsliste",
+  "ui.notesStyle.decisions": "Entscheidungsprotokoll",
+  "ui.notesStyle.minutes": "Chronologisches Protokoll",
+  "ui.notesStyleEmpty": "Dieser Protokolltyp enthält keine Einträge."
 }

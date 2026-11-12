@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Mistraliga ei õnnestunud ühenduda. Kontrollige internetiühendust ja proovige uuesti.",
   "settings.launchAtLogin": "Käivita sisselogimisel",
   "settings.launchAtLoginDescription": "Käivitage AutoDoc automaatselt, kui logite arvutisse sisse.",
-  "settings.launchAtLoginAria": "Lülitage AutoDoci automaatne käivitamine sisselogimisel sisse/välja"
+  "settings.launchAtLoginAria": "Lülitage AutoDoci automaatne käivitamine sisselogimisel sisse/välja",
+  "ui.notesStyle": "Protokolli tüüp",
+  "ui.notesStyle.full": "Täielikud märkmed",
+  "ui.notesStyle.summary": "Lühikokkuvõte",
+  "ui.notesStyle.actions": "Tegevuste loend",
+  "ui.notesStyle.decisions": "Otsuste register",
+  "ui.notesStyle.minutes": "Kronoloogiline protokoll",
+  "ui.notesStyleEmpty": "Selles protokolli tüübis pole kirjeid."
 }

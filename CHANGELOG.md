@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.0] — 2026-11-10
+
+### Added
+
+- Meeting notes can now be displayed as different protocol types. A selector
+  above the notes offers:
+  - **Full notes** — the complete categorized document (unchanged default),
+  - **Brief summary** — overview plus decisions and next steps,
+  - **Action list** — next steps as a checklist with owners and deadlines,
+  - **Decision log** — decisions only,
+  - **Chronological minutes** — every note sorted by its position in the
+    transcript, with clickable timestamps.
+  The choice is remembered per meeting. Styles are deterministic views of the
+  same generated notes; editing stays available in the full view.
+
+
 ## [1.5.5] — 2026-11-10
 
 ### Added

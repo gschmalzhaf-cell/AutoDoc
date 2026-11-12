@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Impossibile raggiungere Mistral. Controlla la connessione a Internet e riprova.",
   "settings.launchAtLogin": "Avvia all’accesso",
   "settings.launchAtLoginDescription": "Avvia AutoDoc automaticamente quando accedi al computer.",
-  "settings.launchAtLoginAria": "Attiva/disattiva l’avvio automatico di AutoDoc all’accesso"
+  "settings.launchAtLoginAria": "Attiva/disattiva l’avvio automatico di AutoDoc all’accesso",
+  "ui.notesStyle": "Tipo di verbale",
+  "ui.notesStyle.full": "Note complete",
+  "ui.notesStyle.summary": "Riassunto breve",
+  "ui.notesStyle.actions": "Elenco delle azioni",
+  "ui.notesStyle.decisions": "Registro delle decisioni",
+  "ui.notesStyle.minutes": "Verbale cronologico",
+  "ui.notesStyleEmpty": "Questo tipo di verbale non contiene voci."
 }

@@ -28,7 +28,7 @@ import { MemoryFailureCallout } from '../components/MemoryFailureCallout'
 import { DiskFullCallout } from '../components/DiskFullCallout'
 import { CpuFallbackNotice } from '../components/CpuFallbackNotice'
 import { TranscriptView } from '../components/TranscriptView'
-import { NotesV2Document } from '../components/NotesV2Document'
+import { NotesStyleDocument } from '../components/NotesStyleDocument'
 import { useMeetingSpan } from '../hooks/useMeetingSpan'
 import { NotesFeedback } from '../components/NotesFeedback'
 import { feedbackGenerationId } from '../../../shared/notes-feedback'
@@ -1670,7 +1670,7 @@ export function MeetingDetail() {
               )}
             {notesV2 && segmentationStatus === 'complete' && !layoutDegraded ? (
               <>
-                <NotesV2Document
+                <NotesStyleDocument
                   notes={notesV2}
                   title={detail?.title}
                   meetingSpan={meetingSpan}

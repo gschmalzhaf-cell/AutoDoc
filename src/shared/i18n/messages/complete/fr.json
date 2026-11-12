@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Mistral est injoignable. Vérifiez votre connexion Internet et réessayez.",
   "settings.launchAtLogin": "Lancer à la connexion",
   "settings.launchAtLoginDescription": "Démarrez AutoDoc automatiquement lorsque vous vous connectez à votre ordinateur.",
-  "settings.launchAtLoginAria": "Activer/désactiver le lancement d’AutoDoc à la connexion"
+  "settings.launchAtLoginAria": "Activer/désactiver le lancement d’AutoDoc à la connexion",
+  "ui.notesStyle": "Type de compte rendu",
+  "ui.notesStyle.full": "Notes complètes",
+  "ui.notesStyle.summary": "Résumé succinct",
+  "ui.notesStyle.actions": "Liste des actions",
+  "ui.notesStyle.decisions": "Registre des décisions",
+  "ui.notesStyle.minutes": "Compte rendu chronologique",
+  "ui.notesStyleEmpty": "Ce type de compte rendu ne contient aucune entrée."
 }

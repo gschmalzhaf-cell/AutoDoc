@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Το Mistral δεν ήταν προσβάσιμο. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά.",
   "settings.launchAtLogin": "Εκκίνηση κατά τη σύνδεση",
   "settings.launchAtLoginDescription": "Ξεκινήστε το AutoDoc αυτόματα όταν συνδέεστε στον υπολογιστή σας.",
-  "settings.launchAtLoginAria": "Εναλλαγή αυτόματης εκκίνησης του AutoDoc κατά τη σύνδεση"
+  "settings.launchAtLoginAria": "Εναλλαγή αυτόματης εκκίνησης του AutoDoc κατά τη σύνδεση",
+  "ui.notesStyle": "Τύπος πρακτικού",
+  "ui.notesStyle.full": "Πλήρης σημειώσεις",
+  "ui.notesStyle.summary": "Σύντομη περίληψη",
+  "ui.notesStyle.actions": "Λίστα ενεργειών",
+  "ui.notesStyle.decisions": "Μητρώο αποφάσεων",
+  "ui.notesStyle.minutes": "Χρονολογικά πρακτικά",
+  "ui.notesStyleEmpty": "Αυτός ο τύπος πρακτικού δεν έχει καταχωρήσεις."
 }

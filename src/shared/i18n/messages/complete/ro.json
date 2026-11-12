@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Mistral nu a putut fi contactat. Verificați conexiunea la internet și încercați din nou.",
   "settings.launchAtLogin": "Pornire la autentificare",
   "settings.launchAtLoginDescription": "Porniți AutoDoc automat când vă autentificați la computer.",
-  "settings.launchAtLoginAria": "Comutați pornirea automată a AutoDoc la autentificare"
+  "settings.launchAtLoginAria": "Comutați pornirea automată a AutoDoc la autentificare",
+  "ui.notesStyle": "Tip de proces-verbal",
+  "ui.notesStyle.full": "Note complete",
+  "ui.notesStyle.summary": "Rezumat succint",
+  "ui.notesStyle.actions": "Listă de acțiuni",
+  "ui.notesStyle.decisions": "Registrul deciziilor",
+  "ui.notesStyle.minutes": "Proces-verbal cronologic",
+  "ui.notesStyleEmpty": "Acest tip de proces-verbal nu are înregistrări."
 }

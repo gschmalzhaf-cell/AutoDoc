@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "A Mistral nem érhető el. Ellenőrizze az internetkapcsolatot, és próbálja újra.",
   "settings.launchAtLogin": "Indítás bejelentkezéskor",
   "settings.launchAtLoginDescription": "Az AutoDoc automatikusan elindul, amikor bejelentkezik a számítógépére.",
-  "settings.launchAtLoginAria": "Az AutoDoc bejelentkezéskori automatikus indításának be/ki kapcsolása"
+  "settings.launchAtLoginAria": "Az AutoDoc bejelentkezéskori automatikus indításának be/ki kapcsolása",
+  "ui.notesStyle": "Jegyzőkönyv típusa",
+  "ui.notesStyle.full": "Teljes jegyzetek",
+  "ui.notesStyle.summary": "Rövid összefoglaló",
+  "ui.notesStyle.actions": "Teendőlista",
+  "ui.notesStyle.decisions": "Döntésnapló",
+  "ui.notesStyle.minutes": "Kronológiai jegyzőkönyv",
+  "ui.notesStyleEmpty": "Ez a jegyzőkönyvtípus nem tartalmaz bejegyzéseket."
 }

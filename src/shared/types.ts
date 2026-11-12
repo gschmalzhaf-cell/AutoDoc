@@ -77,6 +77,9 @@ export interface CalendarEvent {
   syncedAt: number
 }
 
+/** Presentation styles for the generated meeting protocol. */
+export type NotesStyle = 'full' | 'summary' | 'actions' | 'decisions' | 'minutes'
+
 export interface MeetingSegments {
   decisions: Segment[]
   actionItems: Segment[]

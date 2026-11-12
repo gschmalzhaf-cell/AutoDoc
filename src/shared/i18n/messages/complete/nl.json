@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Mistral is onbereikbaar. Controleer uw internetverbinding en probeer het opnieuw.",
   "settings.launchAtLogin": "Starten bij inloggen",
   "settings.launchAtLoginDescription": "Start AutoDoc automatisch wanneer u zich aanmeldt op uw computer.",
-  "settings.launchAtLoginAria": "Automatisch starten van AutoDoc bij inloggen in-/uitschakelen"
+  "settings.launchAtLoginAria": "Automatisch starten van AutoDoc bij inloggen in-/uitschakelen",
+  "ui.notesStyle": "Notulen type",
+  "ui.notesStyle.full": "Volledige notities",
+  "ui.notesStyle.summary": "Beknopte samenvatting",
+  "ui.notesStyle.actions": "Actielijst",
+  "ui.notesStyle.decisions": "Besluitenlog",
+  "ui.notesStyle.minutes": "Chronologische notulen",
+  "ui.notesStyleEmpty": "Dit notulen type bevat geen items."
 }

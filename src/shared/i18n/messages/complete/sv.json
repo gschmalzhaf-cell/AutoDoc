@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Mistral kunde inte nås. Kontrollera din internetanslutning och försök igen.",
   "settings.launchAtLogin": "Starta vid inloggning",
   "settings.launchAtLoginDescription": "Starta AutoDoc automatiskt när du loggar in på datorn.",
-  "settings.launchAtLoginAria": "Växla automatisk start av AutoDoc vid inloggning"
+  "settings.launchAtLoginAria": "Växla automatisk start av AutoDoc vid inloggning",
+  "ui.notesStyle": "Protokolltyp",
+  "ui.notesStyle.full": "Fullständiga anteckningar",
+  "ui.notesStyle.summary": "Kort sammanfattning",
+  "ui.notesStyle.actions": "Åtgärdslista",
+  "ui.notesStyle.decisions": "Beslutslogg",
+  "ui.notesStyle.minutes": "Kronologiskt protokoll",
+  "ui.notesStyleEmpty": "Denna protokolltyp har inga poster."
 }

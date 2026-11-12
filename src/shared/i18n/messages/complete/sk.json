@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Mistral sa nepodarilo spojiť. Skontrolujte pripojenie k internetu a skúste to znova.",
   "settings.launchAtLogin": "Spustiť pri prihlásení",
   "settings.launchAtLoginDescription": "Automaticky spustite AutoDoc, keď sa prihlásite do počítača.",
-  "settings.launchAtLoginAria": "Prepnúť automatické spustenie AutoDocu pri prihlásení"
+  "settings.launchAtLoginAria": "Prepnúť automatické spustenie AutoDocu pri prihlásení",
+  "ui.notesStyle": "Typ zápisnice",
+  "ui.notesStyle.full": "Úplné poznámky",
+  "ui.notesStyle.summary": "Stručné zhrnutie",
+  "ui.notesStyle.actions": "Zoznam akcií",
+  "ui.notesStyle.decisions": "Register rozhodnutí",
+  "ui.notesStyle.minutes": "Chronologická zápisnica",
+  "ui.notesStyleEmpty": "Tento typ zápisnice neobsahuje žiadne položky."
 }

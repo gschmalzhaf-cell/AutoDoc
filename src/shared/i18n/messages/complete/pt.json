@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Não foi possível conectar ao Mistral. Verifique sua conexão com a internet e tente novamente.",
   "settings.launchAtLogin": "Iniciar ao entrar",
   "settings.launchAtLoginDescription": "Inicie o AutoDoc automaticamente quando entrar no computador.",
-  "settings.launchAtLoginAria": "Ativar/desativar o início automático do AutoDoc ao entrar"
+  "settings.launchAtLoginAria": "Ativar/desativar o início automático do AutoDoc ao entrar",
+  "ui.notesStyle": "Tipo de ata",
+  "ui.notesStyle.full": "Notas completas",
+  "ui.notesStyle.summary": "Resumo breve",
+  "ui.notesStyle.actions": "Lista de ações",
+  "ui.notesStyle.decisions": "Registro de decisões",
+  "ui.notesStyle.minutes": "Ata cronológica",
+  "ui.notesStyleEmpty": "Este tipo de ata não tem entradas."
 }

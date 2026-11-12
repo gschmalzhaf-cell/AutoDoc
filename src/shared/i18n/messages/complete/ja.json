@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Mistralに接続できませんでした。インターネット接続を確認して、もう一度お試しください。",
   "settings.launchAtLogin": "ログイン時に起動",
   "settings.launchAtLoginDescription": "コンピューターへのサインイン時にAutoDocを自動的に起動します。",
-  "settings.launchAtLoginAria": "ログイン時のAutoDoc起動を切り替える"
+  "settings.launchAtLoginAria": "ログイン時のAutoDoc起動を切り替える",
+  "ui.notesStyle": "プロトコル種類",
+  "ui.notesStyle.full": "完全なノート",
+  "ui.notesStyle.summary": "簡易サマリー",
+  "ui.notesStyle.actions": "アクションリスト",
+  "ui.notesStyle.decisions": "決定記録",
+  "ui.notesStyle.minutes": "時系列議事録",
+  "ui.notesStyleEmpty": "このプロトコル種類には項目がありません。"
 }

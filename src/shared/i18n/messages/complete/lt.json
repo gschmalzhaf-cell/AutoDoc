@@ -486,5 +486,12 @@
   "ui.mistralUnavailable": "Nepavyko pasiekti Mistral. Patikrinkite interneto ryšį ir bandykite dar kartą.",
   "settings.launchAtLogin": "Paleisti prisijungus",
   "settings.launchAtLoginDescription": "Paleiskite AutoDoc automatiškai, kai prisijungiate prie kompiuterio.",
-  "settings.launchAtLoginAria": "Perjungti automatinį AutoDoc paleidimą prisijungus"
+  "settings.launchAtLoginAria": "Perjungti automatinį AutoDoc paleidimą prisijungus",
+  "ui.notesStyle": "Protokolo tipas",
+  "ui.notesStyle.full": "Visos pastabos",
+  "ui.notesStyle.summary": "Trumpa santrauka",
+  "ui.notesStyle.actions": "Veiksmų sąrašas",
+  "ui.notesStyle.decisions": "Sprendimų registras",
+  "ui.notesStyle.minutes": "Chronologinis protokolas",
+  "ui.notesStyleEmpty": "Šio protokolo tipo nėra įrašų."
 }
