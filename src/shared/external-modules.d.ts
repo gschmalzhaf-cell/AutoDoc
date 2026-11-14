@@ -76,7 +76,11 @@ declare module 'electron-updater' {
     allowPrerelease: boolean
     channel: string | null
     on(event: string, listener: (...args: unknown[]) => void): void
-    setFeedURL(options: { provider: string; url: string }): void
+    setFeedURL(
+      options:
+        | { provider: string; url: string }
+        | { provider: 'github'; owner: string; repo: string }
+    ): void
     checkForUpdates(): void
     quitAndInstall(): void
   }

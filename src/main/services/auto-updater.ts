@@ -2,7 +2,7 @@ import { autoUpdater } from 'electron-updater'
 import { BrowserWindow, app } from 'electron'
 import { is } from '@electron-toolkit/utils'
 import { logAutodocFailure } from './autodoc-log'
-import { getConfiguredPublicUpdateFeedUrl } from './distribution-config'
+import { getConfiguredPublicUpdateFeedUrl, isOfficialAutoDocBuild } from './distribution-config'
 import { isDiskFullError } from './disk-full'
 
 export interface UpdateStatus {
@@ -123,22 +123,37 @@ export function getUpdateStatus(): UpdateStatus {
     : currentStatus
 }
 
+/**
+ * This fork distributes its releases on GitHub, so unofficial builds check
+ * the fork's releases for updates instead of the upstream distribution feed.
+ */
+const FORK_UPDATE_FEED = {
+  provider: 'github',
+  owner: 'gschmalzhaf-cell',
+  repo: 'AutoDoc'
+} as const
+
 function configureUpdateFeedOverride(): void {
   const overrideUrl =
     process.env.AUTODOC_UPDATE_FEED_URL?.trim() ||
     (app.getVersion().includes('-') ? null : getConfiguredPublicUpdateFeedUrl())
-  if (!overrideUrl) {
+  if (overrideUrl) {
+    const normalizedUrl = overrideUrl.endsWith('/') ? overrideUrl : `${overrideUrl}/`
+
+    autoUpdater.setFeedURL({
+      provider: 'generic',
+      url: normalizedUrl
+    })
+
+    if (process.env.AUTODOC_TEST_MODE === '1') {
+      console.log(`Auto-updater using smoke feed: ${normalizedUrl}`)
+    }
     return
   }
-  const normalizedUrl = overrideUrl.endsWith('/') ? overrideUrl : `${overrideUrl}/`
 
-  autoUpdater.setFeedURL({
-    provider: 'generic',
-    url: normalizedUrl
-  })
-
-  if (process.env.AUTODOC_TEST_MODE === '1') {
-    console.log(`Auto-updater using smoke feed: ${normalizedUrl}`)
+  // Unofficial (fork) builds update from the fork's own GitHub releases.
+  if (!isOfficialAutoDocBuild()) {
+    autoUpdater.setFeedURL(FORK_UPDATE_FEED)
   }
 }
 

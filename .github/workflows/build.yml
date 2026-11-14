@@ -604,7 +604,7 @@ jobs:
         shell: bash
         run: |
           gh release create "$RELEASE_TAG" --draft --title "AutoDoc ${RELEASE_TAG#v}" --notes "AutoDoc ${RELEASE_TAG#v} build from $RELEASE_TAG." || true
-          gh release upload "$RELEASE_TAG" dist/*-setup.exe --clobber
+          gh release upload "$RELEASE_TAG" dist/*-setup.exe dist/latest.yml --clobber
 
       - name: Upload Windows release assets
         if: env.AUTODOC_SIGNED_RELEASE == 'true' && success()
@@ -613,6 +613,7 @@ jobs:
           name: release-windows-${{ steps.release_meta.outputs.release_tag }}
           path: |
             dist/*-setup.exe
+            dist/latest.yml
             dist/latest.yml
           if-no-files-found: error
           retention-days: 14

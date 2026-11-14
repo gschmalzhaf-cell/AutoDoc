@@ -93,6 +93,6 @@ afterPack: ./scripts/after-pack-mac-privacy.cjs
 npmRebuild: false
 publish:
   provider: github
-  owner: DuetDisplay
+  owner: gschmalzhaf-cell
   repo: AutoDoc
   releaseType: release

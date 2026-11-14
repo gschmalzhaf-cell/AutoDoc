@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.1] — 2026-11-10
+
+### Added
+
+- In-app updates now come from this fork's own GitHub releases. The app checks
+  `gschmalzhaf-cell/AutoDoc` on launch and every 4 hours, downloads a newer
+  release automatically, and asks via the update banner whether to install it
+  now or later. The Settings page still offers a manual check.
+
+### Changed
+
+- Release builds now attach electron-builder's `latest.yml` update manifest to
+  each GitHub release, which the updater requires, and the baked publish target
+  points to this fork instead of the upstream repository.
+
+
 ## [1.6.0] — 2026-11-10
 
 ### Added

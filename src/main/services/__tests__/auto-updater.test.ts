@@ -148,17 +148,23 @@ describe('Auto-updater validity characterization', () => {
     }
   )
 
-  it.each(['unofficial', 'qa', 'disabled'])(
-    'preserves the existing feed for %s builds',
-    (flavor) => {
-      process.env.AUTODOC_PUBLIC_UPDATE_FEED_URL = 'https://updates.example.com/stable/'
-      if (flavor !== 'unofficial') process.env.AUTODOC_OFFICIAL_BUILD = '1'
-      if (flavor === 'qa') vi.stubGlobal('__AUTODOC_QA_BUILD__', true)
-      if (flavor === 'disabled') delete process.env.AUTODOC_PUBLIC_UPDATE_FEED_URL
-      initAutoUpdater()
-      expect(setFeedURL).not.toHaveBeenCalled()
-    }
-  )
+  it.each(['unofficial', 'qa'])('routes %s builds to the fork GitHub releases', (flavor) => {
+    delete process.env.AUTODOC_PUBLIC_UPDATE_FEED_URL
+    if (flavor === 'qa') vi.stubGlobal('__AUTODOC_QA_BUILD__', true)
+    initAutoUpdater()
+    expect(setFeedURL).toHaveBeenCalledWith({
+      provider: 'github',
+      owner: 'gschmalzhaf-cell',
+      repo: 'AutoDoc'
+    })
+  })
+
+  it('preserves the existing feed for disabled official builds', () => {
+    process.env.AUTODOC_OFFICIAL_BUILD = '1'
+    delete process.env.AUTODOC_PUBLIC_UPDATE_FEED_URL
+    initAutoUpdater()
+    expect(setFeedURL).not.toHaveBeenCalled()
+  })
 
   it.each([
     'http://updates.example.com/stable/',
