@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Lista de ações",
   "ui.notesStyle.decisions": "Registro de decisões",
   "ui.notesStyle.minutes": "Ata cronológica",
-  "ui.notesStyleEmpty": "Este tipo de ata não tem entradas."
+  "ui.notesStyleEmpty": "Este tipo de ata não tem entradas.",
+  "settings.report": "Relatório de diagnóstico",
+  "settings.reportDescription": "Cria um relatório Markdown com a versão do aplicativo, o motor de IA, as configurações, eventos recentes e registros de erros. Não contém transcrições, conteúdo de reuniões ou credenciais — compartilhe-o para ajudar a encontrar erros e melhorar a qualidade.",
+  "settings.reportCopy": "Criar e copiar",
+  "settings.reportSave": "Salvar como arquivo",
+  "settings.reportGenerating": "Criando…",
+  "settings.reportCopied": "O relatório foi copiado para a área de transferência.",
+  "settings.reportSaved": "O relatório foi salvo na subpasta AutoDoc da sua pasta de downloads.",
+  "settings.reportFailed": "Não foi possível criar o relatório."
 }

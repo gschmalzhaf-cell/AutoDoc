@@ -265,6 +265,9 @@ export interface IpcInvokeEvents {
     panel: 'microphone' | 'screen',
     opened: boolean
   ]
+  'report:generate': []
+  'report:save': [markdown: string]
+  'report:show-in-folder': [filePath: string]
   'prefs:get-launch-at-login': []
   'prefs:set-launch-at-login': [enabled: boolean]
   'prefs:get-analytics-consent': []
@@ -448,6 +451,9 @@ export interface IpcInvokeReturns {
   'prefs:set-onboarding-step': void
   'prefs:get-onboarding-permission-settings-opened': boolean
   'prefs:set-onboarding-permission-settings-opened': void
+  'report:generate': string
+  'report:save': string
+  'report:show-in-folder': void
   'prefs:get-launch-at-login': boolean
   'prefs:set-launch-at-login': void
   'prefs:get-analytics-consent': boolean | null

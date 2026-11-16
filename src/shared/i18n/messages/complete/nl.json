@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Actielijst",
   "ui.notesStyle.decisions": "Besluitenlog",
   "ui.notesStyle.minutes": "Chronologische notulen",
-  "ui.notesStyleEmpty": "Dit notulen type bevat geen items."
+  "ui.notesStyleEmpty": "Dit notulen type bevat geen items.",
+  "settings.report": "Diagnostisch rapport",
+  "settings.reportDescription": "Maakt een Markdown-rapport met app-versie, AI-engine, instellingen, recente gebeurtenissen en foutenlogs. Het bevat geen transcripties, vergaderinhoud of inloggegevens — deel het om fouten te vinden en de kwaliteit te verbeteren.",
+  "settings.reportCopy": "Maken en kopiëren",
+  "settings.reportSave": "Opslaan als bestand",
+  "settings.reportGenerating": "Bezig met maken…",
+  "settings.reportCopied": "Het rapport is naar het klembord gekopieerd.",
+  "settings.reportSaved": "Het rapport is opgeslagen in de AutoDoc-submap van uw map Downloads.",
+  "settings.reportFailed": "Het rapport kon niet worden gemaakt."
 }

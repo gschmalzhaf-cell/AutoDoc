@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Aktionsliste",
   "ui.notesStyle.decisions": "Entscheidungsprotokoll",
   "ui.notesStyle.minutes": "Chronologisches Protokoll",
-  "ui.notesStyleEmpty": "Dieser Protokolltyp enthält keine Einträge."
+  "ui.notesStyleEmpty": "Dieser Protokolltyp enthält keine Einträge.",
+  "settings.report": "Diagnosebericht",
+  "settings.reportDescription": "Erstellt einen Markdown-Bericht mit App-Version, KI-Engine, Einstellungen, letzten Ereignissen und Fehlerlogs. Er enthält keine Transkripte, Meeting-Inhalte oder Zugangsdaten — teile ihn, um Fehler zu finden und die Qualität zu verbessern.",
+  "settings.reportCopy": "Erstellen und kopieren",
+  "settings.reportSave": "Als Datei speichern",
+  "settings.reportGenerating": "Wird erstellt…",
+  "settings.reportCopied": "Der Bericht wurde in die Zwischenablage kopiert.",
+  "settings.reportSaved": "Der Bericht wurde im Unterordner AutoDoc Ihrer Downloads gespeichert.",
+  "settings.reportFailed": "Der Bericht konnte nicht erstellt werden."
 }

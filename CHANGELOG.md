@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.7.0] — 2026-11-10
+
+### Added
+
+- Settings now has a **Diagnostic report** section. One click creates a
+  Markdown report with the app version, AI engine and models, transcription
+  backend, non-sensitive settings, the recent diagnostic event trail, and the
+  sanitized tail of the error log. The report can be copied to the clipboard or
+  saved to the Downloads folder (AutoDoc subfolder) and opened in the file
+  manager. It never includes transcripts, meeting content, or credentials, so
+  it can be shared directly to find errors and improve quality.
+
+
 ## [1.6.1] — 2026-11-10
 
 ### Added

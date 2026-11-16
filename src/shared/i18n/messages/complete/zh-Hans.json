@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "行动清单",
   "ui.notesStyle.decisions": "决策记录",
   "ui.notesStyle.minutes": "按时间排序的纪要",
-  "ui.notesStyleEmpty": "此纪要类型没有条目。"
+  "ui.notesStyleEmpty": "此纪要类型没有条目。",
+  "settings.report": "诊断报告",
+  "settings.reportDescription": "创建一份包含应用版本、AI 引擎、设置、近期事件和错误日志的 Markdown 报告。它不包含转录文本、会议内容或凭证——分享它以帮助发现错误并提升质量。",
+  "settings.reportCopy": "创建并复制",
+  "settings.reportSave": "保存为文件",
+  "settings.reportGenerating": "正在创建…",
+  "settings.reportCopied": "报告已复制到剪贴板。",
+  "settings.reportSaved": "报告已保存到下载文件夹的 AutoDoc 子文件夹中。",
+  "settings.reportFailed": "无法创建报告。"
 }

@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Listă de acțiuni",
   "ui.notesStyle.decisions": "Registrul deciziilor",
   "ui.notesStyle.minutes": "Proces-verbal cronologic",
-  "ui.notesStyleEmpty": "Acest tip de proces-verbal nu are înregistrări."
+  "ui.notesStyleEmpty": "Acest tip de proces-verbal nu are înregistrări.",
+  "settings.report": "Raport de diagnosticare",
+  "settings.reportDescription": "Creează un raport Markdown cu versiunea aplicației, motorul AI, setările, evenimentele recente și jurnalele de erori. Nu conține transcrieri, conținut de ședințe sau date de autentificare — partajați-l pentru a ajuta la găsirea erorilor și îmbunătățirea calității.",
+  "settings.reportCopy": "Creează și copiază",
+  "settings.reportSave": "Salvează ca fișier",
+  "settings.reportGenerating": "Se creează…",
+  "settings.reportCopied": "Raportul a fost copiat în clipboard.",
+  "settings.reportSaved": "Raportul a fost salvat în subdosarul AutoDoc al folderului Descărcări.",
+  "settings.reportFailed": "Raportul nu a putut fi creat."
 }

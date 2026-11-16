@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Списък с действия",
   "ui.notesStyle.decisions": "Регистър на решенията",
   "ui.notesStyle.minutes": "Хронологичен протокол",
-  "ui.notesStyleEmpty": "Този тип протокол няма записи."
+  "ui.notesStyleEmpty": "Този тип протокол няма записи.",
+  "settings.report": "Диагностичен доклад",
+  "settings.reportDescription": "Създава Markdown доклад с версия на приложението, AI двигателя, настройките, последните събития и журналите за грешки. Не съдържа транскрипции, съдържание на срещи или идентификационни данни — споделете го, за помагнете за откриването на грешки и подобряване на качеството.",
+  "settings.reportCopy": "Създай и копирай",
+  "settings.reportSave": "Запази като файл",
+  "settings.reportGenerating": "Създава се…",
+  "settings.reportCopied": "Докладът е копиран в клипборда.",
+  "settings.reportSaved": "Докладът е запазен в подпапката AutoDoc на папката за изтегляния.",
+  "settings.reportFailed": "Докладът не можа да бъде създаден."
 }

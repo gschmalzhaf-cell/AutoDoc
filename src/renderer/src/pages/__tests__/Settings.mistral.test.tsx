@@ -346,3 +346,52 @@ describe('Settings launch-at-login toggle', () => {
     expect(toggle).toHaveAttribute('aria-pressed', 'false')
   })
 })
+
+describe('Settings diagnostic report', () => {
+  it('generates and confirms a copied report', async () => {
+    const writeText = vi.fn().mockResolvedValue(undefined)
+    Object.assign(navigator, { clipboard: { writeText } })
+    vi.mocked(window.electronAPI.invoke).mockImplementation((channel: string) => {
+      if (channel === 'report:generate') {
+        return Promise.resolve('# AutoDoc diagnostic report\nApp version: 1.7.0')
+      }
+      if (channel === 'mistral:get-status') {
+        return Promise.resolve({
+          enabled: false,
+          keyStored: false,
+          keyFromEnv: false,
+          model: 'mistral-small-latest'
+        })
+      }
+      if (channel === 'app:get-runtime-info') {
+        return Promise.resolve({ platform: 'win32', ollamaModel: 'qwen3:4b-instruct' })
+      }
+      if (channel === 'updater:get-status') {
+        return Promise.resolve({ state: 'idle' })
+      }
+      if (channel === 'app:get-version') {
+        return Promise.resolve('1.7.0')
+      }
+      if (channel === 'calendar:get-accounts') {
+        return Promise.resolve([])
+      }
+      if (channel === 'calendar:get-events') {
+        return Promise.resolve([])
+      }
+      return Promise.resolve()
+    })
+
+    await act(async () => {
+      render(<Settings />)
+      await Promise.resolve()
+    })
+
+    await act(async () => {
+      screen.getByRole('button', { name: 'Create and copy' }).click()
+      await Promise.resolve()
+    })
+
+    expect(writeText).toHaveBeenCalledWith(expect.stringContaining('# AutoDoc diagnostic report'))
+    expect(screen.getByText('The report was copied to the clipboard.')).toBeInTheDocument()
+  })
+})

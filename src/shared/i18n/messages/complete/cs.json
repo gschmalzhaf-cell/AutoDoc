@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Seznam akcí",
   "ui.notesStyle.decisions": "Rejstřík rozhodnutí",
   "ui.notesStyle.minutes": "Chronologický zápis",
-  "ui.notesStyleEmpty": "Tento typ zápisu neobsahuje žádné položky."
+  "ui.notesStyleEmpty": "Tento typ zápisu neobsahuje žádné položky.",
+  "settings.report": "Diagnostická zpráva",
+  "settings.reportDescription": "Vytvoří zprávu ve formátu Markdown s verzí aplikace, AI enginem, nastaveními, nedávnými událostmi a chybovými protokoly. Neobsahuje přepisy, obsah schůzek ani přihlašovací údaje — sdílejte ji, abyste pomohli najít chyby a zlepšit kvalitu.",
+  "settings.reportCopy": "Vytvořit a zkopírovat",
+  "settings.reportSave": "Uložit jako soubor",
+  "settings.reportGenerating": "Vytváří se…",
+  "settings.reportCopied": "Zpráva byla zkopírována do schránky.",
+  "settings.reportSaved": "Zpráva byla uložena do podsložky AutoDoc ve složce Stažené soubory.",
+  "settings.reportFailed": "Zprávu nebylo možné vytvořit."
 }

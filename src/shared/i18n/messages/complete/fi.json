@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Toimenpidelista",
   "ui.notesStyle.decisions": "Päätösloki",
   "ui.notesStyle.minutes": "Kronologinen muistio",
-  "ui.notesStyleEmpty": "Tämä muistio tyyppi ei sisällä merkintöjä."
+  "ui.notesStyleEmpty": "Tämä muistio tyyppi ei sisällä merkintöjä.",
+  "settings.report": "Diagnosiraportti",
+  "settings.reportDescription": "Luo Markdown-raportin, joka sisältää sovellusversion, AI-moottorin, asetukset, viimeaikaiset tapahtumat ja virhelokit. Se ei sisällä transkriptioita, kokoustietoja tai tunnuksia — jaa se virheiden löytämiseksi ja laadun parantamiseksi.",
+  "settings.reportCopy": "Luo ja kopioi",
+  "settings.reportSave": "Tallenna tiedostona",
+  "settings.reportGenerating": "Luodaan…",
+  "settings.reportCopied": "Raportti kopioitiin leikepöydälle.",
+  "settings.reportSaved": "Raportti tallennettiin latauskansion AutoDoc-alikansioon.",
+  "settings.reportFailed": "Raporttia ei voitu luoda."
 }

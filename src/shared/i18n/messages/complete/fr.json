@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Liste des actions",
   "ui.notesStyle.decisions": "Registre des décisions",
   "ui.notesStyle.minutes": "Compte rendu chronologique",
-  "ui.notesStyleEmpty": "Ce type de compte rendu ne contient aucune entrée."
+  "ui.notesStyleEmpty": "Ce type de compte rendu ne contient aucune entrée.",
+  "settings.report": "Rapport de diagnostic",
+  "settings.reportDescription": "Crée un rapport Markdown avec la version de l’application, le moteur d’IA, les paramètres, les événements récents et les journaux d’erreurs. Il ne contient ni transcriptions, ni contenu de réunion, ni identifiants — partagez-le pour aider à trouver les erreurs et améliorer la qualité.",
+  "settings.reportCopy": "Créer et copier",
+  "settings.reportSave": "Enregistrer sous forme de fichier",
+  "settings.reportGenerating": "Création…",
+  "settings.reportCopied": "Le rapport a été copié dans le presse-papiers.",
+  "settings.reportSaved": "Le rapport a été enregistré dans le sous-dossier AutoDoc de votre dossier Téléchargements.",
+  "settings.reportFailed": "Le rapport n’a pas pu être créé."
 }

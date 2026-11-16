@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Elenco delle azioni",
   "ui.notesStyle.decisions": "Registro delle decisioni",
   "ui.notesStyle.minutes": "Verbale cronologico",
-  "ui.notesStyleEmpty": "Questo tipo di verbale non contiene voci."
+  "ui.notesStyleEmpty": "Questo tipo di verbale non contiene voci.",
+  "settings.report": "Rapporto diagnostico",
+  "settings.reportDescription": "Crea un rapporto Markdown con versione dell’app, motore AI, impostazioni, eventi recenti e registri degli errori. Non contiene trascrizioni, contenuti di riunioni o credenziali — condividilo per trovare errori e migliorare la qualità.",
+  "settings.reportCopy": "Crea e copia",
+  "settings.reportSave": "Salva come file",
+  "settings.reportGenerating": "Creazione…",
+  "settings.reportCopied": "Il rapporto è stato copiato negli appunti.",
+  "settings.reportSaved": "Il rapporto è stato salvato nella sottocartella AutoDoc della cartella Download.",
+  "settings.reportFailed": "Impossibile creare il rapporto."
 }

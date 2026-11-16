@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Åtgärdslista",
   "ui.notesStyle.decisions": "Beslutslogg",
   "ui.notesStyle.minutes": "Kronologiskt protokoll",
-  "ui.notesStyleEmpty": "Denna protokolltyp har inga poster."
+  "ui.notesStyleEmpty": "Denna protokolltyp har inga poster.",
+  "settings.report": "Diagnostikrapport",
+  "settings.reportDescription": "Skapar en Markdown-rapport med appversion, AI-motor, inställningar, senaste händelser och felloggar. Den innehåller inga transkriptioner, mötesinnehåll eller inloggningsuppgifter — dela den för att hitta fel och förbättra kvaliteten.",
+  "settings.reportCopy": "Skapa och kopiera",
+  "settings.reportSave": "Spara som fil",
+  "settings.reportGenerating": "Skapar…",
+  "settings.reportCopied": "Rapporten kopierades till urklippet.",
+  "settings.reportSaved": "Rapporten sparades i undermappen AutoDoc i din nedladdningsmapp.",
+  "settings.reportFailed": "Rapporten kunde inte skapas."
 }

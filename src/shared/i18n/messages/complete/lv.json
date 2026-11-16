@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Darbību saraksts",
   "ui.notesStyle.decisions": "Lēmumu reģistrs",
   "ui.notesStyle.minutes": "Hronoloģisks protokols",
-  "ui.notesStyleEmpty": "Šim protokola tipam nav ierakstu."
+  "ui.notesStyleEmpty": "Šim protokola tipam nav ierakstu.",
+  "settings.report": "Diagnostikas atskaite",
+  "settings.reportDescription": "Izveido Markdown atskaiti ar lietotnes versiju, AI dzinēju, iestatījumiem, nesenajiem notikumiem un kļūdu žurnāliem. Tā nesatur transkripcijas, sapulču saturu vai piekļuves datus — dalieties ar to, lai palīdzētu atrast kļūdas un uzlabotu kvalitāti.",
+  "settings.reportCopy": "Izveidot un kopēt",
+  "settings.reportSave": "Saglabāt kā failu",
+  "settings.reportGenerating": "Izveido…",
+  "settings.reportCopied": "Atskaite tika nokopēta starpliktuvē.",
+  "settings.reportSaved": "Atskaite tika saglabāta lejupielaužu mapes AutoDoc apakšmapē.",
+  "settings.reportFailed": "Atskaiti neizdevās izveidot."
 }

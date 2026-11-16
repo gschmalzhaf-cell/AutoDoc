@@ -60,6 +60,7 @@ import {
   setMistralModelProvider
 } from './services/mistral-config'
 import { registerMistralIpc } from './ipc/mistral-ipc'
+import { registerReportIpc } from './ipc/report-ipc'
 import { ensureMistralOllamaAdapter } from './services/mistral-ollama-adapter'
 import {
   createOllamaRuntimeRecovery,
@@ -139,6 +140,7 @@ import {
 } from './services/sentry-reporter'
 import {
   clearDiagnosticTrail,
+  getDiagnosticTrail,
   recordMainDiagnosticAction,
   recordRendererDiagnosticAction
 } from './services/diagnostic-trail'
@@ -2334,6 +2336,36 @@ app.whenReady().then(async () => {
     markSetupStarting: markOllamaSetupStarting,
     markSetupFailed: markOllamaSetupFailed,
     getSetupStatus: () => ({ ...ollamaSetupState })
+  })
+  registerReportIpc({
+    getRuntimeInfo: () =>
+      ({
+        appVersion: app.getVersion(),
+        platform: isE2E ? getE2EPlatform() : process.platform,
+        arch: process.arch,
+        officialBuild: isOfficialAutoDocBuild(),
+        qaBuild: __AUTODOC_QA_BUILD__,
+        buildChannel: __AUTODOC_QA_BUILD__
+          ? 'qa'
+          : is.dev
+            ? 'development'
+            : isOfficialAutoDocBuild()
+              ? 'official'
+              : 'custom',
+        storagePath: app.getPath('userData'),
+        whisperModel: whisperManager.getModelName(),
+        transcriptionBackend: whisperManager.getTranscriptionBackend(),
+        ollamaModel: managedOllamaManager.getModel(),
+        mistralEnabled: isMistralModeEnabled(),
+        mistralModel: isMistralModeEnabled() ? getMistralNotesModel() : undefined
+      }) as AppRuntimeInfo,
+    getDiagnosticTrail: () => getDiagnosticTrail(),
+    getUiLanguage: () => prefsStore.getUiLanguage(),
+    getLaunchAtLogin: () => prefsStore.getLaunchAtLogin(),
+    getAnalyticsConsent: () => prefsStore.getAnalyticsConsent(),
+    getOllamaSetupPhase: () => ollamaSetupState.phase,
+    getOllamaSetupPercent: () =>
+      typeof ollamaSetupState.percent === 'number' ? ollamaSetupState.percent : null
   })
   let preparedMeetingLanguage = 'en'
   // A failed preparation must read as an error, not as "checking", so the

@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Popis radnji",
   "ui.notesStyle.decisions": "Evidencija odluka",
   "ui.notesStyle.minutes": "Kronološki zapisnik",
-  "ui.notesStyleEmpty": "Ova vrsta zapisnika nema stavki."
+  "ui.notesStyleEmpty": "Ova vrsta zapisnika nema stavki.",
+  "settings.report": "Dijagnostičko izvješće",
+  "settings.reportDescription": "Stvara Markdown izvješće s verzijom aplikacije, AI modulom, postavkama, nedavnim događajima i zapisnicima pogrešaka. Ne sadrži transkripte, sadržaj sastanaka ni vjerodajnice — podijelite ga kako biste pomogli pronaći pogreške i poboljšati kvalitetu.",
+  "settings.reportCopy": "Stvori i kopiraj",
+  "settings.reportSave": "Spremi kao datoteku",
+  "settings.reportGenerating": "Stvaranje…",
+  "settings.reportCopied": "Izvješće je kopirano u međuspremnik.",
+  "settings.reportSaved": "Izvješće je spremljeno u podmapu AutoDoc mape za preuzimanja.",
+  "settings.reportFailed": "Izvješće nije moguće stvoriti."
 }

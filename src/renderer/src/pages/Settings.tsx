@@ -136,6 +136,8 @@ export function Settings() {
   const [mistralConnecting, setMistralConnecting] = useState(false)
   const [mistralKeyRejected, setMistralKeyRejected] = useState(false)
   const [mistralUnavailable, setMistralUnavailable] = useState(false)
+  const [reportBusy, setReportBusy] = useState(false)
+  const [reportMessage, setReportMessage] = useState<'copied' | 'saved' | 'failed' | null>(null)
   const [mistralShowKeyInput, setMistralShowKeyInput] = useState(false)
   const [mistralModelInput, setMistralModelInput] = useState('')
   const [mistralModelOptions, setMistralModelOptions] = useState<string[]>([])
@@ -483,6 +485,32 @@ export function Settings() {
     })
     await window.electronAPI.invoke('prefs:set-launch-at-login', nextValue)
     setLaunchAtLoginState(nextValue)
+  }
+
+  const handleGenerateReport = async (mode: 'copy' | 'save'): Promise<void> => {
+    if (reportBusy) return
+    setReportBusy(true)
+    setReportMessage(null)
+    try {
+      const markdown = await window.electronAPI.invoke('report:generate')
+      if (mode === 'copy') {
+        await navigator.clipboard.writeText(markdown)
+        setReportMessage('copied')
+      } else {
+        const filePath = await window.electronAPI.invoke('report:save', markdown)
+        setReportMessage('saved')
+        window.electronAPI.invoke('report:show-in-folder', filePath).catch(() => {})
+      }
+      recordDiagnosticAction({
+        category: 'settings',
+        action: 'diagnostic_report_created',
+        details: { mode }
+      })
+    } catch {
+      setReportMessage('failed')
+    } finally {
+      setReportBusy(false)
+    }
   }
 
   const handleSetMeetingLanguage = async (language: MeetingLanguageCode): Promise<void> => {
@@ -912,6 +940,48 @@ export function Settings() {
                   className={`block h-5 w-5 rounded-full transition-transform ${launchAtLogin ? 'translate-x-5 bg-control-thumb-on' : 'translate-x-0 bg-control-thumb'}`}
                 />
               </button>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-[13px] font-semibold text-ink mb-2">{t('settings.report')}</h3>
+            <div className="i18n-setting-row rounded-xl border border-border-subtle bg-bg-accent px-4 py-3">
+              <div className="i18n-setting-copy">
+                <p className="text-[12px] text-ink-muted text-pretty">
+                  {t('settings.reportDescription')}
+                </p>
+                {reportMessage && (
+                  <p
+                    role="status"
+                    className={`mt-1 text-[11px] text-pretty ${
+                      reportMessage === 'failed' ? 'text-clay-dark' : 'text-ink-muted'
+                    }`}
+                  >
+                    {reportMessage === 'copied'
+                      ? t('settings.reportCopied')
+                      : reportMessage === 'saved'
+                        ? t('settings.reportSaved')
+                        : t('settings.reportFailed')}
+                  </p>
+                )}
+              </div>
+              <div className="i18n-setting-control flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => void handleGenerateReport('copy')}
+                  disabled={reportBusy}
+                  className="i18n-btn rounded-lg bg-sage px-3 py-1.5 text-[12px] font-medium leading-snug text-on-brand disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {reportBusy ? t('settings.reportGenerating') : t('settings.reportCopy')}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => void handleGenerateReport('save')}
+                  disabled={reportBusy}
+                  className="i18n-btn text-[12px] font-medium leading-snug text-ink-muted bg-bg-accent px-3 py-1.5 rounded-lg border border-border-subtle hover:border-ink-muted transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {t('settings.reportSave')}
+                </button>
+              </div>
             </div>
           </div>
           <div>

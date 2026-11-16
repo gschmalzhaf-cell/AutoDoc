@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "アクションリスト",
   "ui.notesStyle.decisions": "決定記録",
   "ui.notesStyle.minutes": "時系列議事録",
-  "ui.notesStyleEmpty": "このプロトコル種類には項目がありません。"
+  "ui.notesStyleEmpty": "このプロトコル種類には項目がありません。",
+  "settings.report": "診断レポート",
+  "settings.reportDescription": "アプリのバージョン、AIエンジン、設定、最近のイベント、エラーログを含むMarkdownレポートを作成します。文字起こし、会議の内容、認証情報は含まれません。エラーの発見と品質向上のために共有してください。",
+  "settings.reportCopy": "作成してコピー",
+  "settings.reportSave": "ファイルとして保存",
+  "settings.reportGenerating": "作成中…",
+  "settings.reportCopied": "レポートはクリップボードにコピーされました。",
+  "settings.reportSaved": "レポートはダウンロードフォルダー内のAutoDocサブフォルダーに保存されました。",
+  "settings.reportFailed": "レポートを作成できませんでした。"
 }

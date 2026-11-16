@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Список задач",
   "ui.notesStyle.decisions": "Реестр решений",
   "ui.notesStyle.minutes": "Хронологический протокол",
-  "ui.notesStyleEmpty": "В этом типе протокола нет записей."
+  "ui.notesStyleEmpty": "В этом типе протокола нет записей.",
+  "settings.report": "Диагностический отчёт",
+  "settings.reportDescription": "Создаёт отчёт в формате Markdown с версией приложения, ИИ-движком, настройками, недавними событиями и журналами ошибок. Он не содержит расшифровок, содержимого встреч и учётных данных — поделитесь им, чтобы помочь найти ошибки и улучшить качество.",
+  "settings.reportCopy": "Создать и скопировать",
+  "settings.reportSave": "Сохранить в файл",
+  "settings.reportGenerating": "Создаётся…",
+  "settings.reportCopied": "Отчёт скопирован в буфер обмена.",
+  "settings.reportSaved": "Отчёт сохранён в подпапке AutoDoc папки «Загрузки».",
+  "settings.reportFailed": "Не удалось создать отчёт."
 }

@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Список дій",
   "ui.notesStyle.decisions": "Реєстр рішень",
   "ui.notesStyle.minutes": "Хронологічний протокол",
-  "ui.notesStyleEmpty": "Цей тип протоколу не містить записів."
+  "ui.notesStyleEmpty": "Цей тип протоколу не містить записів.",
+  "settings.report": "Діагностичний звіт",
+  "settings.reportDescription": "Створює звіт у форматі Markdown з версією програми, ШІ-движком, налаштуваннями, недавніми подіями та журналами помилок. Він не містить транскрипцій, вмісту зустрічей чи облікових даних — поділіться ним, щоб допомогти знайти помилки та покращити якість.",
+  "settings.reportCopy": "Створити та скопіювати",
+  "settings.reportSave": "Зберегти як файл",
+  "settings.reportGenerating": "Створення…",
+  "settings.reportCopied": "Звіт скопійовано в буфер обміну.",
+  "settings.reportSaved": "Звіт збережено в підпапці AutoDoc папки Завантаження.",
+  "settings.reportFailed": "Не вдалося створити звіт."
 }

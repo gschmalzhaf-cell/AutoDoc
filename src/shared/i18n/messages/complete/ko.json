@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "할 일 목록",
   "ui.notesStyle.decisions": "결정 기록",
   "ui.notesStyle.minutes": "시간순 의사록",
-  "ui.notesStyleEmpty": "이 프로토콜 유형에는 항목이 없습니다."
+  "ui.notesStyleEmpty": "이 프로토콜 유형에는 항목이 없습니다.",
+  "settings.report": "진단 보고서",
+  "settings.reportDescription": "앱 버전, AI 엔진, 설정, 최근 이벤트, 오류 로그가 포함된 Markdown 보고서를 생성합니다. 전사, 회의 내용, 자격 증명은 포함되지 않습니다. 오류 찾기와 품질 개선을 위해 공유하세요.",
+  "settings.reportCopy": "생성 및 복사",
+  "settings.reportSave": "파일로 저장",
+  "settings.reportGenerating": "생성 중…",
+  "settings.reportCopied": "보고서가 클립보드에 복사되었습니다.",
+  "settings.reportSaved": "보고서가 다운로드 폴더의 AutoDoc 하위 폴더에 저장되었습니다.",
+  "settings.reportFailed": "보고서를 생성할 수 없습니다."
 }

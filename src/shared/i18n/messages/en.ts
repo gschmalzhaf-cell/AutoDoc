@@ -41,6 +41,15 @@ export const en = {
   'settings.disconnect': 'Disconnect',
   'settings.mistralApi': 'Mistral API',
   'settings.launchAtLogin': 'Launch at login',
+  'settings.report': 'Diagnostic report',
+  'settings.reportDescription':
+    'Create a Markdown report with app version, AI engine, settings, recent events, and error logs. It contains no transcripts, meeting content, or credentials — share it to help find errors and improve quality.',
+  'settings.reportCopy': 'Create and copy',
+  'settings.reportSave': 'Save as file',
+  'settings.reportGenerating': 'Creating…',
+  'settings.reportCopied': 'The report was copied to the clipboard.',
+  'settings.reportSaved': 'The report was saved to your Downloads folder (AutoDoc subfolder).',
+  'settings.reportFailed': 'The report could not be created.',
   'settings.launchAtLoginDescription':
     'Start AutoDoc automatically when you sign in to your computer.',
   'settings.launchAtLoginAria': 'Toggle launching AutoDoc at login',

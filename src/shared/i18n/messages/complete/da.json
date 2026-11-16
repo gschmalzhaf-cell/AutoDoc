@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Handlingsliste",
   "ui.notesStyle.decisions": "Beslutningslog",
   "ui.notesStyle.minutes": "Kronologisk referat",
-  "ui.notesStyleEmpty": "Denne referattype har ingen poster."
+  "ui.notesStyleEmpty": "Denne referattype har ingen poster.",
+  "settings.report": "Diagnostikrapport",
+  "settings.reportDescription": "Opretter en Markdown-rapport med appversion, AI-motor, indstillinger, seneste hændelser og fejllogge. Den indeholder ingen transskriptioner, mødeindhold eller loginoplysninger — del den for at finde fejl og forbedre kvaliteten.",
+  "settings.reportCopy": "Opret og kopiér",
+  "settings.reportSave": "Gem som fil",
+  "settings.reportGenerating": "Opretter…",
+  "settings.reportCopied": "Rapporten blev kopieret til udklipsholderen.",
+  "settings.reportSaved": "Rapporten blev gemt i AutoDoc-undermappen i din downloadsmappe.",
+  "settings.reportFailed": "Rapporten kunne ikke oprettes."
 }

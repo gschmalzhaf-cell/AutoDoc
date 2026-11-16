@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Lista zadań",
   "ui.notesStyle.decisions": "Rejestr decyzji",
   "ui.notesStyle.minutes": "Protokół chronologiczny",
-  "ui.notesStyleEmpty": "Ten typ protokołu nie ma wpisów."
+  "ui.notesStyleEmpty": "Ten typ protokołu nie ma wpisów.",
+  "settings.report": "Raport diagnostyczny",
+  "settings.reportDescription": "Tworzy raport Markdown z wersją aplikacji, silnikiem AI, ustawieniami, ostatnimi zdarzeniami i dziennikami błędów. Nie zawiera transkrypcji, treści spotkań ani danych logowania — udostępnij go, aby pomóc znaleźć błędy i poprawić jakość.",
+  "settings.reportCopy": "Utwórz i skopiuj",
+  "settings.reportSave": "Zapisz jako plik",
+  "settings.reportGenerating": "Tworzenie…",
+  "settings.reportCopied": "Raport został skopiowany do schowka.",
+  "settings.reportSaved": "Raport został zapisany w podfolderze AutoDoc w folderze Pobrane.",
+  "settings.reportFailed": "Nie udało się utworzyć raportu."
 }

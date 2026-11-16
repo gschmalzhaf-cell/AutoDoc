@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Veiksmų sąrašas",
   "ui.notesStyle.decisions": "Sprendimų registras",
   "ui.notesStyle.minutes": "Chronologinis protokolas",
-  "ui.notesStyleEmpty": "Šio protokolo tipo nėra įrašų."
+  "ui.notesStyleEmpty": "Šio protokolo tipo nėra įrašų.",
+  "settings.report": "Diagnostikos ataskaita",
+  "settings.reportDescription": "Sukuriaus Markdown ataskaitą su programos versija, AI varikliu, nustatymais, neseniais įvykiais ir klaidų žurnalais. Joje nėra transkripcijų, susirinkimų turinio ar prisijungimo duomenų — pasidalinkite ja, kad padėtumėte rasti klaidas ir pagerinti kokybę.",
+  "settings.reportCopy": "Sukurti ir kopijuoti",
+  "settings.reportSave": "Išsaugoti kaip failą",
+  "settings.reportGenerating": "Kuriama…",
+  "settings.reportCopied": "Ataskaita nukopijuota į iškarpinę.",
+  "settings.reportSaved": "Ataskaita išsaugota Atsisiuntimų aplanko AutoDoc poaplankyje.",
+  "settings.reportFailed": "Nepavyko sukurti ataskaitos."
 }

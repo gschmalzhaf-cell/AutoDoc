@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Seznam dejanj",
   "ui.notesStyle.decisions": "Register odločitev",
   "ui.notesStyle.minutes": "Kronološki zapisnik",
-  "ui.notesStyleEmpty": "Ta vrsta zapisnika nima vnosov."
+  "ui.notesStyleEmpty": "Ta vrsta zapisnika nima vnosov.",
+  "settings.report": "Diagnostično poročilo",
+  "settings.reportDescription": "Ustvari poročilo Markdown z različico aplikacije, modulom UI, nastavitvami, nedavnimi dogodki in dnevnikov napak. Ne vsebuje prepisov, vsebine sestankov ali poverilnic — delite ga, da pomagate najti napake in izboljšati kakovost.",
+  "settings.reportCopy": "Ustvari in kopiraj",
+  "settings.reportSave": "Shrani kot datoteko",
+  "settings.reportGenerating": "Ustvarjanje…",
+  "settings.reportCopied": "Poročilo je bilo kopirano v odložišče.",
+  "settings.reportSaved": "Poročilo je bilo shranjeno v podmapo AutoDoc v mapi prenosov.",
+  "settings.reportFailed": "Poročila ni bilo mogoče ustvariti."
 }

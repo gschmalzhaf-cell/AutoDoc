@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Lista de acciones",
   "ui.notesStyle.decisions": "Registro de decisiones",
   "ui.notesStyle.minutes": "Acta cronológica",
-  "ui.notesStyleEmpty": "Este tipo de acta no tiene entradas."
+  "ui.notesStyleEmpty": "Este tipo de acta no tiene entradas.",
+  "settings.report": "Informe de diagnóstico",
+  "settings.reportDescription": "Crea un informe Markdown con la versión de la aplicación, el motor de IA, la configuración, los eventos recientes y los registros de errores. No contiene transcripciones, contenido de reuniones ni credenciales; compártelo para ayudar a encontrar errores y mejorar la calidad.",
+  "settings.reportCopy": "Crear y copiar",
+  "settings.reportSave": "Guardar como archivo",
+  "settings.reportGenerating": "Creando…",
+  "settings.reportCopied": "El informe se copió al portapapeles.",
+  "settings.reportSaved": "El informe se guardó en la subcarpeta AutoDoc de tu carpeta de descargas.",
+  "settings.reportFailed": "No se pudo crear el informe."
 }

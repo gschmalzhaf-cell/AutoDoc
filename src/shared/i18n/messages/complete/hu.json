@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Teendőlista",
   "ui.notesStyle.decisions": "Döntésnapló",
   "ui.notesStyle.minutes": "Kronológiai jegyzőkönyv",
-  "ui.notesStyleEmpty": "Ez a jegyzőkönyvtípus nem tartalmaz bejegyzéseket."
+  "ui.notesStyleEmpty": "Ez a jegyzőkönyvtípus nem tartalmaz bejegyzéseket.",
+  "settings.report": "Diagnosztikai jelentés",
+  "settings.reportDescription": "Markdown formátumú jelentést hoz létre az alkalmazás verziójával, AI-motorjával, beállításaival, legutóbbi eseményeivel és hibanaplóival. Nem tartalmzik átírásokat, értekezletek tartalmát és hitelesítő adatokat — ossza meg, hogy segítsen a hibák megtalálásában és a minőség javításában.",
+  "settings.reportCopy": "Létrehozás és másolás",
+  "settings.reportSave": "Mentés fájlként",
+  "settings.reportGenerating": "Létrehozás…",
+  "settings.reportCopied": "A jelentés a vágólapra másolva.",
+  "settings.reportSaved": "A jelentés a Letöltések mappa AutoDoc almappájába mentve.",
+  "settings.reportFailed": "A jelentést nem sikerült létrehozni."
 }

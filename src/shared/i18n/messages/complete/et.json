@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Tegevuste loend",
   "ui.notesStyle.decisions": "Otsuste register",
   "ui.notesStyle.minutes": "Kronoloogiline protokoll",
-  "ui.notesStyleEmpty": "Selles protokolli tüübis pole kirjeid."
+  "ui.notesStyleEmpty": "Selles protokolli tüübis pole kirjeid.",
+  "settings.report": "Diagnoosiraport",
+  "settings.reportDescription": "Loob Markdown-vormingus raporti rakendi versiooni, AI-mootori, seadete, hiljutiste sündmuste ja vealogidega. See ei sisalda transkriptsioone, koosoleku sisu ega mandaate — jagage seda, et aidata leida vigu ja parandada kvaliteeti.",
+  "settings.reportCopy": "Loo ja kopeeri",
+  "settings.reportSave": "Salvesta failina",
+  "settings.reportGenerating": "Loomine…",
+  "settings.reportCopied": "Raport kopeeriti lõikelauale.",
+  "settings.reportSaved": "Raport salvestati allalaadimiste kausta alamkausta AutoDoc.",
+  "settings.reportFailed": "Raportit ei saanud luua."
 }

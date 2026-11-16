@@ -493,5 +493,13 @@
   "ui.notesStyle.actions": "Zoznam akcií",
   "ui.notesStyle.decisions": "Register rozhodnutí",
   "ui.notesStyle.minutes": "Chronologická zápisnica",
-  "ui.notesStyleEmpty": "Tento typ zápisnice neobsahuje žiadne položky."
+  "ui.notesStyleEmpty": "Tento typ zápisnice neobsahuje žiadne položky.",
+  "settings.report": "Diagnostická správa",
+  "settings.reportDescription": "Vytvorí správu vo formáte Markdown s verziou aplikácie, AI motorom, nastaveniami, nedávnymi udalosťami a chybovými protokolmi. Neobsahuje prepisy, obsah stretnutí ani prihlasovacie údaje — sprístupnite ju, aby ste pomohli nájsť chyby a zlepšiť kvalitu.",
+  "settings.reportCopy": "Vytvoriť a skopírovať",
+  "settings.reportSave": "Uložiť ako súbor",
+  "settings.reportGenerating": "Vytvára sa…",
+  "settings.reportCopied": "Správa bola skopírovaná do schránky.",
+  "settings.reportSaved": "Správa bola uložená do podpriečinka AutoDoc v priečinku Na stiahnutie.",
+  "settings.reportFailed": "Správu nebolo možné vytvoriť."
 }
