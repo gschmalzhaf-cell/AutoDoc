@@ -468,6 +468,8 @@
   "announcement.done": "Gereed",
   "announcement.meetingLanguageBody": "Transcripties en notities ondersteunen nu {count} talen!",
   "announcement.meetingLanguageDescription": "Kies de taal die tijdens je vergaderingen wordt gesproken. Nieuwe transcripties en notities gebruiken deze taal.",
+  "askAi.indexingPreparingAnnouncement": "Je vergaderingen worden voorbereid voor Vraag AI.",
+  "askAi.indexingPausedAnnouncement": "De voorbereiding voor Vraag AI is gepauzeerd terwijl een vergadering wordt opgenomen of notities worden gemaakt.",
   "nav.mistralConnected": "Mistral verbonden",
   "nav.mistralDisconnected": "Mistral niet verbonden",
   "ui.mistralUseMistralApi": "Mistral API gebruiken",

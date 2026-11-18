@@ -468,6 +468,8 @@
   "announcement.done": "Končano",
   "announcement.meetingLanguageBody": "Prepisi in zapiski zdaj podpirajo {count} jezikov!",
   "announcement.meetingLanguageDescription": "Izberite jezik, ki ga govorite na sestankih. Novi prepisi in zapiski bodo v tem jeziku.",
+  "askAi.indexingPreparingAnnouncement": "Priprava sestankov za Vprašaj AI.",
+  "askAi.indexingPausedAnnouncement": "Priprava za Vprašaj AI je ustavljena, medtem ko se snema sestanek ali ustvarjajo zapiski.",
   "nav.mistralConnected": "Mistral povezan",
   "nav.mistralDisconnected": "Mistral ni povezan",
   "ui.mistralUseMistralApi": "Uporabi Mistral API",

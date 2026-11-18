@@ -468,6 +468,8 @@
   "announcement.done": "Valmis",
   "announcement.meetingLanguageBody": "Litteroinnit ja muistiinpanot tukevat nyt {count} kieltä!",
   "announcement.meetingLanguageDescription": "Valitse kokouksissasi puhuttu kieli. Uudet litteroinnit ja muistiinpanot tehdään tällä kielellä.",
+  "askAi.indexingPreparingAnnouncement": "Kokouksiasi valmistellaan tekoälyltä kysymistä varten.",
+  "askAi.indexingPausedAnnouncement": "Kokousten valmistelu tekoälyltä kysymistä varten on tauolla, kun kokousta tallennetaan tai muistiinpanoja luodaan.",
   "nav.mistralConnected": "Mistral yhdistetty",
   "nav.mistralDisconnected": "Mistral ei yhdistetty",
   "ui.mistralUseMistralApi": "Käytä Mistral API:a",

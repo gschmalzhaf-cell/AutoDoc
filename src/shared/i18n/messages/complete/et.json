@@ -468,6 +468,8 @@
   "announcement.done": "Valmis",
   "announcement.meetingLanguageBody": "Transkriptsioonid ja märkmed toetavad nüüd {count} keelt!",
   "announcement.meetingLanguageDescription": "Valige koosolekutel räägitav keel. Uued transkriptsioonid ja märkmed koostatakse selles keeles.",
+  "askAi.indexingPreparingAnnouncement": "Koosolekuid valmistatakse ette tehisarult küsimiseks.",
+  "askAi.indexingPausedAnnouncement": "Koosolekute ettevalmistus tehisarult küsimiseks on peatatud, kuni koosolekut salvestatakse või märkmeid koostatakse.",
   "nav.mistralConnected": "Mistral on ühendatud",
   "nav.mistralDisconnected": "Mistral ei ole ühendatud",
   "ui.mistralUseMistralApi": "Kasuta Mistral API-t",

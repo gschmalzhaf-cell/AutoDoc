@@ -468,6 +468,8 @@
   "announcement.done": "Gotovo",
   "announcement.meetingLanguageBody": "Transkripti i bilješke sada podržavaju {count} jezika!",
   "announcement.meetingLanguageDescription": "Odaberite jezik koji se govori na vašim sastancima. Novi transkripti i bilješke bit će na tom jeziku.",
+  "askAi.indexingPreparingAnnouncement": "Priprema sastanaka za Pitaj AI.",
+  "askAi.indexingPausedAnnouncement": "Priprema za Pitaj AI pauzirana je dok se snima sastanak ili izrađuju bilješke.",
   "nav.mistralConnected": "Mistral povezan",
   "nav.mistralDisconnected": "Mistral nije povezan",
   "ui.mistralUseMistralApi": "Koristi Mistral API",

@@ -468,6 +468,8 @@
   "announcement.done": "完了",
   "announcement.meetingLanguageBody": "文字起こしとノートが{count}言語に対応しました！",
   "announcement.meetingLanguageDescription": "会議で話す言語を選択してください。新しい文字起こしとノートは、この言語で作成されます。",
+  "askAi.indexingPreparingAnnouncement": "AIに質問できるよう会議を準備しています。",
+  "askAi.indexingPausedAnnouncement": "会議の録音中またはノートの作成中のため、AIに質問するための準備を一時停止しています。",
   "nav.mistralConnected": "Mistral 接続済み",
   "nav.mistralDisconnected": "Mistral 接続なし",
   "ui.mistralUseMistralApi": "Mistral API を使用",

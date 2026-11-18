@@ -468,6 +468,8 @@
   "announcement.done": "Listo",
   "announcement.meetingLanguageBody": "¡Las transcripciones y las notas ahora están disponibles en {count} idiomas!",
   "announcement.meetingLanguageDescription": "Elige el idioma que se habla en tus reuniones. Las nuevas transcripciones y notas usarán este idioma.",
+  "askAi.indexingPreparingAnnouncement": "Preparando tus reuniones para Preguntar a la IA.",
+  "askAi.indexingPausedAnnouncement": "La preparación para Preguntar a la IA está pausada mientras se graba una reunión o se crean las notas.",
   "nav.mistralConnected": "Mistral conectado",
   "nav.mistralDisconnected": "Mistral desconectado",
   "ui.mistralUseMistralApi": "Usar la API de Mistral",

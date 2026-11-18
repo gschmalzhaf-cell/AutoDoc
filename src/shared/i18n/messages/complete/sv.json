@@ -468,6 +468,8 @@
   "announcement.done": "Klart",
   "announcement.meetingLanguageBody": "Transkriptioner och anteckningar stöder nu {count} språk!",
   "announcement.meetingLanguageDescription": "Välj det språk som talas på dina möten. Nya transkriptioner och anteckningar kommer att använda detta språk.",
+  "askAi.indexingPreparingAnnouncement": "Dina möten förbereds för Fråga AI.",
+  "askAi.indexingPausedAnnouncement": "Förberedelsen för Fråga AI är pausad medan ett möte spelas in eller anteckningar skapas.",
   "nav.mistralConnected": "Mistral ansluten",
   "nav.mistralDisconnected": "Mistral frånkopplad",
   "ui.mistralUseMistralApi": "Använd Mistral API",

@@ -468,6 +468,8 @@
   "announcement.done": "完成",
   "announcement.meetingLanguageBody": "转录和笔记现已支持 {count} 种语言！",
   "announcement.meetingLanguageDescription": "选择会议中使用的语言。新的转录和笔记将使用此语言。",
+  "askAi.indexingPreparingAnnouncement": "正在为“询问 AI”准备您的会议。",
+  "askAi.indexingPausedAnnouncement": "会议录制或笔记生成期间，“询问 AI”的准备工作暂停。",
   "nav.mistralConnected": "Mistral 已连接",
   "nav.mistralDisconnected": "Mistral 未连接",
   "ui.mistralUseMistralApi": "使用 Mistral API",
