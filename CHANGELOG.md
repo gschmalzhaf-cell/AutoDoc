@@ -7,6 +7,52 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.8.0] — 2026-11-18
+
+### Added
+
+- Merged upstream AutoDoc 1.3.4 into this fork. Highlights: **Ask about this
+  meeting** opens Ask AI from a recording with the search limited to that
+  meeting, Ask AI prepares its search index in the background with progress,
+  and Ask AI is marked Beta with a one-time notice.
+- Ask AI answers faster and more accurately by searching passages from meeting
+  notes and transcripts; source links open the recording at the matching moment.
+- Follow-up questions stay focused on the same meeting and replies use the
+  language of the question.
+
+### Changed
+
+- Ask AI availability follows upstream 1.3.4: shown on computers with a
+  supported GPU notes model, hidden on other computers (recording,
+  transcription, and notes remain available).
+- Crash reporting excludes window and meeting titles and reduces duplicate
+  reports and reports for expected events.
+
+### Fixed
+
+- Ask AI source links no longer accumulate across follow-up questions or include
+  duplicate links; asking about recording counts returns the count without
+  unnecessary source links.
+- Mac speech-model downloads can use ModelScope or hf-mirror when Hugging Face
+  is unavailable and are checked against pinned hashes; the Ollama runtime
+  download is verified and resumable; the local AI server restarts more
+  promptly after an unexpected exit.
+- A Google Calendar connection that can no longer sync asks you to reconnect.
+- An interrupted quit or update installation no longer leaves AutoDoc unable to
+  start new recordings; a failed recording start no longer stops a running
+  recording; recordings cannot be deleted while recording, saving, or
+  transcribing; on Windows, recording audio is encrypted after transcription
+  even if the recording was opened during processing.
+
+### Fork features retained
+
+- Mistral API mode for notes and Ask AI (Settings section, onboarding, live
+  model list, model picker, API key replacement).
+- Protocol-type selection for meeting notes.
+- Launch-at-login toggle in Settings.
+- In-app updates from this fork's own GitHub releases.
+- Diagnostic report in Settings.
+
 ## [1.7.0] — 2026-11-10
 
 ### Added
