@@ -1,16 +1,18 @@
 <div align="center">
 
-<img src="docs/assets/logo.png" alt="AutoDoc" width="120" height="120" />
+<img src="docs/assets/logo.png" alt="Gideon's Notizen" width="120" height="120" />
 
-# AutoDoc
+# Gideon's Notizen
 
-### Open-source meeting notes for Mac and Windows that also record your screen, so you can click a note and replay that moment.
+### Cozy, open-source meeting notes for Mac and Windows — with screen recording, timestamp playback, local AI, and optional Mistral API support.
 
-AutoDoc is an open-source, local-first meeting notes app for macOS and Windows. Record your screen and meeting audio, get editable notes, and click a note's timestamp to replay the moment. Transcription, notes, and Ask AI run on your computer. No AutoDoc account or AI API key required.
+> **Fork Notice:** **Gideon's Notizen** is an independent fork of [**DuetDisplay/AutoDoc**](https://github.com/DuetDisplay/AutoDoc), customized with a cozy playful blue design, its own branding, and additional features. See [What's different from the original AutoDoc](#whats-different-from-the-original-autodoc) below.
 
-[![Download AutoDoc for macOS](docs/assets/badges/download-macos.svg)](https://github.com/DuetDisplay/AutoDoc/releases/latest) [![Download AutoDoc for Windows](docs/assets/badges/download-windows.svg)](https://github.com/DuetDisplay/AutoDoc/releases/latest)
+Gideon's Notizen is an open-source, local-first meeting notes app for macOS and Windows. Record your screen and meeting audio, get editable notes, and click a note's timestamp to replay the moment. Transcription, notes, and Ask AI run on your computer (or optionally via the Mistral API). No account required.
 
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL--3.0-7A9E7E?style=flat-square)](LICENSE) [![On-device meeting processing](https://img.shields.io/badge/processing-100%25_on--device-7A9E7E?style=flat-square)](PRIVACY.md) [![Platforms](https://img.shields.io/badge/macOS_14%2B_%C2%B7_Windows_10%2B-1A1A17?style=flat-square)](#download) [![Latest release](https://img.shields.io/github/v/release/DuetDisplay/AutoDoc?style=flat-square&label=release&color=7A9E7E&labelColor=555555)](https://github.com/DuetDisplay/AutoDoc/releases/latest)
+[![Download Gideon's Notizen for macOS](docs/assets/badges/download-macos.svg)](https://github.com/gschmalzhaf-cell/AutoDoc/releases/latest) [![Download Gideon's Notizen for Windows](docs/assets/badges/download-windows.svg)](https://github.com/gschmalzhaf-cell/AutoDoc/releases/latest)
+
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL--3.0-3B76D8?style=flat-square)](LICENSE) [![Fork of DuetDisplay/AutoDoc](https://img.shields.io/badge/Fork_of-DuetDisplay%2FAutoDoc-3B76D8?style=flat-square)](https://github.com/DuetDisplay/AutoDoc) [![Platforms](https://img.shields.io/badge/macOS_14%2B_%C2%B7_Windows_10%2B-182538?style=flat-square)](#download) [![Latest release](https://img.shields.io/github/v/release/gschmalzhaf-cell/AutoDoc?style=flat-square&label=release&color=3B76D8&labelColor=555555)](https://github.com/gschmalzhaf-cell/AutoDoc/releases/latest)
 
 </div>
 
@@ -18,11 +20,11 @@ AutoDoc is an open-source, local-first meeting notes app for macOS and Windows. 
 
 <div align="center">
 
-![AutoDoc Notes and timestamp playback](docs/assets/demo.gif)
+![Gideon's Notizen — Notes and timestamp playback](docs/assets/demo.gif)
 
 <!-- latest-release:start -->
 
-**New in v1.3.4:** a faster Ask AI beta with links to meeting moments, plus recording and privacy fixes. [Read the latest release notes](https://github.com/DuetDisplay/AutoDoc/releases/latest).
+**New in v1.9.0:** rebranded as **Gideon's Notizen** with a cozy, playful blue theme, updated project page, and all fork features on top of AutoDoc 1.3.4. [Read the latest release notes](https://github.com/gschmalzhaf-cell/AutoDoc/releases/latest).
 
 <!-- latest-release:end -->
 
@@ -30,17 +32,32 @@ AutoDoc is an open-source, local-first meeting notes app for macOS and Windows. 
 
 ---
 
+## What's different from the original AutoDoc
+
+Gideon's Notizen is based on [**DuetDisplay/AutoDoc**](https://github.com/DuetDisplay/AutoDoc) (currently synced with upstream `v1.3.4`) and extends it with:
+
+| Feature | Original (`DuetDisplay/AutoDoc`) | Fork (`Gideon's Notizen`) |
+|---|---|---|
+| **Branding & Look** | AutoDoc · Warm paper & sage green | **Gideon's Notizen** · Cozy & playful blue theme (Light & Dark Mode) with custom app icon |
+| **AI Backend** | Local Ollama only | **Local Ollama + optional Mistral API mode** for meeting notes & Ask AI (live model dropdown, key management, onboarding option — see [`docs/MISTRAL.md`](docs/MISTRAL.md)) |
+| **Protocol Types** | Single default note format | **Selectable protocol types** for structured meeting notes |
+| **Launch at Login** | Background preference | **Visible toggle in Settings** |
+| **Diagnostics** | Manual log inspection | **One-click Markdown diagnostic report** in Settings |
+| **In-App Updates** | Upstream update feed | **Checks this fork's GitHub releases** (`gschmalzhaf-cell/AutoDoc`) |
+
+---
+
 ## Features
 
-AutoDoc keeps the whole meeting workflow on your computer, from detection to replay, and every feature below is included, not a paid upgrade.
+Gideon's Notizen keeps the whole meeting workflow on your computer, from detection to replay, and every feature below is included, not a paid upgrade.
 
 - **On-device transcription.** Models are chosen for your meeting language and hardware, with no network round-trips for your audio.
-- **Local notes, no accounts.** Notes run through a local [Ollama](https://ollama.com) instance AutoDoc manages. No AutoDoc account, no API keys, no inference bills.
-- **Multi-track capture.** Screen, microphone, and system audio are recorded as separate streams. Your microphone is labeled Me and combined system audio is labeled Them; AutoDoc does not identify individual remote participants.
+- **Local notes or Mistral API.** Run notes locally through a managed [Ollama](https://ollama.com) instance, or optionally connect your own [Mistral API](https://mistral.ai) key.
+- **Multi-track capture.** Screen, microphone, and system audio are recorded as separate streams. Your microphone is labeled Me and combined system audio is labeled Them; Gideon's Notizen does not identify individual remote participants.
 - **Replay key moments.** Watch the recording in the Transcript tab, or click a note's timestamp to jump to that moment in the video.
-- **Editable notes.** Get a summary and conversation topics with supporting details, edit them, copy as plain text, or export to PDF, Word, or Markdown. Review generated notes before relying on them.
-- **Ask AI across meetings.** Get grounded answers drawn from your meetings, entirely on-device.
-- **Calendars and detection.** Connect Google and Microsoft calendars with Off / Once / Series auto-record per event. AutoDoc lives in your macOS menu bar or Windows tray and offers to record when a Zoom, Meet, Teams, Webex, or Slack meeting starts.
+- **Editable notes & protocol types.** Get a summary and conversation topics with supporting details, choose a protocol style, edit them, copy as plain text, or export to PDF, Word, or Markdown. Review generated notes before relying on them.
+- **Ask AI across meetings.** Get grounded answers drawn from your meetings, on-device or via Mistral API.
+- **Calendars and detection.** Connect Google and Microsoft calendars with Off / Once / Series auto-record per event. Gideon's Notizen lives in your macOS menu bar or Windows tray and offers to record when a Zoom, Meet, Teams, Webex, or Slack meeting starts.
 - **Full-text search.** Search every transcript and note, with deep links straight to the moment.
 - **27 meeting languages** on supported hardware. See [System requirements](#system-requirements) for what each machine supports.
 - **Encrypted at rest.** AES-256-GCM protects recordings, transcripts, notes, and metadata. Electron `safeStorage` protects the key through macOS Keychain or Windows DPAPI when available; otherwise the key is stored locally without operating-system protection. Exported files are separate from this encrypted storage.
@@ -78,27 +95,27 @@ See [`PRODUCT.md`](PRODUCT.md) for a deep technical breakdown of every subsystem
 
 ## Download
 
-> **Platform support:** AutoDoc supports **macOS 14+ on Apple Silicon** and **Windows 10+ on x64 PCs**. Intel Macs and Windows on ARM are not currently supported.
+> **Platform support:** Gideon's Notizen supports **macOS 14+ on Apple Silicon** and **Windows 10+ on x64 PCs**. Intel Macs and Windows on ARM are not currently supported.
 
-Ready-to-use installers are available for Mac and Windows. You do not need to build from source.
+Ready-to-use installers are available for Mac and Windows (note: fork releases currently ship Windows installers directly via GitHub Releases; macOS can be built from source).
 
 ### macOS
 
-1. On the [latest release](https://github.com/DuetDisplay/AutoDoc/releases/latest), download the macOS `.dmg` asset.
-2. **Open** the `.dmg` and drag **AutoDoc** into your **Applications** folder.
-3. **Launch** AutoDoc from Applications. On first run it walks you through granting **Screen Recording** and **Microphone** permissions; macOS verifies **System Audio Capture** separately when recording starts. AutoDoc then downloads its local transcription and AI models (~10 GB, one time).
+1. On the [latest release](https://github.com/gschmalzhaf-cell/AutoDoc/releases/latest), download the macOS `.dmg` asset (or build from source below).
+2. **Open** the `.dmg` and drag **Gideon's Notizen** into your **Applications** folder.
+3. **Launch** Gideon's Notizen from Applications. On first run it walks you through granting **Screen Recording** and **Microphone** permissions; macOS verifies **System Audio Capture** separately when recording starts. It then downloads its local transcription and AI models (~10 GB, one time — or you can choose Mistral API mode).
 
 ### Windows
 
-1. On the [latest release](https://github.com/DuetDisplay/AutoDoc/releases/latest), download the Windows `.exe` installer asset.
+1. On the [latest release](https://github.com/gschmalzhaf-cell/AutoDoc/releases/latest), download the Windows `.exe` installer asset.
 2. **Open** the installer and follow the setup prompts.
-3. **Launch** AutoDoc. On first run it walks you through capture permissions and downloads the local transcription and Ollama models for your selected meeting language.
+3. **Launch** Gideon's Notizen. On first run it walks you through capture permissions and lets you set up local transcription plus Ollama or Mistral API for your selected meeting language.
 
-That's it — no account, no API keys, nothing to configure. Meeting processing runs locally from here on.
+That's it — no account required.
 
 ### System requirements
 
-Local-first meeting apps need real hardware headroom. AutoDoc adjusts its processing profile to the available hardware while keeping meeting content on your device.
+Local-first meeting apps need real hardware headroom. Gideon's Notizen adjusts its processing profile to the available hardware while keeping meeting content on your device.
 
 | | macOS | Windows |
 |---|---|---|
@@ -118,21 +135,21 @@ Transcription on Mac is built on [MLX](https://github.com/ml-explore/mlx) and re
 
 ### Downloading in mainland China
 
-Hugging Face is blocked in mainland China. On a Mac, AutoDoc falls back to [ModelScope](https://modelscope.cn) and [hf-mirror](https://hf-mirror.com) automatically, and checks every file against a pinned SHA-256 hash. There is nothing to configure.
+Hugging Face is blocked in mainland China. On a Mac, Gideon's Notizen falls back to [ModelScope](https://modelscope.cn) and [hf-mirror](https://hf-mirror.com) automatically, and checks every file against a pinned SHA-256 hash. There is nothing to configure.
 
 Some downloads have no alternate source yet, and can be slow or fail if GitHub is hard to reach:
 
 - **Ollama runtime (macOS and Windows)** and **Windows speech models** come from GitHub. Interrupted downloads resume when you retry.
 - **The AI notes model** comes from the Ollama registry.
 
-If you have a proxy, these settings can help. Set them where AutoDoc can see them: apps opened from Finder don't inherit shell exports, so on macOS use `launchctl setenv NAME value`, and on Windows use `setx NAME value`. Then restart AutoDoc.
+If you have a proxy, these settings can help. Set them where Gideon's Notizen can see them: apps opened from Finder don't inherit shell exports, so on macOS use `launchctl setenv NAME value`, and on Windows use `setx NAME value`. Then restart Gideon's Notizen.
 
 - `HTTPS_PROXY` routes Ollama's own downloads, including the notes model, through your proxy.
 - `AUTODOC_WINDOWS_TRANSCRIPTION_ASSET_BASE_URL` points Windows speech downloads at your own copy of the `windows-transcription-v3` [release assets](https://github.com/DuetDisplay/AutoDoc/releases).
 
 ## Build from source
 
-AutoDoc is an Electron + electron-vite app. To build it yourself:
+Gideon's Notizen is an Electron + electron-vite app. To build it yourself:
 
 **Prerequisites**
 
@@ -143,7 +160,7 @@ AutoDoc is an Electron + electron-vite app. To build it yourself:
 **Steps**
 
 ```bash
-git clone https://github.com/DuetDisplay/AutoDoc.git
+git clone https://github.com/gschmalzhaf-cell/AutoDoc.git
 cd AutoDoc
 npm ci
 cp .env.example .env   # optional: configure self-hosting knobs
@@ -240,12 +257,13 @@ Contributions are welcome! Please read [`CONTRIBUTING.md`](CONTRIBUTING.md), the
 
 ## License
 
-AutoDoc is licensed under the **GNU Affero General Public License v3.0** ([`LICENSE`](LICENSE)). You're free to use, study, modify, and share it, and if you run a modified version as a network service you must make your source available to its users under the same license.
+Gideon's Notizen (like the upstream AutoDoc project) is licensed under the **GNU Affero General Public License v3.0** ([`LICENSE`](LICENSE)). You're free to use, study, modify, and share it, and if you run a modified version as a network service you must make your source available to its users under the same license.
 
 ## Acknowledgements
 
-AutoDoc stands on the shoulders of excellent open-source work:
+Gideon's Notizen is a fork of [**AutoDoc**](https://github.com/DuetDisplay/AutoDoc) by Duet Display, Inc., and stands on the shoulders of excellent open-source work:
 
+- [DuetDisplay/AutoDoc](https://github.com/DuetDisplay/AutoDoc) — the original open-source meeting assistant this fork is built upon
 - [whisper.cpp](https://github.com/ggerganov/whisper.cpp) — on-device speech-to-text
 - [NVIDIA NeMo Parakeet](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3) — Windows speech-to-text
 - [ONNX Runtime](https://onnxruntime.ai/) and [DirectML](https://github.com/microsoft/DirectML) — Windows inference
@@ -259,5 +277,5 @@ AutoDoc stands on the shoulders of excellent open-source work:
 ---
 
 <div align="center">
-Made by <a href="https://getautodoc.com/">Duet Display, Inc.</a>
+<strong>Gideon's Notizen</strong> · Forked from <a href="https://github.com/DuetDisplay/AutoDoc">DuetDisplay/AutoDoc</a>
 </div>

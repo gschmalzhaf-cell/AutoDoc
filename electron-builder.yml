@@ -1,5 +1,5 @@
 appId: com.kairos.autodoc
-productName: AutoDoc
+productName: "Gideon's Notizen"
 directories:
   buildResources: build
 files:

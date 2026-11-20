@@ -6,14 +6,14 @@ import { fileURLToPath } from 'node:url'
 
 import { verifyReadmeReleaseLinks } from '../update-readme-release-links.mjs'
 
-const latestReleaseUrl = 'https://github.com/DuetDisplay/AutoDoc/releases/latest'
+const latestReleaseUrl = 'https://github.com/gschmalzhaf-cell/AutoDoc/releases/latest'
 
 const requiredLines = [
-  `[![Download AutoDoc for macOS](docs/assets/badges/download-macos.svg)](${latestReleaseUrl})`,
-  `[![Download AutoDoc for Windows](docs/assets/badges/download-windows.svg)](${latestReleaseUrl})`,
-  `[![Latest release](https://img.shields.io/github/v/release/DuetDisplay/AutoDoc?style=flat-square&label=release&color=7A9E7E&labelColor=555555)](${latestReleaseUrl})`,
+  `[![Download Gideon's Notizen for macOS](docs/assets/badges/download-macos.svg)](${latestReleaseUrl})`,
+  `[![Download Gideon's Notizen for Windows](docs/assets/badges/download-windows.svg)](${latestReleaseUrl})`,
+  `[![Latest release](https://img.shields.io/github/v/release/gschmalzhaf-cell/AutoDoc?style=flat-square&label=release&color=3B76D8&labelColor=555555)](${latestReleaseUrl})`,
   `[Read the latest release notes](${latestReleaseUrl}).`,
-  `1. On the [latest release](${latestReleaseUrl}), download the macOS \`.dmg\` asset.`,
+  `1. On the [latest release](${latestReleaseUrl}), download the macOS \`.dmg\` asset (or build from source below).`,
   `1. On the [latest release](${latestReleaseUrl}), download the Windows \`.exe\` installer asset.`
 ]
 

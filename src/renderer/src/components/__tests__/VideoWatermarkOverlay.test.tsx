@@ -8,7 +8,7 @@ describe('VideoWatermarkOverlay', () => {
     const watermark = container.firstElementChild
 
     expect(watermark).not.toBeNull()
-    expect(watermark).toHaveTextContent(/^Meeting notes by AutoDoc$/)
+    expect(watermark).toHaveTextContent(/^Meeting notes by Gideon's Notizen$/)
     expect(watermark).toHaveAttribute('aria-hidden', 'true')
     expect(watermark).toHaveClass(
       'pointer-events-none',
@@ -22,6 +22,6 @@ describe('VideoWatermarkOverlay', () => {
     )
     expect(watermark?.querySelectorAll('svg rect')).toHaveLength(4)
     expect(watermark?.querySelector('svg')).toHaveClass('text-white/85')
-    expect(screen.getByText('Meeting notes by AutoDoc')).toBeInTheDocument()
+    expect(screen.getByText("Meeting notes by Gideon's Notizen")).toBeInTheDocument()
   })
 })

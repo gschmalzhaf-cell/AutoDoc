@@ -603,7 +603,7 @@ jobs:
           RELEASE_TAG: ${{ github.ref_name }}
         shell: bash
         run: |
-          gh release create "$RELEASE_TAG" --draft --title "AutoDoc ${RELEASE_TAG#v}" --notes "AutoDoc ${RELEASE_TAG#v} build from $RELEASE_TAG." || true
+          gh release create "$RELEASE_TAG" --draft --title "Gideon's Notizen ${RELEASE_TAG#v}" --notes-file "release-notes/${RELEASE_TAG}.md" || gh release create "$RELEASE_TAG" --draft --title "Gideon's Notizen ${RELEASE_TAG#v}" --notes "Gideon's Notizen ${RELEASE_TAG#v} build from $RELEASE_TAG." || true
           gh release upload "$RELEASE_TAG" dist/*-setup.exe dist/latest.yml --clobber
 
       - name: Upload Windows release assets

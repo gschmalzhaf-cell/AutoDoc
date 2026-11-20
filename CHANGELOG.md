@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.9.0] — 2026-11-20
+
+### Changed
+
+- Rebranded the application to **Gideon's Notizen** (window title, sidebar,
+  onboarding, video watermark, tray, and installer metadata) to clearly
+  distinguish this fork from upstream AutoDoc.
+- Redesigned the UI with a **cozy, playful blue** color palette for both light
+  and dark modes, soft ambient background glow, springy micro-interactions, and
+  a matching blue app icon.
+- Updated `README.md` with Gideon's Notizen branding, an explicit fork notice
+  linking to `DuetDisplay/AutoDoc`, and a comparison table highlighting all
+  differences from upstream.
+
 ## [1.8.0] — 2026-11-18
 
 ### Added

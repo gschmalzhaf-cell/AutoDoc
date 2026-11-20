@@ -43,7 +43,7 @@ async function renderSidebar() {
 describe('Sidebar', () => {
   it('renders the app name', async () => {
     await renderSidebar()
-    expect(screen.getByText('AutoDoc')).toBeInTheDocument()
+    expect(screen.getByText("Gideon's Notizen")).toBeInTheDocument()
   })
 
   it('renders all navigation links', async () => {

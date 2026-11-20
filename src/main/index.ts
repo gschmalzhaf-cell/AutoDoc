@@ -201,7 +201,7 @@ import {
 import { DEFAULT_OLLAMA_MODEL, LOW_SPEC_MAC_OLLAMA_MODEL } from '../shared/constants'
 import { isOfficialAutoDocBuild } from './services/distribution-config'
 
-const APP_NAME = __AUTODOC_QA_BUILD__ ? 'AutoDoc QA' : 'AutoDoc'
+const APP_NAME = __AUTODOC_QA_BUILD__ ? 'AutoDoc QA' : "Gideon's Notizen"
 const EXPECTED_APP_ID = __AUTODOC_QA_BUILD__ ? 'com.kairos.autodoc.qa' : 'com.kairos.autodoc'
 
 // Keep the safeStorage keychain service and profile identity stable within each build flavor.

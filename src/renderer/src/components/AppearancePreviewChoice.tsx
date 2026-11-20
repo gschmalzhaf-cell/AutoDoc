@@ -7,8 +7,8 @@ type Mode = 'light' | 'dark'
 
 // Miniature app screenshots depict each theme, so their colours are fixed on purpose.
 const MINI = {
-  light: { bg: '#fafaf7', side: '#ecebe4', bar: '#4a6b4e', line: '#d6d4ca' },
-  dark: { bg: '#1c1c18', side: '#121210', bar: '#8fb392', line: '#46453d' }
+  light: { bg: '#f5f9fe', side: '#ebf2fc', bar: '#3b76d8', line: '#cddcf0' },
+  dark: { bg: '#121824', side: '#0e131d', bar: '#6ba4ff', line: '#2d3b54' }
 } as const
 
 function MiniApp({ mode }: { mode: Mode }) {

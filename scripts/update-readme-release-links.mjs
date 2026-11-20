@@ -9,39 +9,39 @@ const requiredMarkers = [
   {
     description: 'macOS header download badge linked to the latest release',
     pattern:
-      /\[!\[Download AutoDoc for macOS\]\(docs\/assets\/badges\/download-macos\.svg\)\]\(https:\/\/github\.com\/DuetDisplay\/AutoDoc\/releases\/latest\)/g
+      /\[!\[Download Gideon's Notizen for macOS\]\(docs\/assets\/badges\/download-macos\.svg\)\]\(https:\/\/github\.com\/gschmalzhaf-cell\/AutoDoc\/releases\/latest\)/g
   },
   {
     description: 'Windows header download badge linked to the latest release',
     pattern:
-      /\[!\[Download AutoDoc for Windows\]\(docs\/assets\/badges\/download-windows\.svg\)\]\(https:\/\/github\.com\/DuetDisplay\/AutoDoc\/releases\/latest\)/g
+      /\[!\[Download Gideon's Notizen for Windows\]\(docs\/assets\/badges\/download-windows\.svg\)\]\(https:\/\/github\.com\/gschmalzhaf-cell\/AutoDoc\/releases\/latest\)/g
   },
   {
     description: 'dynamic latest-release badge',
     pattern:
-      /\[!\[Latest release\]\(https:\/\/img\.shields\.io\/github\/v\/release\/DuetDisplay\/AutoDoc\?[^)\n]+\)\]\(https:\/\/github\.com\/DuetDisplay\/AutoDoc\/releases\/latest\)/g
+      /\[!\[Latest release\]\(https:\/\/img\.shields\.io\/github\/v\/release\/gschmalzhaf-cell\/AutoDoc\?[^)\n]+\)\]\(https:\/\/github\.com\/gschmalzhaf-cell\/AutoDoc\/releases\/latest\)/g
   },
   {
     description: 'latest release-notes link',
     pattern:
-      /\[Read the latest release notes\]\(https:\/\/github\.com\/DuetDisplay\/AutoDoc\/releases\/latest\)/g
+      /\[Read the latest release notes\]\(https:\/\/github\.com\/gschmalzhaf-cell\/AutoDoc\/releases\/latest\)/g
   },
   {
     description: 'macOS latest-release install step',
     pattern:
-      /^1\. On the \[latest release\]\(https:\/\/github\.com\/DuetDisplay\/AutoDoc\/releases\/latest\), download the macOS `\.dmg` asset\.$/gm
+      /^1\. On the \[latest release\]\(https:\/\/github\.com\/gschmalzhaf-cell\/AutoDoc\/releases\/latest\), download the macOS `\.dmg` asset(?: \(or build from source below\))?\.$/gm
   },
   {
     description: 'Windows latest-release install step',
     pattern:
-      /^1\. On the \[latest release\]\(https:\/\/github\.com\/DuetDisplay\/AutoDoc\/releases\/latest\), download the Windows `\.exe` installer asset\.$/gm
+      /^1\. On the \[latest release\]\(https:\/\/github\.com\/gschmalzhaf-cell\/AutoDoc\/releases\/latest\), download the Windows `\.exe` installer asset\.$/gm
   }
 ]
 
 const forbiddenMarkers = [
   {
     description: 'version-pinned release download URL',
-    pattern: /https:\/\/github\.com\/DuetDisplay\/AutoDoc\/releases\/download\//g
+    pattern: /https:\/\/github\.com\/gschmalzhaf-cell\/AutoDoc\/releases\/download\//g
   },
   {
     description: 'version-pinned macOS installer name',

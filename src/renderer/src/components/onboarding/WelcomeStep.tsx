@@ -19,7 +19,7 @@ export function WelcomeStep({ onNext }: { onNext: () => void }) {
         ))}
       </div>
 
-      <h1 className="font-serif text-[36px] text-ink tracking-[-0.02em]">AutoDoc</h1>
+      <h1 className="font-serif text-[36px] text-ink tracking-[-0.02em]">Gideon&apos;s Notizen</h1>
       <p className="text-[15px] text-ink-muted leading-relaxed mt-1.5 mb-8">
         {t('ui.yourMeetingsTalkWeListen')}
         <br />

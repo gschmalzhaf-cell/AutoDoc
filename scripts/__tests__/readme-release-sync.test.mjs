@@ -23,7 +23,7 @@ test('generates a one-sentence teaser and changes only the managed block', () =>
   assert.match(updated, /\*\*New in v1\.3\.0:\*\* Meetings in your selected language\./)
   assert.match(
     updated,
-    /Read the latest release notes\]\(https:\/\/github\.com\/DuetDisplay\/AutoDoc\/releases\/latest\)/
+    /Read the latest release notes\]\(https:\/\/github\.com\/gschmalzhaf-cell\/AutoDoc\/releases\/latest\)/
   )
   assert.equal(updated.split(RELEASE_START)[0], readme.split(RELEASE_START)[0])
   assert.equal(updated.split(RELEASE_END)[1], readme.split(RELEASE_END)[1])

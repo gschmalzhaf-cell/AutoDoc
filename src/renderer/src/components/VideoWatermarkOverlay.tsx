@@ -18,7 +18,7 @@ export const VideoWatermarkOverlay = forwardRef<HTMLDivElement>(
           <rect x="13.5" y="5" width="2" height="4" rx="1" />
         </svg>
         <span className="min-w-0 [overflow-wrap:anywhere]">
-          {t('ui.meetingNotesByApp', { app: 'AutoDoc' })}
+          {t('ui.meetingNotesByApp', { app: "Gideon's Notizen" })}
         </span>
       </div>
     )

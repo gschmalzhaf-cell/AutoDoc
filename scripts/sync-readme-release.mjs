@@ -5,7 +5,7 @@ import { verifyReadmeReleaseLinks } from './update-readme-release-links.mjs'
 
 export const RELEASE_START = '<!-- latest-release:start -->'
 export const RELEASE_END = '<!-- latest-release:end -->'
-const latestReleaseUrl = 'https://github.com/DuetDisplay/AutoDoc/releases/latest'
+const latestReleaseUrl = 'https://github.com/gschmalzhaf-cell/AutoDoc/releases/latest'
 const maxTeaserWords = 16
 const maxTeaserCharacters = 120
 
