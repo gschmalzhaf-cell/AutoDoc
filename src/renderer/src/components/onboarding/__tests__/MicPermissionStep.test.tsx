@@ -28,7 +28,7 @@ describe('MicPermissionStep', () => {
     expect(screen.getByText('Enable Microphone')).toBeInTheDocument()
     expect(screen.getByText('Use headphones for the clearest notes')).toBeInTheDocument()
     expect(
-      screen.getByText(/help AutoDoc tell your voice apart from everyone else's/i)
+      screen.getByText(/help Gideon's Notizen tell your voice apart from everyone else's/i)
     ).toBeInTheDocument()
   })
 

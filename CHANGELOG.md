@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.9.1] — 2026-11-21
+
+### Fixed
+
+- Replaced remaining visible `AutoDoc` references across all UI strings,
+  translations, main-process notifications, AI assistant prompts, PDF exports,
+  diagnostic reports, the Windows uninstaller prompt, and the Windows installer
+  filename (`gideons-notizen-1.9.1-setup.exe`).
+- Fixed German AI/KI terminology consistency in Settings and Onboarding
+  („KI fragen“ instead of mixed „Ask AI“, plus consistent formal „Sie“ in the
+  diagnostic report description).
+
 ## [1.9.0] — 2026-11-20
 
 ### Changed

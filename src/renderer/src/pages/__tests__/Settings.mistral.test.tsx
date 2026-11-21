@@ -88,7 +88,7 @@ describe('Settings Mistral API section', () => {
     expect(screen.getByText('Mistral API')).toBeInTheDocument()
     expect(screen.queryByPlaceholderText('API key')).not.toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Disconnect' })).toBeInTheDocument()
-    expect(screen.getByText(/AutoDoc is connected to the Mistral API./i)).toBeInTheDocument()
+    expect(screen.getByText(/Gideon's Notizen is connected to the Mistral API./i)).toBeInTheDocument()
   })
 
   it('lets a connected user pick a different chat model', async () => {
@@ -334,7 +334,7 @@ describe('Settings launch-at-login toggle', () => {
       await Promise.resolve()
     })
 
-    const toggle = screen.getByRole('button', { name: 'Toggle launching AutoDoc at login' })
+    const toggle = screen.getByRole('button', { name: 'Toggle launching Gideon\'s Notizen at login' })
     expect(toggle).toHaveAttribute('aria-pressed', 'true')
 
     await act(async () => {
@@ -353,7 +353,7 @@ describe('Settings diagnostic report', () => {
     Object.assign(navigator, { clipboard: { writeText } })
     vi.mocked(window.electronAPI.invoke).mockImplementation((channel: string) => {
       if (channel === 'report:generate') {
-        return Promise.resolve('# AutoDoc diagnostic report\nApp version: 1.7.0')
+        return Promise.resolve('# Gideon\'s Notizen diagnostic report\nApp version: 1.7.0')
       }
       if (channel === 'mistral:get-status') {
         return Promise.resolve({
@@ -391,7 +391,7 @@ describe('Settings diagnostic report', () => {
       await Promise.resolve()
     })
 
-    expect(writeText).toHaveBeenCalledWith(expect.stringContaining('# AutoDoc diagnostic report'))
+    expect(writeText).toHaveBeenCalledWith(expect.stringContaining('# Gideon\'s Notizen diagnostic report'))
     expect(screen.getByText('The report was copied to the clipboard.')).toBeInTheDocument()
   })
 })

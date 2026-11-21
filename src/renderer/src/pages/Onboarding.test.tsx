@@ -39,7 +39,7 @@ it.each(['darwin', 'win32'])(
     platform = value
     render(<Onboarding onComplete={vi.fn()} />)
     expect(await screen.findByRole('heading', { name: 'Choose your language' })).toBeInTheDocument()
-    expect(screen.queryByRole('heading', { name: 'AutoDoc' })).not.toBeInTheDocument()
+    expect(screen.queryByRole('heading', { name: 'Gideon\'s Notizen' })).not.toBeInTheDocument()
   }
 )
 it('preserves a saved step ID from the previous onboarding order', async () => {
@@ -51,5 +51,5 @@ it('preserves a saved step ID from the previous onboarding order', async () => {
 it('keeps an existing saved welcome step at welcome', async () => {
   savedStep = 0
   render(<Onboarding onComplete={vi.fn()} />)
-  expect(await screen.findByRole('heading', { name: 'AutoDoc' })).toBeInTheDocument()
+  expect(await screen.findByRole('heading', { name: 'Gideon\'s Notizen' })).toBeInTheDocument()
 })

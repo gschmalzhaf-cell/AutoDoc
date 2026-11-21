@@ -9,17 +9,17 @@ export const completeEn = {
   'notesFailure.engineBody':
     'The notes engine wasn’t ready yet. Stay connected if a download is in progress, then try again.',
   'notesFailure.genericBody':
-    'AutoDoc hit a problem writing notes this time. Your transcript is still available.',
+    'Gideon\'s Notizen hit a problem writing notes this time. Your transcript is still available.',
   'notesFailure.layoutTitle': 'Your notes are ready in a basic format',
   'notesFailure.layoutBody':
-    'AutoDoc hit an error while preparing the topic layout, so your generated notes are shown in categories below. Your transcript is still available.',
-  'update.startingBeforeRestart': 'AutoDoc is starting. Try again shortly.',
-  'update.processingBeforeRestart': 'AutoDoc is processing your meeting. Restart when it finishes.',
+    'Gideon\'s Notizen hit an error while preparing the topic layout, so your generated notes are shown in categories below. Your transcript is still available.',
+  'update.startingBeforeRestart': 'Gideon\'s Notizen is starting. Try again shortly.',
+  'update.processingBeforeRestart': 'Gideon\'s Notizen is processing your meeting. Restart when it finishes.',
   'update.downloadBeforeRestart': 'Wait for the model download to finish before restarting.',
-  'update.savingBeforeRestart': 'AutoDoc is saving your recording.',
-  'quit.savingTitle': 'AutoDoc is still saving your recording',
+  'update.savingBeforeRestart': 'Gideon\'s Notizen is saving your recording.',
+  'quit.savingTitle': 'Gideon\'s Notizen is still saving your recording',
   'quit.savingBody':
-    'AutoDoc stayed open to protect your recording. Wait for it to finish, then quit again.',
+    'Gideon\'s Notizen stayed open to protect your recording. Wait for it to finish, then quit again.',
 
   'menu.file': 'File',
   'menu.edit': 'Edit',
@@ -79,19 +79,19 @@ export const completeEn = {
   'speaker.unknown': 'Speaker',
   'ui.youReUpToDate': "You're up to date",
   'ui.autoDocIsRunningTheLatestAvailableVersion':
-    'AutoDoc is running the latest available version.',
+    'Gideon\'s Notizen is running the latest available version.',
   'ui.dismissUpToDateMessage': 'Dismiss up to date message',
   'ui.later': 'Later',
   'ui.draftOpenedInYourEmailApp': 'Draft opened in your email app.',
-  'ui.howSAutoDocWorkingForYou': 'How’s AutoDoc working for you?',
+  'ui.howSAutoDocWorkingForYou': 'How’s Gideon\'s Notizen working for you?',
   'ui.tellUsWhatSWorkingWhatSMissingOrWhatAutoDocCouldDoBetter':
-    'Tell us what’s working, what’s missing, or what AutoDoc could do better.',
+    'Tell us what’s working, what’s missing, or what Gideon\'s Notizen could do better.',
   'ui.shareFeedback': 'Share feedback',
   'ui.maybeLater': 'Maybe later',
   'ui.donTAskAgain': 'Don’t ask again',
   'ui.optimizedLocalProcessingIsOn': 'Optimized local processing is on',
   'ui.thisComputerHasLimitedMemorySoAutoDocIsProcessingRecordingsMoreCarefullyNot':
-    'This computer has limited memory, so AutoDoc is processing recordings more carefully. Notes may take a little longer, but this helps avoid slowdowns or failed processing.',
+    'This computer has limited memory, so Gideon\'s Notizen is processing recordings more carefully. Notes may take a little longer, but this helps avoid slowdowns or failed processing.',
   'ui.gotIt': 'Got it',
   'ui.exportNotes': 'Export notes',
   'ui.chooseAFileFormat': 'Choose a file format.',
@@ -110,7 +110,7 @@ export const completeEn = {
   'ui.couldnTSendYourFeedbackYourResponseIsStillHereCheckYourConnectionAndTryAgai':
     'Couldn’t send your feedback. Your response is still here. Check your connection and try again.',
   'ui.addDetailOptional': 'Add detail (optional)',
-  'ui.whatGetsSentToAutoDoc': 'What gets sent to AutoDoc',
+  'ui.whatGetsSentToAutoDoc': 'What gets sent to Gideon\'s Notizen',
   'ui.yourRatingAnyCommentYouAddAppVersionOperatingSystemAndNotesEngineVersion':
     'Your rating, any comment you add, app version, operating system, and notes engine version.',
   'ui.notesTranscriptsRecordingsLogsAndMeetingTitlesAreNotAttached':
@@ -153,11 +153,11 @@ export const completeEn = {
   'ui.noTranscriptSegmentsFound': 'No transcript segments found.',
   'ui.youReAllSet': "You're All Set",
   'ui.autoDocIsReadyToGoStartOrJoinAMeetingAndWeLlTakeItFromHere':
-    "AutoDoc is ready to go. Start or join a meeting and we'll take it from here.",
-  'ui.openAutoDoc': 'Open AutoDoc',
-  'ui.helpUsMakeAutoDocBetter': 'Help us make AutoDoc better',
+    "Gideon's Notizen is ready to go. Start or join a meeting and we'll take it from here.",
+  'ui.openAutoDoc': 'Open Gideon\'s Notizen',
+  'ui.helpUsMakeAutoDocBetter': 'Help us make Gideon\'s Notizen better',
   'ui.youCanOptionallyShareAnonymousProductHealthSoWeCanFixCrashesAndImproveAutoD':
-    'You can optionally share anonymous product health so we can fix crashes and improve AutoDoc. We never receive your meeting content, titles, transcripts, or recordings, and we never train on them. You can change this later in Settings.',
+    'You can optionally share anonymous product health so we can fix crashes and improve Gideon\'s Notizen. We never receive your meeting content, titles, transcripts, or recordings, and we never train on them. You can change this later in Settings.',
   'ui.whatExactlyDoWeTrack': 'What exactly do we track?',
   'ui.meetingContentMeetingTitlesTranscriptsOrCalendarData':
     'Meeting content, meeting titles, transcripts, or calendar data',
@@ -178,7 +178,7 @@ export const completeEn = {
   'ui.microphoneAccess': 'Microphone Access',
   'ui.useHeadphonesForTheClearestNotes': 'Use headphones for the clearest notes',
   'ui.wearHeadphonesWhileRecordingTheyHelpAutoDocTellYourVoiceApartFromEveryoneEl':
-    "Wear headphones while recording. They help AutoDoc tell your voice apart from everyone else's and make playback cleaner.",
+    "Wear headphones while recording. They help Gideon's Notizen tell your voice apart from everyone else's and make playback cleaner.",
   'ui.aIModelReady': 'AI Model Ready',
   'ui.mistralUseMistralApi': 'Use Mistral API',
   'ui.mistralDescription':
@@ -187,7 +187,7 @@ export const completeEn = {
   'ui.mistralConnect': 'Connect',
   'ui.mistralConnecting': 'Connecting…',
   'ui.mistralConnectedBody':
-    'AutoDoc is connected to the Mistral API. Notes and Ask AI run on Mistral; transcription stays on this device.',
+    'Gideon\'s Notizen is connected to the Mistral API. Notes and Ask AI run on Mistral; transcription stays on this device.',
   'ui.mistralKeyRejected': 'The API key was rejected. Check the key and try again.',
   'ui.useLocalModels': 'Use local models',
   'ui.mistralChangeApiKey': 'Change API key',
@@ -211,10 +211,10 @@ export const completeEn = {
     'This PC will transcribe this language on the processor, so it will be slower.',
   'ui.settingUpTranscription': 'Setting Up Transcription',
   'ui.autoDocUsesALocalSpeechEngineAndLocalSpeakerIdentificationToProcessMeetings':
-    'AutoDoc uses a local speech engine and local speaker identification to process meetings on-device. This downloads once and runs entirely on your machine.',
+    'Gideon\'s Notizen uses a local speech engine and local speaker identification to process meetings on-device. This downloads once and runs entirely on your machine.',
   'ui.stillFinishingTranscriptionSetup': 'Still finishing transcription setup',
   'ui.autoDocIsRetryingAutomaticallyInTheBackgroundSoYouCanKeepMoving':
-    'AutoDoc is retrying automatically in the background so you can keep moving.',
+    'Gideon\'s Notizen is retrying automatically in the background so you can keep moving.',
   'ui.chooseAnotherLanguage': 'Choose another language',
   'ui.yourMeetingsTalkWeListen': 'Your meetings talk. We listen.',
   'ui.soYouDonTHaveToTakeNotes': "So you don't have to take notes.",
@@ -227,14 +227,14 @@ export const completeEn = {
     'Re-run transcription or note generation from the original audio.',
   'ui.privateByDesign': 'Private by Design',
   'ui.autoDocIsFullyOpenSourceAndRunsEntirelyOnYourMachineYourMeetingsAreEncrypte':
-    'AutoDoc is fully open source and runs entirely on your machine. Your meetings are encrypted on disk and never leave your computer. No cloud. No accounts. No compromises. Built by ex-Apple engineers who believe your data is yours.',
+    'Gideon\'s Notizen is fully open source and runs entirely on your machine. Your meetings are encrypted on disk and never leave your computer. No cloud. No accounts. No compromises. Built by ex-Apple engineers who believe your data is yours.',
   'ui.howItWorks': 'How It Works',
   'ui.autoDocQuietlyRecordsYourMeetingAudioTranscribesItLocallyAndIdentifiesWhoSS':
-    "AutoDoc quietly records your meeting audio, transcribes it locally, and identifies who's speaking — all on your device.",
+    "Gideon's Notizen quietly records your meeting audio, transcribes it locally, and identifies who's speaking — all on your device.",
   'ui.notesThatThink': 'Notes That Think',
   'ui.back': '← Back',
   'ui.updateReady': 'Update ready',
-  'ui.autoDocWillReopenAfterTheUpdateInstalls': 'AutoDoc will reopen after the update installs.',
+  'ui.autoDocWillReopenAfterTheUpdateInstalls': 'Gideon\'s Notizen will reopen after the update installs.',
   'ui.restart': 'Restart',
   'ui.retryTranscription': 'Retry transcription',
   'ui.retryNotes': 'Retry notes',
@@ -258,13 +258,13 @@ export const completeEn = {
   'ui.macOSMayRequireARestartForThePermissionToTakeEffectIfYouChoseRestartLaterYo':
     'macOS may require a restart for the permission to take effect. If you chose "Restart Later", you can continue setup and grant access from Settings later.',
   'ui.autoDocNeedsYourMicrophoneToCaptureMeetingAudioThisIsTheCoreOfHowTranscript':
-    "AutoDoc needs your microphone to capture meeting audio. This is the core of how transcription works — without it, we can't hear your meetings.",
+    "Gideon's Notizen needs your microphone to capture meeting audio. This is the core of how transcription works — without it, we can't hear your meetings.",
   'ui.emailAddressCopied': 'Email address copied',
   'ui.tryCopyingAgain': 'Try copying again',
   'ui.ifMacOSDidNotGrantScreenAccessAutomaticallyYouCanEnableItInSystemSettingsSc':
-    'If macOS did not grant screen access automatically, you can enable it in System Settings. Screen visuals and system audio are verified separately when recording starts, and you may need to restart AutoDoc after changing the setting.',
+    'If macOS did not grant screen access automatically, you can enable it in System Settings. Screen visuals and system audio are verified separately when recording starts, and you may need to restart Gideon\'s Notizen after changing the setting.',
   'ui.autoDocUsesScreenRecordingPermissionToCaptureMeetingVisualsMacOSVerifiesSys':
-    'AutoDoc uses screen recording permission to capture meeting visuals. macOS verifies system audio separately when a recording starts, so you can continue even if you skip this for now.',
+    'Gideon\'s Notizen uses screen recording permission to capture meeting visuals. macOS verifies system audio separately when a recording starts, so you can continue even if you skip this for now.',
   'ui.preparing': 'Preparing...',
   'ui.optimizedForThisPC': 'Optimized for this PC',
   'ui.optimizedForThisMac': 'Optimized for this Mac',
@@ -273,7 +273,7 @@ export const completeEn = {
   'ui.transcriptionSetupIsTakingLongerThanExpected':
     'Transcription setup is taking longer than expected',
   'ui.youCanContinueAndAutoDocWillKeepWorkingOnThisInTheBackgroundOrRetryRightNow':
-    'You can continue and AutoDoc will keep working on this in the background, or retry right now.',
+    'You can continue and Gideon\'s Notizen will keep working on this in the background, or retry right now.',
   'ui.awaitingTranscription': 'Awaiting transcription',
   'ui.downloadingModel': 'Downloading model...',
   'ui.transcribing': 'Transcribing...',
@@ -311,7 +311,7 @@ export const completeEn = {
     'Records mic and system audio separately for clean speaker identification',
   'ui.transcribesLocally': 'Transcribes locally',
   'ui.autoDocInstallsAOneTimeSpeechEngineThenTranscribesOnDevice':
-    'AutoDoc installs a one-time speech engine, then transcribes on-device',
+    'Gideon\'s Notizen installs a one-time speech engine, then transcribes on-device',
   'ui.identifiesSpeakers': 'Identifies speakers',
   'ui.knowsWhoSTalkingLabelsMeVsThemAutomatically':
     'Knows who\'s talking — labels "Me" vs "Them" automatically',
@@ -326,7 +326,7 @@ export const completeEn = {
     'Not enough disk space to export. Choose another location or free up space.',
   'ui.thereArenTAnyNotesToExportYet': 'There aren’t any notes to export yet.',
   'ui.autoDocCouldnTSaveTheNotesThereChooseAnotherLocationAndTryAgain':
-    'AutoDoc couldn’t save the notes there. Choose another location and try again.',
+    'Gideon\'s Notizen couldn’t save the notes there. Choose another location and try again.',
   'ui.couldnTExportNotesTryAgain': 'Couldn’t export notes. Try again.',
   'ui.thereArenTAnyNotesToCopyYet': 'There aren’t any notes to copy yet.',
   'ui.couldnTCopyNotesTryAgain': 'Couldn’t copy notes. Try again.',
@@ -338,13 +338,13 @@ export const completeEn = {
   'ui.dismissCopyError': 'Dismiss copy error',
   'ui.dismissExportError': 'Dismiss export error',
   'ui.autoDocNowSupportsCountMeetingLanguagesChooseTheLanguageSpokenInYourMeeting':
-    'AutoDoc now supports {count} meeting languages. Choose the language spoken in your meetings in Settings. New transcripts and notes will use that language.',
+    'Gideon\'s Notizen now supports {count} meeting languages. Choose the language spoken in your meetings in Settings. New transcripts and notes will use that language.',
   'ui.couldNotSaveThisPreferenceTryAgain': 'Could not save this preference. Try again.',
   'ui.noInternetConnection': 'No internet connection',
   'ui.thisComputerHasLimitedMemorySoAutoDocWillProcessRecordingsMoreCarefullyTran':
-    'This computer has limited memory, so AutoDoc will process recordings more carefully. Transcription and notes may take longer.',
+    'This computer has limited memory, so Gideon\'s Notizen will process recordings more carefully. Transcription and notes may take longer.',
   'ui.autoDocWillProcessMicrophoneAndSystemAudioOneAtATimeToReduceMemoryPressure':
-    'AutoDoc will process microphone and system audio one at a time to reduce memory pressure.',
+    'Gideon\'s Notizen will process microphone and system audio one at a time to reduce memory pressure.',
   'ui.ownerOwner': 'Owner: {owner}',
   'ui.dueDeadline': 'Due: {deadline}',
   'ui.featureUsageAnonymousFeatureSetupAndRecordingWorkflowEvents':
@@ -443,17 +443,17 @@ export const completeEn = {
   'ui.postHogNotConfigured': 'PostHog not configured',
   'ui.consentOn': 'consent on',
   'ui.consentOff': 'consent off',
-  'ui.quitAutoDoc': 'Quit AutoDoc',
+  'ui.quitAutoDoc': 'Quit Gideon\'s Notizen',
   'ui.unsupportedMacOSVersion': 'Unsupported macOS Version',
-  'ui.pleaseUpdateMacOSToContinueUsingAutoDoc': 'Please update macOS to continue using AutoDoc.',
+  'ui.pleaseUpdateMacOSToContinueUsingAutoDoc': 'Please update macOS to continue using Gideon\'s Notizen.',
   'ui.theCopyInLocation': 'the copy in {location}',
-  'ui.autoDocRequiresVersionOrNewer': 'AutoDoc requires {version} or newer.',
+  'ui.autoDocRequiresVersionOrNewer': 'Gideon\'s Notizen requires {version} or newer.',
   'ui.thisMacIsRunningMacOSVersionUpdateMacOSToContinueUsingAutoDoc':
-    'This Mac is running macOS {version}. Update macOS to continue using AutoDoc.',
+    'This Mac is running macOS {version}. Update macOS to continue using Gideon\'s Notizen.',
   'ui.autoDocSourceIsNewerThanTargetInstalled':
-    'AutoDoc {source} is newer than {target} ({installed}).',
+    'Gideon\'s Notizen {source} is newer than {target} ({installed}).',
   'ui.autoDocSourceIsOlderThanTargetInstalled':
-    'AutoDoc {source} is older than {target} ({installed}).',
+    'Gideon\'s Notizen {source} is older than {target} ({installed}).',
   'ui.unknownInstallationError': 'Unknown installation error.',
   'ui.upgradeApplicationsCopy': 'Upgrade Applications Copy',
   'ui.upgradeInstalledCopy': 'Upgrade Installed Copy',
@@ -462,13 +462,13 @@ export const completeEn = {
   'ui.replaceApplicationsCopy': 'Replace Applications Copy',
   'ui.replaceInstalledCopy': 'Replace Installed Copy',
   'ui.autoDocFoundAnotherCopyInApplicationsButCouldNotReadItsVersion':
-    'AutoDoc found another copy in /Applications, but could not read its version.',
+    'Gideon\'s Notizen found another copy in /Applications, but could not read its version.',
   'ui.autoDocFoundAnotherInstalledCopyButCouldNotReadItsVersion':
-    'AutoDoc found another installed copy, but could not read its version.',
+    'Gideon\'s Notizen found another installed copy, but could not read its version.',
   'ui.replaceTheAutoDocCopyInApplicationsAndRelaunchFromThereSoOnlyOneVersionCanR':
-    'Replace the AutoDoc copy in /Applications and relaunch from there so only one version can run.',
+    'Replace the Gideon\'s Notizen copy in /Applications and relaunch from there so only one version can run.',
   'ui.replaceTheInstalledAutoDocCopyAndRelaunchFromItSoOnlyOneVersionCanRun':
-    'Replace the installed AutoDoc copy and relaunch from it so only one version can run.',
+    'Replace the installed Gideon\'s Notizen copy and relaunch from it so only one version can run.',
   'ui.upgradeInApplications': 'Upgrade in Applications',
   'ui.downgradeInApplications': 'Downgrade in Applications',
   'ui.replaceInApplications': 'Replace in Applications',
@@ -476,8 +476,8 @@ export const completeEn = {
   'ui.couldNotReplaceApplicationsCopy': 'Could not replace Applications copy',
   'ui.couldNotReplaceInstalledCopy': 'Could not replace installed copy',
   'ui.autoDocCouldNotReplaceTheCopyInApplications':
-    'AutoDoc could not replace the copy in /Applications.',
-  'ui.autoDocCouldNotReplaceTheInstalledCopy': 'AutoDoc could not replace the installed copy.',
+    'Gideon\'s Notizen could not replace the copy in /Applications.',
+  'ui.autoDocCouldNotReplaceTheInstalledCopy': 'Gideon\'s Notizen could not replace the installed copy.',
   'speaker.me': 'Me',
   'speaker.them': 'Them',
   'speaker.number': 'Speaker {number}',
@@ -513,36 +513,36 @@ export const completeEn = {
   'ui.ollamaAndTheNotesModelAreInstalledAndReadyToGo':
     'Ollama and the notes model are installed and ready to go.',
   'ui.autoDocInstallsOllamaAndDownloadsTheNotesModelOnceSoYourNotesCanRunEntirely':
-    'AutoDoc installs Ollama and downloads the notes model once so your notes can run entirely on your machine.',
+    'Gideon\'s Notizen installs Ollama and downloads the notes model once so your notes can run entirely on your machine.',
   'ui.preparingAskAISearchModel': 'Preparing Ask AI search model...',
   'ui.preparingNotesModel': 'Preparing notes model...',
   'ui.downloadingAskAISearchModelPercent': 'Downloading Ask AI search model... {percent}%',
   'ui.downloadingNotesModelPercent': 'Downloading notes model... {percent}%',
   'ui.optionalDiagnosticLogUpload':
     'This is optional. You can leave this off while analytics and crash reports stay on.',
-  'githubStar.heading': 'Enjoying AutoDoc?',
+  'githubStar.heading': 'Enjoying Gideon\'s Notizen?',
   'githubStar.body':
-    'AutoDoc is free and made by a small team. A GitHub star is the easiest way to help it grow.',
+    'Gideon\'s Notizen is free and made by a small team. A GitHub star is the easiest way to help it grow.',
   'githubStar.star': 'Star on GitHub',
   'githubStar.noThanks': 'No thanks',
   'githubStar.thanks': 'Thanks for the support!',
   'githubStar.sourceCode': 'Source code on GitHub',
-  'githubStar.starAutoDoc': 'Star AutoDoc',
+  'githubStar.starAutoDoc': 'Star Gideon\'s Notizen',
   'githubStar.openFailed': 'Couldn’t open GitHub. Try again.',
   'recording.systemAudioCaptureFailed':
-    'System audio capture failed. AutoDoc can still record, but speaker labeling may be unavailable for this recording.',
+    'System audio capture failed. Gideon\'s Notizen can still record, but speaker labeling may be unavailable for this recording.',
   'recording.microphoneRevoked':
-    'Microphone access was revoked. AutoDoc needs it to record meetings. Enable it in System Settings → Privacy → Microphone.',
+    'Microphone access was revoked. Gideon\'s Notizen needs it to record meetings. Enable it in System Settings → Privacy → Microphone.',
   'recording.microphoneBlocked':
     'Microphone access is blocked. Enable microphone access in Windows Settings, then try recording again.',
   'recording.microphoneMissing':
-    'No microphone was detected, or Windows privacy settings are hiding it. AutoDoc can still record system audio.',
+    'No microphone was detected, or Windows privacy settings are hiding it. Gideon\'s Notizen can still record system audio.',
   'recording.microphoneBusy':
-    'Your microphone is unavailable or in use by another app. AutoDoc can still record system audio.',
+    'Your microphone is unavailable or in use by another app. Gideon\'s Notizen can still record system audio.',
   'recording.microphoneStartFailed':
-    'AutoDoc could not start the microphone. Recordings can continue with system audio only.',
+    'Gideon\'s Notizen could not start the microphone. Recordings can continue with system audio only.',
   'recording.audioOnlyReminderBody':
-    'Video stopped {minutes} minutes ago. AutoDoc is still recording audio.',
+    'Video stopped {minutes} minutes ago. Gideon\'s Notizen is still recording audio.',
   'recording.audioOnlyReminderStop': 'Stop recording',
   'recording.audioOnlyReminderKeep': 'Keep recording',
   'ui.usingCPUForThisRecording': 'Using CPU for this recording',
@@ -555,7 +555,7 @@ export const completeEn = {
   'ui.notEnoughSpaceToSetUpTranscription': 'Not enough space to set up transcription',
   'ui.whyIsThisTakingLonger': 'Why is this taking longer?',
   'ui.autoDocUsuallyUsesYourGraphicsChipToTranscribeQuicklyThisTimeItCouldnT':
-    "AutoDoc usually uses your computer's graphics chip to transcribe quickly. This time it couldn't: your computer was low on free memory, or the graphics chip stopped responding. So AutoDoc switched to the main processor for this recording. Your transcript will be just as complete; it just takes longer. Closing other apps can help next time. Your next recording will try the faster way again.",
+    "AutoDoc usually uses your computer's graphics chip to transcribe quickly. This time it couldn't: your computer was low on free memory, or the graphics chip stopped responding. So Gideon's Notizen switched to the main processor for this recording. Your transcript will be just as complete; it just takes longer. Closing other apps can help next time. Your next recording will try the faster way again.",
   'recording.startedNoticeBody': 'AI notes started. This meeting is being recorded.',
   'recording.chooseMeetingWindowSubtitle': 'Choose the window for this meeting to start AI notes.',
   'ui.new': 'New',
@@ -563,10 +563,10 @@ export const completeEn = {
   'settings.syncReconnectRequiredGoogle':
     'Google Calendar needs to be reconnected to resume calendar sync. Disconnect it, then connect again and allow calendar access.',
   'notesFailure.nothingFoundBody':
-    'AutoDoc didn’t find anything in the transcript to turn into notes. You can retry, and your transcript is still available.',
+    'Gideon\'s Notizen didn’t find anything in the transcript to turn into notes. You can retry, and your transcript is still available.',
   'nav.notesModelUnavailable': 'Notes model unavailable',
   'onboarding.notesBody':
-    'AutoDoc writes a summary, topics, and key takeaways you can edit. Decisions show up when the meeting made them.',
+    'Gideon\'s Notizen writes a summary, topics, and key takeaways you can edit. Decisions show up when the meeting made them.',
   'onboarding.topicsTitle': 'Topics',
   'onboarding.summaryDescription': 'A short overview of the meeting',
   'onboarding.topicsDescription': 'The conversation, grouped by topic',
@@ -574,16 +574,16 @@ export const completeEn = {
   'onboarding.keyTakeawaysTitle': 'Key takeaways',
   'picker.reasonNeedsGraphicsCard': '{language} needs a supported graphics card on this PC.',
   'picker.reasonSpeechRuntimeMissing':
-    'The speech runtime is missing from this build. Reinstall AutoDoc.',
+    'The speech runtime is missing from this build. Reinstall Gideon\'s Notizen.',
   'picker.reasonSetupDownloadFailed': "The speech model download didn't finish. Try again.",
   'picker.reasonSetupVerificationFailed': "The speech model couldn't be verified. Try again.",
   'picker.reasonSetupFailed': "Setup didn't finish. Try again.",
   'onboarding.chooseUiLanguage': 'Choose your language',
   'onboarding.uiLanguageDescription':
-    'AutoDoc will use this language for menus, buttons and messages. You can change it later in Settings.',
+    'Gideon\'s Notizen will use this language for menus, buttons and messages. You can change it later in Settings.',
   'appearance.darkMode': 'Dark mode',
-  'announcement.uiAppearanceTitle': 'AutoDoc now speaks your language',
-  'announcement.uiLanguageBody': 'Choose the language for AutoDoc’s menus, buttons and messages.',
+  'announcement.uiAppearanceTitle': 'Gideon\'s Notizen now speaks your language',
+  'announcement.uiLanguageBody': 'Choose the language for Gideon\'s Notizen’s menus, buttons and messages.',
   'announcement.darkModeBody': 'Prefer a darker look? Turn on Dark mode.',
   'announcement.done': 'Done',
   'announcement.meetingLanguageBody': 'Transcripts and notes now support {count} languages!',

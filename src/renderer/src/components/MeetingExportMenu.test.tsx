@@ -331,7 +331,7 @@ describe('MeetingExportMenu', () => {
     ['nothing-to-export', 'There aren’t any notes to export yet.'],
     [
       'permission-denied',
-      'AutoDoc couldn’t save the notes there. Choose another location and try again.'
+      'Gideon\'s Notizen couldn’t save the notes there. Choose another location and try again.'
     ],
     ['invalid-request', 'Couldn’t export notes. Try again.'],
     ['render-failed', 'Couldn’t export notes. Try again.'],

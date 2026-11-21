@@ -255,9 +255,9 @@ describe('Calendar OAuth', () => {
       })
 
       await expect(connectPromise).rejects.toThrow(
-        'AutoDoc needs permission to read your calendar. Connect again and leave the calendar access box ticked.'
+        'Gideon\'s Notizen needs permission to read your calendar. Connect again and leave the calendar access box ticked.'
       )
-      expect(body).toContain('AutoDoc needs permission to read your calendar')
+      expect(body).toContain('Gideon\'s Notizen needs permission to read your calendar')
       expect(tokenStore.size).toBe(0)
     })
 
@@ -268,7 +268,7 @@ describe('Calendar OAuth', () => {
         scope: 'openid https://www.googleapis.com/auth/calendar.settings.readonly'
       })
 
-      await expect(connectPromise).rejects.toThrow('AutoDoc needs permission to read your calendar')
+      await expect(connectPromise).rejects.toThrow('Gideon\'s Notizen needs permission to read your calendar')
       expect(tokenStore.size).toBe(0)
     })
 

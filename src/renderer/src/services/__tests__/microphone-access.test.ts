@@ -24,7 +24,7 @@ describe('getMicrophoneCaptureFailureMessage', () => {
   })
   it('keeps the original revoked copy on non-Windows regardless of error name', () => {
     const expected =
-      'Microphone access was revoked. AutoDoc needs it to record meetings. Enable it in System Settings → Privacy → Microphone.'
+      'Microphone access was revoked. Gideon\'s Notizen needs it to record meetings. Enable it in System Settings → Privacy → Microphone.'
 
     for (const name of ['NotAllowedError', 'NotFoundError', 'NotReadableError', 'AnythingElse']) {
       expect(getMicrophoneCaptureFailureMessage({ name, message: name }, false)).toBe(expected)

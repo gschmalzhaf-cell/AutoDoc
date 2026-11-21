@@ -43,7 +43,7 @@ describe('buildDiagnosticReportMarkdown', () => {
   it('contains the key sections and values', async () => {
     const report = await buildDiagnosticReportMarkdown(makeInput())
 
-    expect(report).toContain('# AutoDoc diagnostic report')
+    expect(report).toContain("# Gideon's Notizen diagnostic report")
     expect(report).toContain('App version: 1.7.0')
     expect(report).toContain('Engine: Mistral API (model: mistral-large-latest)')
     expect(report).toContain('Whisper model: medium')

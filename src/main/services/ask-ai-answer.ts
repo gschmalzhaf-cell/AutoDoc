@@ -1002,7 +1002,7 @@ function buildUnsupportedActionAnswer(): string {
 
 function buildSmalltalkAnswer(topic: 'greeting' | 'capability'): string {
   if (topic === 'capability') {
-    return "I'm AutoDoc's meeting assistant. Ask me what was discussed in a meeting, who owns an action item, decisions and deadlines, or what's on your calendar — I'll answer from your local recordings and notes."
+    return "I'm Gideon's Notizen's meeting assistant. Ask me what was discussed in a meeting, who owns an action item, decisions and deadlines, or what's on your calendar — I'll answer from your local recordings and notes."
   }
   return 'Hi! Ask me anything about your meetings — what was discussed, your action items and owners, or what you have coming up on your calendar.'
 }

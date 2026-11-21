@@ -17,7 +17,7 @@ describe('AudioOnlyReminderBanner', () => {
     render(<AudioOnlyReminderBanner visible minutes={5} onStop={onStop} onKeep={onKeep} />)
 
     expect(screen.getByRole('alert')).toHaveTextContent(
-      'Video stopped 5 minutes ago. AutoDoc is still recording audio.'
+      'Video stopped 5 minutes ago. Gideon\'s Notizen is still recording audio.'
     )
     await userEvent.click(screen.getByRole('button', { name: 'Keep recording' }))
     expect(onKeep).toHaveBeenCalledTimes(1)

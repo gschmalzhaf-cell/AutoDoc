@@ -340,7 +340,7 @@ let refreshAskAiPassageIndex: (
 let isQuitting = false
 let prepareRecordingQuit: () => Promise<void> = async () => {}
 let getUpdateInstallBlockReason: () => string | undefined = () =>
-  'AutoDoc is starting. Try again shortly.'
+  "Gideon's Notizen is starting. Try again shortly."
 let prepareIdleUpdateInstall: () => void = () => {}
 let cancelIdleUpdateInstall: () => void = () => {}
 const safeQuit = new SafeQuitCoordinator({
@@ -1551,7 +1551,7 @@ app.whenReady().then(async () => {
   })
   ipcMain.handle('app:reset-local-data', (): void => {
     if (recordingService.getState().isRecording) {
-      throw new Error('Stop the current recording before deleting local AutoDoc data.')
+      throw new Error("Stop the current recording before deleting local Gideon's Notizen data.")
     }
 
     managedOllamaManager.stop()
@@ -1998,7 +1998,7 @@ app.whenReady().then(async () => {
                 id: `${meetingId}-transcript-1`,
                 meetingId,
                 speaker: 'Speaker 1',
-                text: 'AutoDoc finished the transcript and notes.',
+                text: "Gideon's Notizen finished the transcript and notes.",
                 startMs: 0,
                 endMs: 5_000,
                 confidence: 0.99
@@ -2084,12 +2084,12 @@ app.whenReady().then(async () => {
       transcriptionService.hasActiveOrQueuedWork() ||
       segmentationService.hasActiveOrQueuedWork()
     ) {
-      return 'AutoDoc is processing your meeting. Restart when it finishes.'
+      return "Gideon's Notizen is processing your meeting. Restart when it finishes."
     }
     const phase = whisperManager.getSetupStatus().phase
     if (phase !== 'ready' && phase !== 'checking' && phase !== 'error')
       return 'Wait for the model download to finish before restarting.'
-    if (isQuitting) return 'AutoDoc is saving your recording.'
+    if (isQuitting) return "Gideon's Notizen is saving your recording."
     return undefined
   }
   prepareIdleUpdateInstall = () => recordingService.setShutdownPending(true)

@@ -35,7 +35,7 @@ win:
   signtoolOptions:
     sign: ./scripts/windows-sign.js
 nsis:
-  artifactName: ${name}-${version}-setup.${ext}
+  artifactName: gideons-notizen-${version}-setup.${ext}
   shortcutName: ${productName}
   uninstallDisplayName: ${productName}
   createDesktopShortcut: always

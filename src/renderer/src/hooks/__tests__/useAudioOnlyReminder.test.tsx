@@ -38,7 +38,7 @@ describe('useAudioOnlyReminder', () => {
     expect(send).toHaveBeenCalledWith(
       'recording:audio-only-reminder',
       'Recording audio only',
-      'Video stopped 5 minutes ago. AutoDoc is still recording audio.'
+      'Video stopped 5 minutes ago. Gideon\'s Notizen is still recording audio.'
     )
 
     act(() => vi.advanceTimersByTime(AUDIO_ONLY_REMINDER_DELAY_MS * 3))

@@ -294,7 +294,7 @@ describe('RecordingControls', () => {
   it('shows a screen permission toast when capture sources cannot be listed', async () => {
     const fetchSources = vi.fn(async () => {
       throw new Error(
-        'AutoDoc could not list capture sources. Screen recording permission may be missing.'
+        'Gideon\'s Notizen could not list capture sources. Screen recording permission may be missing.'
       )
     })
 
@@ -339,7 +339,7 @@ describe('RecordingControls', () => {
 
     await waitFor(() => {
       expect(useToastStore.getState().activeToast?.message).toContain(
-        'fully quit and reopen AutoDoc'
+        'fully quit and reopen Gideon\'s Notizen'
       )
     })
     expect(screen.queryByText('Select a window to record')).not.toBeInTheDocument()

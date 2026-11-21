@@ -4,13 +4,13 @@ import type { MessageKey } from '../../../shared/i18n'
 // so an already-visible update prompt follows changes to the UI language.
 const reasonKeys: ReadonlyMap<string, MessageKey> = new Map([
   ['Finish your recording before restarting.', 'settings.finishRecordingBeforeRestart'],
-  ['AutoDoc is starting. Try again shortly.', 'update.startingBeforeRestart'],
+  ["Gideon's Notizen is starting. Try again shortly.", 'update.startingBeforeRestart'],
   [
-    'AutoDoc is processing your meeting. Restart when it finishes.',
+    "Gideon's Notizen is processing your meeting. Restart when it finishes.",
     'update.processingBeforeRestart'
   ],
   ['Wait for the model download to finish before restarting.', 'update.downloadBeforeRestart'],
-  ['AutoDoc is saving your recording.', 'update.savingBeforeRestart']
+  ["Gideon's Notizen is saving your recording.", 'update.savingBeforeRestart']
 ])
 
 export function updateInstallBlockMessage(

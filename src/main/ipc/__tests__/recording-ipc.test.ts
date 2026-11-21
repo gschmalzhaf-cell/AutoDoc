@@ -342,7 +342,7 @@ describe('recording IPC source handling', () => {
 
     expect(getSourcesHandler).toBeTypeOf('function')
     await expect(getSourcesHandler?.()).rejects.toThrow(
-      'AutoDoc could not list capture sources. Screen recording permission may be missing.'
+      "Gideon's Notizen could not list capture sources. Screen recording permission may be missing."
     )
   })
 

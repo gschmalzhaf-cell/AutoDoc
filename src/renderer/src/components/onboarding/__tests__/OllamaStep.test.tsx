@@ -129,7 +129,7 @@ describe('OllamaStep', () => {
     })
 
     expect(screen.getByRole('heading', { name: 'AI Model Ready' })).toBeInTheDocument()
-    expect(screen.getByText(/AutoDoc is connected to the Mistral API./i)).toBeInTheDocument()
+    expect(screen.getByText(/Gideon's Notizen is connected to the Mistral API./i)).toBeInTheDocument()
   })
 
   it('offers the Mistral option and connects with a valid API key', async () => {
@@ -168,7 +168,7 @@ describe('OllamaStep', () => {
 
     expect(window.electronAPI.invoke).toHaveBeenCalledWith('mistral:set-api-key', 'test-key')
     expect(screen.getByRole('heading', { name: 'AI Model Ready' })).toBeInTheDocument()
-    expect(screen.getByText(/AutoDoc is connected to the Mistral API./i)).toBeInTheDocument()
+    expect(screen.getByText(/Gideon's Notizen is connected to the Mistral API./i)).toBeInTheDocument()
   })
 
   it('shows a rejection message when the Mistral API key is invalid', async () => {

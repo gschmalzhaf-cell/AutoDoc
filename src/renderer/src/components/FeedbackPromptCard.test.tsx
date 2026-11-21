@@ -34,10 +34,10 @@ describe('FeedbackPromptCard', () => {
     existingFocus.focus()
 
     const region = screen.getByRole('region', {
-      name: 'How’s AutoDoc working for you?'
+      name: 'How’s Gideon\'s Notizen working for you?'
     })
     expect(region).toHaveAccessibleDescription(
-      'Tell us what’s working, what’s missing, or what AutoDoc could do better.'
+      'Tell us what’s working, what’s missing, or what Gideon\'s Notizen could do better.'
     )
     expect(region).toHaveAttribute('aria-busy', 'false')
     expect(region).toHaveClass('w-full', 'border-sage/25', 'bg-sage-light/60')
@@ -95,7 +95,7 @@ describe('FeedbackPromptCard', () => {
     const props = createProps({ pending: true })
     render(<FeedbackPromptCard {...props} />)
 
-    expect(screen.getByRole('region', { name: 'How’s AutoDoc working for you?' })).toHaveAttribute(
+    expect(screen.getByRole('region', { name: 'How’s Gideon\'s Notizen working for you?' })).toHaveAttribute(
       'aria-busy',
       'true'
     )

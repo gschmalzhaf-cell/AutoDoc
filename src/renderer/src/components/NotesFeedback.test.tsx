@@ -46,7 +46,7 @@ describe('NotesFeedback', () => {
     async (enabled) => {
       consent = enabled
       render(<NotesFeedback {...props} />)
-      expect(await screen.findByText('What gets sent to AutoDoc')).toBeVisible()
+      expect(await screen.findByText('What gets sent to Gideon\'s Notizen')).toBeVisible()
       expect(
         screen.getByText(
           'Notes, transcripts, recordings, logs, and meeting titles are not attached.'

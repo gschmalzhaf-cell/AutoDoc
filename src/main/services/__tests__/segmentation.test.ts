@@ -1943,7 +1943,7 @@ describe('SegmentationService', () => {
         status: 'failed',
         errorCode: 'llm-empty-output',
         userReason:
-          'No notes were generated. AutoDoc didn’t find anything in the transcript to turn into notes. You can retry, and your transcript is still available.',
+          'No notes were generated. Gideon\'s Notizen didn’t find anything in the transcript to turn into notes. You can retry, and your transcript is still available.',
         notesLayout: 'v1'
       })
       expect(send).toHaveBeenCalledWith(

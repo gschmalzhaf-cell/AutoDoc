@@ -236,7 +236,7 @@ export function Sidebar() {
             <WaveformIcon className="w-5 h-5" />
           </div>
           <span className="font-serif text-[18px] leading-tight text-ink tracking-[-0.02em]">
-            Gideon&apos;s Notizen
+            {"Gideon's Notizen"}
           </span>
         </div>
 

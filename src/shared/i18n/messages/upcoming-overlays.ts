@@ -77,7 +77,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '참석자 {count}명',
     'recording.stopRecording': '녹음 중지',
     'recording.selectWindowToRecord': '녹음할 창을 선택하세요',
-    'recording.highlightedWindow': 'AutoDoc이 가장 가능성 높은 회의 창을 표시했습니다.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen이 가장 가능성 높은 회의 창을 표시했습니다.',
     'recording.detectedMeeting': '감지된 회의',
     'recording.suggestedWindow': '추천 창'
   },
@@ -114,7 +114,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '参加者 {count} 人',
     'recording.stopRecording': '録音を停止',
     'recording.selectWindowToRecord': '録音するウィンドウを選択',
-    'recording.highlightedWindow': 'AutoDoc が会議の可能性が最も高いウィンドウを強調表示しました。',
+    'recording.highlightedWindow': 'Gideon\'s Notizen が会議の可能性が最も高いウィンドウを強調表示しました。',
     'recording.detectedMeeting': '検出した会議',
     'recording.suggestedWindow': '候補のウィンドウ'
   },
@@ -151,7 +151,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} 位参会者',
     'recording.stopRecording': '停止录制',
     'recording.selectWindowToRecord': '选择要录制的窗口',
-    'recording.highlightedWindow': 'AutoDoc 已标出最可能的会议窗口。',
+    'recording.highlightedWindow': 'Gideon\'s Notizen 已标出最可能的会议窗口。',
     'recording.detectedMeeting': '检测到的会议',
     'recording.suggestedWindow': '建议的窗口'
   },
@@ -191,7 +191,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} Teilnehmer',
     'recording.stopRecording': 'Aufnahme beenden',
     'recording.selectWindowToRecord': 'Fenster zum Aufnehmen wählen',
-    'recording.highlightedWindow': 'AutoDoc hat das wahrscheinlichste Besprechungsfenster markiert.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen hat das wahrscheinlichste Besprechungsfenster markiert.',
     'recording.detectedMeeting': 'Erkannte Besprechung',
     'recording.suggestedWindow': 'Vorgeschlagenes Fenster'
   },
@@ -231,7 +231,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} participants',
     'recording.stopRecording': 'Arrêter l’enregistrement',
     'recording.selectWindowToRecord': 'Choisissez une fenêtre à enregistrer',
-    'recording.highlightedWindow': 'AutoDoc a mis en avant la fenêtre de réunion la plus probable.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen a mis en avant la fenêtre de réunion la plus probable.',
     'recording.detectedMeeting': 'Réunion détectée',
     'recording.suggestedWindow': 'Fenêtre suggérée'
   },
@@ -271,7 +271,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} asistentes',
     'recording.stopRecording': 'Detener grabación',
     'recording.selectWindowToRecord': 'Elige una ventana para grabar',
-    'recording.highlightedWindow': 'AutoDoc resaltó la ventana de reunión más probable.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen resaltó la ventana de reunión más probable.',
     'recording.detectedMeeting': 'Reunión detectada',
     'recording.suggestedWindow': 'Ventana sugerida'
   },
@@ -311,7 +311,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} partecipanti',
     'recording.stopRecording': 'Interrompi registrazione',
     'recording.selectWindowToRecord': 'Scegli una finestra da registrare',
-    'recording.highlightedWindow': 'AutoDoc ha evidenziato la finestra di riunione più probabile.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen ha evidenziato la finestra di riunione più probabile.',
     'recording.detectedMeeting': 'Riunione rilevata',
     'recording.suggestedWindow': 'Finestra suggerita'
   },
@@ -351,7 +351,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} participantes',
     'recording.stopRecording': 'Parar gravação',
     'recording.selectWindowToRecord': 'Escolha uma janela para gravar',
-    'recording.highlightedWindow': 'O AutoDoc destacou a janela de reunião mais provável.',
+    'recording.highlightedWindow': 'O Gideon\'s Notizen destacou a janela de reunião mais provável.',
     'recording.detectedMeeting': 'Reunião detetada',
     'recording.suggestedWindow': 'Janela sugerida'
   },
@@ -391,7 +391,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} deelnemers',
     'recording.stopRecording': 'Opname stoppen',
     'recording.selectWindowToRecord': 'Kies een venster om op te nemen',
-    'recording.highlightedWindow': 'AutoDoc heeft het meest waarschijnlijke vergadervenster gemarkeerd.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen heeft het meest waarschijnlijke vergadervenster gemarkeerd.',
     'recording.detectedMeeting': 'Gedetecteerde vergadering',
     'recording.suggestedWindow': 'Voorgesteld venster'
   },
@@ -431,7 +431,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} deltagare',
     'recording.stopRecording': 'Stoppa inspelning',
     'recording.selectWindowToRecord': 'Välj ett fönster att spela in',
-    'recording.highlightedWindow': 'AutoDoc markerade det mest sannolika mötesfönstret.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen markerade det mest sannolika mötesfönstret.',
     'recording.detectedMeeting': 'Upptäckt möte',
     'recording.suggestedWindow': 'Föreslaget fönster'
   },
@@ -471,7 +471,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} deltagere',
     'recording.stopRecording': 'Stop optagelse',
     'recording.selectWindowToRecord': 'Vælg et vindue at optage',
-    'recording.highlightedWindow': 'AutoDoc fremhævede det mest sandsynlige mødevindue.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen fremhævede det mest sandsynlige mødevindue.',
     'recording.detectedMeeting': 'Registreret møde',
     'recording.suggestedWindow': 'Foreslået vindue'
   },
@@ -511,7 +511,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} osallistujaa',
     'recording.stopRecording': 'Lopeta nauhoitus',
     'recording.selectWindowToRecord': 'Valitse nauhoitettava ikkuna',
-    'recording.highlightedWindow': 'AutoDoc korosti todennäköisimmän kokousikkunan.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen korosti todennäköisimmän kokousikkunan.',
     'recording.detectedMeeting': 'Havaittu kokous',
     'recording.suggestedWindow': 'Ehdotettu ikkuna'
   },
@@ -551,7 +551,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} uczestników',
     'recording.stopRecording': 'Zatrzymaj nagrywanie',
     'recording.selectWindowToRecord': 'Wybierz okno do nagrania',
-    'recording.highlightedWindow': 'AutoDoc wyróżnił najbardziej prawdopodobne okno spotkania.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen wyróżnił najbardziej prawdopodobne okno spotkania.',
     'recording.detectedMeeting': 'Wykryte spotkanie',
     'recording.suggestedWindow': 'Sugerowane okno'
   },
@@ -591,7 +591,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} участников',
     'recording.stopRecording': 'Остановить запись',
     'recording.selectWindowToRecord': 'Выберите окно для записи',
-    'recording.highlightedWindow': 'AutoDoc выделил наиболее вероятное окно встречи.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen выделил наиболее вероятное окно встречи.',
     'recording.detectedMeeting': 'Обнаруженная встреча',
     'recording.suggestedWindow': 'Предложенное окно'
   },
@@ -631,7 +631,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} учасників',
     'recording.stopRecording': 'Зупинити запис',
     'recording.selectWindowToRecord': 'Виберіть вікно для запису',
-    'recording.highlightedWindow': 'AutoDoc виділив найімовірніше вікно зустрічі.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen виділив найімовірніше вікно зустрічі.',
     'recording.detectedMeeting': 'Виявлена зустріч',
     'recording.suggestedWindow': 'Запропоноване вікно'
   },
@@ -671,7 +671,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} účastníků',
     'recording.stopRecording': 'Zastavit nahrávání',
     'recording.selectWindowToRecord': 'Vyberte okno k nahrání',
-    'recording.highlightedWindow': 'AutoDoc zvýraznil nejpravděpodobnější okno schůzky.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen zvýraznil nejpravděpodobnější okno schůzky.',
     'recording.detectedMeeting': 'Zjištěná schůzka',
     'recording.suggestedWindow': 'Navrhované okno'
   },
@@ -711,7 +711,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} účastníkov',
     'recording.stopRecording': 'Zastaviť nahrávanie',
     'recording.selectWindowToRecord': 'Vyberte okno na nahratie',
-    'recording.highlightedWindow': 'AutoDoc zvýraznil najpravdepodobnejšie okno stretnutia.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen zvýraznil najpravdepodobnejšie okno stretnutia.',
     'recording.detectedMeeting': 'Zistené stretnutie',
     'recording.suggestedWindow': 'Navrhované okno'
   },
@@ -751,7 +751,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} udeležencev',
     'recording.stopRecording': 'Ustavi snemanje',
     'recording.selectWindowToRecord': 'Izberite okno za snemanje',
-    'recording.highlightedWindow': 'AutoDoc je označil najverjetnejše okno sestanka.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen je označil najverjetnejše okno sestanka.',
     'recording.detectedMeeting': 'Zaznani sestanek',
     'recording.suggestedWindow': 'Predlagano okno'
   },
@@ -791,7 +791,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} sudionika',
     'recording.stopRecording': 'Zaustavi snimanje',
     'recording.selectWindowToRecord': 'Odaberite prozor za snimanje',
-    'recording.highlightedWindow': 'AutoDoc je istaknuo najvjerojatniji prozor sastanka.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen je istaknuo najvjerojatniji prozor sastanka.',
     'recording.detectedMeeting': 'Otkriveni sastanak',
     'recording.suggestedWindow': 'Predloženi prozor'
   },
@@ -831,7 +831,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} участници',
     'recording.stopRecording': 'Спри записа',
     'recording.selectWindowToRecord': 'Изберете прозорец за запис',
-    'recording.highlightedWindow': 'AutoDoc маркира най-вероятния прозорец на срещата.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen маркира най-вероятния прозорец на срещата.',
     'recording.detectedMeeting': 'Открита среща',
     'recording.suggestedWindow': 'Предложен прозорец'
   },
@@ -871,7 +871,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} participanți',
     'recording.stopRecording': 'Oprește înregistrarea',
     'recording.selectWindowToRecord': 'Alege o fereastră de înregistrat',
-    'recording.highlightedWindow': 'AutoDoc a evidențiat fereastra de întâlnire cea mai probabilă.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen a evidențiat fereastra de întâlnire cea mai probabilă.',
     'recording.detectedMeeting': 'Întâlnire detectată',
     'recording.suggestedWindow': 'Fereastră sugerată'
   },
@@ -911,7 +911,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} résztvevő',
     'recording.stopRecording': 'Felvétel leállítása',
     'recording.selectWindowToRecord': 'Válasszon rögzítendő ablakot',
-    'recording.highlightedWindow': 'Az AutoDoc a legvalószínűbb megbeszélésablakot emelte ki.',
+    'recording.highlightedWindow': 'Az Gideon\'s Notizen a legvalószínűbb megbeszélésablakot emelte ki.',
     'recording.detectedMeeting': 'Észlelt megbeszélés',
     'recording.suggestedWindow': 'Javasolt ablak'
   },
@@ -951,7 +951,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} συμμετέχοντες',
     'recording.stopRecording': 'Διακοπή εγγραφής',
     'recording.selectWindowToRecord': 'Επιλέξτε παράθυρο για εγγραφή',
-    'recording.highlightedWindow': 'Το AutoDoc επισήμανε το πιο πιθανό παράθυρο σύσκεψης.',
+    'recording.highlightedWindow': 'Το Gideon\'s Notizen επισήμανε το πιο πιθανό παράθυρο σύσκεψης.',
     'recording.detectedMeeting': 'Ανιχνευμένη σύσκεψη',
     'recording.suggestedWindow': 'Προτεινόμενο παράθυρο'
   },
@@ -991,7 +991,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} osalejat',
     'recording.stopRecording': 'Peata salvestus',
     'recording.selectWindowToRecord': 'Vali salvestatav aken',
-    'recording.highlightedWindow': 'AutoDoc tõstis esile kõige tõenäolisema koosolekuakna.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen tõstis esile kõige tõenäolisema koosolekuakna.',
     'recording.detectedMeeting': 'Tuvastatud koosolek',
     'recording.suggestedWindow': 'Soovitatud aken'
   },
@@ -1031,7 +1031,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} dalībnieki',
     'recording.stopRecording': 'Pārtraukt ierakstu',
     'recording.selectWindowToRecord': 'Izvēlieties logu ierakstam',
-    'recording.highlightedWindow': 'AutoDoc izcēla visiespējamāko sanāksmes logu.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen izcēla visiespējamāko sanāksmes logu.',
     'recording.detectedMeeting': 'Konstatēta sanāksme',
     'recording.suggestedWindow': 'Ieteiktais logs'
   },
@@ -1071,7 +1071,7 @@ export const upcomingOverlays: Partial<Record<UiLanguageCode, UpcomingOverlay>> 
     'upcoming.attendeeOther': '{count} dalyviai',
     'recording.stopRecording': 'Stabdyti įrašymą',
     'recording.selectWindowToRecord': 'Pasirinkite langą įrašymui',
-    'recording.highlightedWindow': 'AutoDoc paryškino labiausiai tikėtiną susitikimo langą.',
+    'recording.highlightedWindow': 'Gideon\'s Notizen paryškino labiausiai tikėtiną susitikimo langą.',
     'recording.detectedMeeting': 'Aptiktas susitikimas',
     'recording.suggestedWindow': 'Siūlomas langas'
   }

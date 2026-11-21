@@ -40,7 +40,7 @@ export async function buildDiagnosticReportMarkdown(input: DiagnosticReportInput
   const runtime = input.runtimeInfo
 
   const lines: string[] = [
-    '# AutoDoc diagnostic report',
+    "# Gideon's Notizen diagnostic report",
     '',
     `- Generated: ${new Date().toISOString()}`,
     `- App version: ${runtime.appVersion}`,

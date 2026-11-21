@@ -36,7 +36,7 @@ describe('complete UI localization', () => {
 
   it('keeps newly added JSX copy and accessibility text in the catalogs', () => {
     const failures: string[] = []
-    const brands = new Set(['AutoDoc', 'PDF', 'Word', 'Markdown', 'Ollama', 'Whisper'])
+    const brands = new Set(["Gideon's Notizen", 'AutoDoc', 'PDF', 'Word', 'Markdown', 'Ollama', 'Whisper'])
     const attributes = new Set([
       'title',
       'placeholder',

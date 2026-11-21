@@ -106,7 +106,7 @@ describe('FeedbackPromptSlot', () => {
     render(<FeedbackPromptSlot surface="upcoming" />)
 
     const prompt = await screen.findByRole('region', {
-      name: 'How’s AutoDoc working for you?'
+      name: 'How’s Gideon\'s Notizen working for you?'
     })
     expect(prompt).toBeVisible()
     expect(prompt).toHaveAttribute('aria-busy', 'true')
@@ -131,7 +131,7 @@ describe('FeedbackPromptSlot', () => {
       expect(invoke).toHaveBeenCalledWith('feedback:observe-foreground')
     })
     expect(invoke).not.toHaveBeenCalledWith('feedback:reserve-prompt', 'upcoming')
-    expect(screen.queryByText('How’s AutoDoc working for you?')).not.toBeInTheDocument()
+    expect(screen.queryByText('How’s Gideon\'s Notizen working for you?')).not.toBeInTheDocument()
   })
 
   it('cancels an in-flight reservation response after the surface unmounts', async () => {
@@ -163,7 +163,7 @@ describe('FeedbackPromptSlot', () => {
   it('cancels before confirmation when suppression begins before paint settles', async () => {
     const { invoke } = installApi()
     const { rerender } = render(<FeedbackPromptSlot surface="upcoming" />)
-    await screen.findByRole('region', { name: 'How’s AutoDoc working for you?' })
+    await screen.findByRole('region', { name: 'How’s Gideon\'s Notizen working for you?' })
 
     act(runAnimationFrame)
     rerender(<FeedbackPromptSlot surface="upcoming" suppressed />)
@@ -181,7 +181,7 @@ describe('FeedbackPromptSlot', () => {
       'feedback:confirm-prompt': { status: 'rejected' }
     })
     render(<FeedbackPromptSlot surface="upcoming" />)
-    await screen.findByRole('region', { name: 'How’s AutoDoc working for you?' })
+    await screen.findByRole('region', { name: 'How’s Gideon\'s Notizen working for you?' })
 
     await waitFor(() => expect(animationFrames.size).toBeGreaterThan(0))
     act(runAnimationFrame)
@@ -189,7 +189,7 @@ describe('FeedbackPromptSlot', () => {
     act(runAnimationFrame)
 
     await waitFor(() => {
-      expect(screen.queryByText('How’s AutoDoc working for you?')).not.toBeInTheDocument()
+      expect(screen.queryByText('How’s Gideon\'s Notizen working for you?')).not.toBeInTheDocument()
     })
     expect(invoke).toHaveBeenCalledWith('feedback:confirm-prompt', 'reservation-1', 'upcoming')
     expect(trackEvent).not.toHaveBeenCalledWith('feedback_prompt_shown', expect.anything())
@@ -199,13 +199,13 @@ describe('FeedbackPromptSlot', () => {
     const user = userEvent.setup()
     const { invoke } = installApi()
     render(<FeedbackPromptSlot surface="ai_notes" />)
-    await screen.findByRole('region', { name: 'How’s AutoDoc working for you?' })
+    await screen.findByRole('region', { name: 'How’s Gideon\'s Notizen working for you?' })
     await confirmRenderedPrompt()
 
     await user.click(screen.getByRole('button', { name: 'Maybe later' }))
 
     await waitFor(() => {
-      expect(screen.queryByText('How’s AutoDoc working for you?')).not.toBeInTheDocument()
+      expect(screen.queryByText('How’s Gideon\'s Notizen working for you?')).not.toBeInTheDocument()
     })
     expect(invoke).toHaveBeenCalledWith('feedback:record-action', 'reservation-1', 'later')
     expect(trackEvent).toHaveBeenCalledWith('feedback_prompt_action', {
@@ -219,13 +219,13 @@ describe('FeedbackPromptSlot', () => {
     const user = userEvent.setup()
     const { invoke } = installApi()
     render(<FeedbackPromptSlot surface="upcoming" />)
-    await screen.findByRole('region', { name: 'How’s AutoDoc working for you?' })
+    await screen.findByRole('region', { name: 'How’s Gideon\'s Notizen working for you?' })
     await confirmRenderedPrompt()
 
     await user.click(screen.getByRole('button', { name: 'Share feedback' }))
 
     await waitFor(() => {
-      expect(screen.queryByText('How’s AutoDoc working for you?')).not.toBeInTheDocument()
+      expect(screen.queryByText('How’s Gideon\'s Notizen working for you?')).not.toBeInTheDocument()
     })
     expect(invoke).toHaveBeenCalledWith('support:open-email', 'upcoming')
     expect(trackEvent).toHaveBeenCalledWith('feedback_prompt_action', {
@@ -252,7 +252,7 @@ describe('FeedbackPromptSlot', () => {
       'support:copy-email': { status: 'copied' }
     })
     render(<FeedbackPromptSlot surface="ai_notes" />)
-    await screen.findByRole('region', { name: 'How’s AutoDoc working for you?' })
+    await screen.findByRole('region', { name: 'How’s Gideon\'s Notizen working for you?' })
     await confirmRenderedPrompt()
 
     await user.click(screen.getByRole('button', { name: 'Share feedback' }))
@@ -273,12 +273,12 @@ describe('FeedbackPromptSlot', () => {
   it('removes a confirmed prompt when support is contacted elsewhere', async () => {
     const { emit } = installApi()
     render(<FeedbackPromptSlot surface="upcoming" />)
-    await screen.findByRole('region', { name: 'How’s AutoDoc working for you?' })
+    await screen.findByRole('region', { name: 'How’s Gideon\'s Notizen working for you?' })
     await confirmRenderedPrompt()
 
     act(() => emit('feedback:contact-initiated', 'sidebar'))
 
-    expect(screen.queryByText('How’s AutoDoc working for you?')).not.toBeInTheDocument()
+    expect(screen.queryByText('How’s Gideon\'s Notizen working for you?')).not.toBeInTheDocument()
     expect(trackEvent).not.toHaveBeenCalledWith(
       'feedback_prompt_action',
       expect.objectContaining({ action: expect.anything() })

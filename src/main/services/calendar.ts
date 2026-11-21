@@ -33,7 +33,7 @@ const GOOGLE_CALENDAR_READ_SCOPES = [
   'https://www.googleapis.com/auth/calendar'
 ]
 const MISSING_CALENDAR_SCOPE_MESSAGE =
-  'AutoDoc needs permission to read your calendar. Connect again and leave the calendar access box ticked.'
+  "Gideon's Notizen needs permission to read your calendar. Connect again and leave the calendar access box ticked."
 const CLIENT_ID = '610162912921-4k5ljde2b6bf70idvq4kpdit343c1v8g.apps.googleusercontent.com'
 function extractEmailFromIdToken(idToken: string | undefined): string | null {
   if (!idToken) return null

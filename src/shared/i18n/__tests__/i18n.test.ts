@@ -28,7 +28,7 @@ describe('UI language', () => {
   })
 
   it('interpolates parameters without concatenating fragments', () => {
-    expect(translate('ko', 'settings.version', { version: '1.3.0' })).toBe('AutoDoc v1.3.0')
+    expect(translate('ko', 'settings.version', { version: '1.3.0' })).toBe('Gideon\'s Notizen v1.3.0')
     expect(translate('en', 'nav.recording', { time: '1:02' })).toBe('Recording · 1:02')
   })
 

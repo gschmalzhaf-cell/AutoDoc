@@ -850,7 +850,7 @@ function normalizeCaptureSourceError(err: unknown): Error {
     normalized.includes('permission')
   ) {
     return new Error(
-      'AutoDoc could not list capture sources. Screen recording permission may be missing.'
+      "Gideon's Notizen could not list capture sources. Screen recording permission may be missing."
     )
   }
 

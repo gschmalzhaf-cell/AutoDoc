@@ -17,7 +17,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
     'meeting.deleteBlocked': '삭제하려면 먼저 녹음을 중지하고 저장과 텍스트 변환이 끝날 때까지 기다리세요.',
     'meeting.deleteFailed': '이 녹음을 삭제할 수 없습니다. 다시 시도하세요.',
     'recording.saveFailedStopped':
-      'AutoDoc에서 저장할 수 없어 녹음이 중지되었습니다. 일부 내용이 누락되었을 수 있습니다. 다시 녹음하기 전에 디스크 여유 공간을 확인하세요.'
+      'Gideon\'s Notizen에서 저장할 수 없어 녹음이 중지되었습니다. 일부 내용이 누락되었을 수 있습니다. 다시 녹음하기 전에 디스크 여유 공간을 확인하세요.'
   },
   ja: {
     'meeting.reprocessTranscriptHint': 'オーディオを文字起こしし直し、新しい文字起こしからノートを再生成します',
@@ -32,7 +32,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
     'meeting.deleteBlocked': '削除するには、録音を停止し、保存と文字起こしが完了するまでお待ちください。',
     'meeting.deleteFailed': 'この録音を削除できませんでした。もう一度お試しください。',
     'recording.saveFailedStopped':
-      'AutoDocが保存できなかったため、録音を停止しました。一部が欠けている可能性があります。もう一度録音する前に、ディスクの空き容量を確認してください。'
+      'Gideon\'s Notizenが保存できなかったため、録音を停止しました。一部が欠けている可能性があります。もう一度録音する前に、ディスクの空き容量を確認してください。'
   },
   'zh-Hans': {
     'meeting.reprocessTranscriptHint': '重新转录音频并从新转录稿生成笔记',
@@ -46,7 +46,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
     'meeting.confirmDelete': '确认删除',
     'meeting.deleteBlocked': '请先停止录音，并等待保存和转录完成，然后再删除。',
     'meeting.deleteFailed': '无法删除此录音。请重试。',
-    'recording.saveFailedStopped': 'AutoDoc 无法保存录音，因此已停止录音。部分内容可能缺失。再次录音前，请检查可用磁盘空间。'
+    'recording.saveFailedStopped': 'Gideon\'s Notizen 无法保存录音，因此已停止录音。部分内容可能缺失。再次录音前，请检查可用磁盘空间。'
   },
   de: {
     'meeting.reprocessTranscriptHint':
@@ -64,7 +64,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Zum Löschen zuerst die Aufnahme beenden und warten, bis Speichern und Transkription abgeschlossen sind.',
     'meeting.deleteFailed': 'Diese Aufnahme konnte nicht gelöscht werden. Bitte erneut versuchen.',
     'recording.saveFailedStopped':
-      'Die Aufnahme wurde beendet, weil AutoDoc sie nicht speichern konnte. Teile davon fehlen möglicherweise. Vor der nächsten Aufnahme den freien Speicherplatz prüfen.'
+      'Die Aufnahme wurde beendet, weil Gideon\'s Notizen sie nicht speichern konnte. Teile davon fehlen möglicherweise. Vor der nächsten Aufnahme den freien Speicherplatz prüfen.'
   },
   fr: {
     'meeting.reprocessTranscriptHint':
@@ -83,7 +83,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       "Arrêtez l'enregistrement et attendez la fin de la sauvegarde et de la transcription avant de le supprimer.",
     'meeting.deleteFailed': 'Impossible de supprimer cet enregistrement. Réessayez.',
     'recording.saveFailedStopped':
-      "L'enregistrement a été interrompu, car AutoDoc n'a pas pu le sauvegarder. Il se peut qu'une partie manque. Vérifiez l'espace disque disponible avant d'enregistrer à nouveau."
+      "L'enregistrement a été interrompu, car Gideon's Notizen n'a pas pu le sauvegarder. Il se peut qu'une partie manque. Vérifiez l'espace disque disponible avant d'enregistrer à nouveau."
   },
   es: {
     'meeting.reprocessTranscriptHint':
@@ -102,7 +102,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Detén la grabación y espera a que terminen el guardado y la transcripción antes de eliminarla.',
     'meeting.deleteFailed': 'No se pudo eliminar esta grabación. Inténtalo de nuevo.',
     'recording.saveFailedStopped':
-      'La grabación se detuvo porque AutoDoc no pudo guardarla. Puede que falte una parte. Comprueba el espacio libre en disco antes de volver a grabar.'
+      'La grabación se detuvo porque Gideon\'s Notizen no pudo guardarla. Puede que falte una parte. Comprueba el espacio libre en disco antes de volver a grabar.'
   },
   it: {
     'meeting.reprocessTranscriptHint':
@@ -119,7 +119,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Interrompi la registrazione e attendi il termine del salvataggio e della trascrizione prima di eliminarla.',
     'meeting.deleteFailed': 'Impossibile eliminare questa registrazione. Riprova.',
     'recording.saveFailedStopped':
-      'La registrazione si è interrotta perché AutoDoc non è riuscito a salvarla. Una parte potrebbe mancare. Controlla lo spazio libero su disco prima di registrare di nuovo.'
+      'La registrazione si è interrotta perché Gideon\'s Notizen non è riuscito a salvarla. Una parte potrebbe mancare. Controlla lo spazio libero su disco prima di registrare di nuovo.'
   },
   pt: {
     'meeting.reprocessTranscriptHint':
@@ -137,7 +137,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Pare a gravação e aguarde até estar guardada e transcrita antes de a eliminar.',
     'meeting.deleteFailed': 'Não foi possível eliminar esta gravação. Tente novamente.',
     'recording.saveFailedStopped':
-      'A gravação foi interrompida porque o AutoDoc não conseguiu guardá-la. Parte dela pode estar em falta. Verifique o espaço livre em disco antes de gravar novamente.'
+      'A gravação foi interrompida porque o Gideon\'s Notizen não conseguiu guardá-la. Parte dela pode estar em falta. Verifique o espaço livre em disco antes de gravar novamente.'
   },
   nl: {
     'meeting.reprocessTranscriptHint':
@@ -156,7 +156,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Stop de opname en wacht tot opslaan en transcriberen klaar zijn voordat je hem verwijdert.',
     'meeting.deleteFailed': 'Kan deze opname niet verwijderen. Probeer het opnieuw.',
     'recording.saveFailedStopped':
-      'De opname is gestopt omdat AutoDoc deze niet kon opslaan. Een deel kan ontbreken. Controleer de vrije schijfruimte voordat je opnieuw opneemt.'
+      'De opname is gestopt omdat Gideon\'s Notizen deze niet kon opslaan. Een deel kan ontbreken. Controleer de vrije schijfruimte voordat je opnieuw opneemt.'
   },
   sv: {
     'meeting.reprocessTranscriptHint':
@@ -175,7 +175,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Stoppa inspelningen och vänta tills sparning och transkribering är klara innan du raderar den.',
     'meeting.deleteFailed': 'Det gick inte att radera inspelningen. Försök igen.',
     'recording.saveFailedStopped':
-      'Inspelningen stoppades eftersom AutoDoc inte kunde spara den. En del kan saknas. Kontrollera ledigt diskutrymme innan du spelar in igen.'
+      'Inspelningen stoppades eftersom Gideon\'s Notizen inte kunde spara den. En del kan saknas. Kontrollera ledigt diskutrymme innan du spelar in igen.'
   },
   da: {
     'meeting.reprocessTranscriptHint':
@@ -193,7 +193,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Stop optagelsen, og vent, til lagring og transskribering er færdige, før du sletter den.',
     'meeting.deleteFailed': 'Optagelsen kunne ikke slettes. Prøv igen.',
     'recording.saveFailedStopped':
-      'Optagelsen stoppede, fordi AutoDoc ikke kunne gemme den. Noget af den kan mangle. Tjek den ledige diskplads, før du optager igen.'
+      'Optagelsen stoppede, fordi Gideon\'s Notizen ikke kunne gemme den. Noget af den kan mangle. Tjek den ledige diskplads, før du optager igen.'
   },
   fi: {
     'meeting.reprocessTranscriptHint':
@@ -212,7 +212,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Pysäytä nauhoitus ja odota, että tallennus ja litterointi ovat valmiit, ennen kuin poistat sen.',
     'meeting.deleteFailed': 'Nauhoitusta ei voitu poistaa. Yritä uudelleen.',
     'recording.saveFailedStopped':
-      'Nauhoitus pysähtyi, koska AutoDoc ei voinut tallentaa sitä. Osa siitä voi puuttua. Tarkista vapaa levytila ennen uutta nauhoitusta.'
+      'Nauhoitus pysähtyi, koska Gideon\'s Notizen ei voinut tallentaa sitä. Osa siitä voi puuttua. Tarkista vapaa levytila ennen uutta nauhoitusta.'
   },
   pl: {
     'meeting.reprocessTranscriptHint':
@@ -231,7 +231,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Zatrzymaj nagrywanie i poczekaj na zakończenie zapisywania i transkrypcji, zanim usuniesz nagranie.',
     'meeting.deleteFailed': 'Nie można usunąć tego nagrania. Spróbuj ponownie.',
     'recording.saveFailedStopped':
-      'Nagrywanie zostało zatrzymane, ponieważ AutoDoc nie mógł go zapisać. Części nagrania może brakować. Sprawdź wolne miejsce na dysku przed kolejnym nagrywaniem.'
+      'Nagrywanie zostało zatrzymane, ponieważ Gideon\'s Notizen nie mógł go zapisać. Części nagrania może brakować. Sprawdź wolne miejsce na dysku przed kolejnym nagrywaniem.'
   },
   ru: {
     'meeting.reprocessTranscriptHint':
@@ -250,7 +250,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Остановите запись и дождитесь завершения сохранения и расшифровки, прежде чем удалять её.',
     'meeting.deleteFailed': 'Не удалось удалить эту запись. Повторите попытку.',
     'recording.saveFailedStopped':
-      'Запись остановлена, так как AutoDoc не смог её сохранить. Часть записи может отсутствовать. Перед новой записью проверьте свободное место на диске.'
+      'Запись остановлена, так как Gideon\'s Notizen не смог её сохранить. Часть записи может отсутствовать. Перед новой записью проверьте свободное место на диске.'
   },
   uk: {
     'meeting.reprocessTranscriptHint':
@@ -268,7 +268,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Зупиніть запис і дочекайтеся завершення збереження та транскрибування, перш ніж видаляти його.',
     'meeting.deleteFailed': 'Не вдалося видалити цей запис. Спробуйте ще раз.',
     'recording.saveFailedStopped':
-      'Запис зупинено, оскільки AutoDoc не зміг його зберегти. Частина запису може бути відсутня. Перед новим записом перевірте вільне місце на диску.'
+      'Запис зупинено, оскільки Gideon\'s Notizen не зміг його зберегти. Частина запису може бути відсутня. Перед новим записом перевірте вільне місце на диску.'
   },
   cs: {
     'meeting.reprocessTranscriptHint':
@@ -286,7 +286,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Před odstraněním nahrávání zastavte a počkejte na dokončení ukládání a přepisu.',
     'meeting.deleteFailed': 'Tuto nahrávku se nepodařilo odstranit. Zkuste to znovu.',
     'recording.saveFailedStopped':
-      'Nahrávání se zastavilo, protože AutoDoc nemohl nahrávku uložit. Část může chybět. Před dalším nahráváním zkontrolujte volné místo na disku.'
+      'Nahrávání se zastavilo, protože Gideon\'s Notizen nemohl nahrávku uložit. Část může chybět. Před dalším nahráváním zkontrolujte volné místo na disku.'
   },
   sk: {
     'meeting.reprocessTranscriptHint':
@@ -304,7 +304,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Pred odstránením nahrávanie zastavte a počkajte na dokončenie ukladania a prepisu.',
     'meeting.deleteFailed': 'Túto nahrávku sa nepodarilo odstrániť. Skúste to znova.',
     'recording.saveFailedStopped':
-      'Nahrávanie sa zastavilo, pretože AutoDoc nemohol nahrávku uložiť. Časť môže chýbať. Pred ďalším nahrávaním skontrolujte voľné miesto na disku.'
+      'Nahrávanie sa zastavilo, pretože Gideon\'s Notizen nemohol nahrávku uložiť. Časť môže chýbať. Pred ďalším nahrávaním skontrolujte voľné miesto na disku.'
   },
   sl: {
     'meeting.reprocessTranscriptHint':
@@ -322,7 +322,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Pred brisanjem ustavite snemanje in počakajte, da se shranjevanje in prepis končata.',
     'meeting.deleteFailed': 'Tega posnetka ni bilo mogoče izbrisati. Poskusite znova.',
     'recording.saveFailedStopped':
-      'Snemanje se je ustavilo, ker AutoDoc posnetka ni mogel shraniti. Del posnetka morda manjka. Pred naslednjim snemanjem preverite prosti prostor na disku.'
+      'Snemanje se je ustavilo, ker Gideon\'s Notizen posnetka ni mogel shraniti. Del posnetka morda manjka. Pred naslednjim snemanjem preverite prosti prostor na disku.'
   },
   hr: {
     'meeting.reprocessTranscriptHint':
@@ -340,7 +340,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Prije brisanja zaustavite snimanje i pričekajte da se spremanje i transkripcija završe.',
     'meeting.deleteFailed': 'Ovu snimku nije moguće izbrisati. Pokušajte ponovno.',
     'recording.saveFailedStopped':
-      'Snimanje je zaustavljeno jer AutoDoc nije mogao spremiti snimku. Dio snimke možda nedostaje. Prije novog snimanja provjerite slobodan prostor na disku.'
+      'Snimanje je zaustavljeno jer Gideon\'s Notizen nije mogao spremiti snimku. Dio snimke možda nedostaje. Prije novog snimanja provjerite slobodan prostor na disku.'
   },
   bg: {
     'meeting.reprocessTranscriptHint':
@@ -359,7 +359,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Спрете записа и изчакайте запазването и транскрипцията да приключат, преди да го изтриете.',
     'meeting.deleteFailed': 'Този запис не можа да бъде изтрит. Опитайте отново.',
     'recording.saveFailedStopped':
-      'Записът спря, защото AutoDoc не успя да го запази. Част от него може да липсва. Преди нов запис проверете свободното място на диска.'
+      'Записът спря, защото Gideon\'s Notizen не успя да го запази. Част от него може да липсва. Преди нов запис проверете свободното място на диска.'
   },
   ro: {
     'meeting.reprocessTranscriptHint':
@@ -377,7 +377,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Opriți înregistrarea și așteptați finalizarea salvării și a transcrierii înainte de a o șterge.',
     'meeting.deleteFailed': 'Această înregistrare nu a putut fi ștearsă. Încercați din nou.',
     'recording.saveFailedStopped':
-      'Înregistrarea s-a oprit deoarece AutoDoc nu a putut-o salva. O parte poate lipsi. Verificați spațiul liber pe disc înainte de a înregistra din nou.'
+      'Înregistrarea s-a oprit deoarece Gideon\'s Notizen nu a putut-o salva. O parte poate lipsi. Verificați spațiul liber pe disc înainte de a înregistra din nou.'
   },
   hu: {
     'meeting.reprocessTranscriptHint':
@@ -395,7 +395,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'A törlés előtt állítsa le a felvételt, és várja meg a mentés és az átírás befejezését.',
     'meeting.deleteFailed': 'Ezt a felvételt nem sikerült törölni. Próbálja újra.',
     'recording.saveFailedStopped':
-      'A felvétel leállt, mert az AutoDoc nem tudta menteni. Egy része hiányozhat. Új felvétel előtt ellenőrizze a szabad lemezterületet.'
+      'A felvétel leállt, mert az Gideon\'s Notizen nem tudta menteni. Egy része hiányozhat. Új felvétel előtt ellenőrizze a szabad lemezterületet.'
   },
   el: {
     'meeting.reprocessTranscriptHint':
@@ -414,7 +414,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Σταματήστε την εγγραφή και περιμένετε να ολοκληρωθούν η αποθήκευση και η απομαγνητοφώνηση πριν τη διαγράψετε.',
     'meeting.deleteFailed': 'Δεν ήταν δυνατή η διαγραφή αυτής της εγγραφής. Δοκιμάστε ξανά.',
     'recording.saveFailedStopped':
-      'Η εγγραφή σταμάτησε επειδή το AutoDoc δεν μπόρεσε να την αποθηκεύσει. Ένα μέρος της ίσως λείπει. Ελέγξτε τον ελεύθερο χώρο στον δίσκο πριν κάνετε νέα εγγραφή.'
+      'Η εγγραφή σταμάτησε επειδή το Gideon\'s Notizen δεν μπόρεσε να την αποθηκεύσει. Ένα μέρος της ίσως λείπει. Ελέγξτε τον ελεύθερο χώρο στον δίσκο πριν κάνετε νέα εγγραφή.'
   },
   et: {
     'meeting.reprocessTranscriptHint':
@@ -433,7 +433,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Enne kustutamist peatage salvestamine ja oodake, kuni salvestise talletamine ja transkribeerimine on lõppenud.',
     'meeting.deleteFailed': 'Seda salvestist ei õnnestunud kustutada. Proovige uuesti.',
     'recording.saveFailedStopped':
-      'Salvestamine peatus, sest AutoDoc ei saanud salvestist talletada. Osa sellest võib puududa. Enne uut salvestamist kontrollige vaba kettaruumi.'
+      'Salvestamine peatus, sest Gideon\'s Notizen ei saanud salvestist talletada. Osa sellest võib puududa. Enne uut salvestamist kontrollige vaba kettaruumi.'
   },
   lv: {
     'meeting.reprocessTranscriptHint':
@@ -452,7 +452,7 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Pirms dzēšanas apturiet ierakstīšanu un pagaidiet, līdz saglabāšana un transkribēšana beidzas.',
     'meeting.deleteFailed': 'Šo ierakstu neizdevās izdzēst. Mēģiniet vēlreiz.',
     'recording.saveFailedStopped':
-      'Ierakstīšana tika apturēta, jo AutoDoc nevarēja saglabāt ierakstu. Daļa var trūkt. Pirms nākamās ierakstīšanas pārbaudiet brīvo vietu diskā.'
+      'Ierakstīšana tika apturēta, jo Gideon\'s Notizen nevarēja saglabāt ierakstu. Daļa var trūkt. Pirms nākamās ierakstīšanas pārbaudiet brīvo vietu diskā.'
   },
   lt: {
     'meeting.reprocessTranscriptHint':
@@ -470,6 +470,6 @@ export const leftoverOverlays: Partial<Record<UiLanguageCode, LeftoverOverlay>> 
       'Prieš ištrindami sustabdykite įrašymą ir palaukite, kol baigsis išsaugojimas ir transkribavimas.',
     'meeting.deleteFailed': 'Šio įrašo ištrinti nepavyko. Bandykite dar kartą.',
     'recording.saveFailedStopped':
-      'Įrašymas sustabdytas, nes „AutoDoc“ negalėjo išsaugoti įrašo. Dalies gali trūkti. Prieš vėl įrašydami patikrinkite laisvą vietą diske.'
+      'Įrašymas sustabdytas, nes „Gideon\'s Notizen“ negalėjo išsaugoti įrašo. Dalies gali trūkti. Prieš vėl įrašydami patikrinkite laisvą vietą diske.'
   }
 }

@@ -261,7 +261,7 @@ export async function renderMeetingExportPdf(html: string): Promise<Buffer> {
       displayHeaderFooter: true,
       headerTemplate: '<div></div>',
       footerTemplate:
-        '<div style="position:relative;width:100%;height:12px;color:#6B6A63;font:9px Arial,sans-serif"><span style="position:absolute;left:.65in">AutoDoc meeting export</span><span style="position:absolute;right:.65in;white-space:nowrap"><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>',
+        '<div style="position:relative;width:100%;height:12px;color:#6B6A63;font:9px Arial,sans-serif"><span style="position:absolute;left:.65in">Gideon\'s Notizen meeting export</span><span style="position:absolute;right:.65in;white-space:nowrap"><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>',
       generateTaggedPDF: true,
       generateDocumentOutline: true
     })

@@ -156,7 +156,7 @@ export function buildWriterPrompt(
     if (!text.trim()) return ''
     return `[${index + 1}] ${excerpt.title} (${stamp}) · ${kind}\n${text}`
   })
-  return `You are AutoDoc's meeting assistant. Answer the user's question using ONLY the numbered excerpts below.
+  return `You are Gideon's Notizen's meeting assistant. Answer the user's question using ONLY the numbered excerpts below.
 
 Rules:
 - Write like a helpful colleague. Prefer 2-6 short sentences or a tight bullet list.

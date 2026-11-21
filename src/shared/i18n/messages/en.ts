@@ -27,10 +27,10 @@ export const en = {
   'appearance.dark': 'Dark',
 
   'uiLanguage.title': 'App language',
-  'uiLanguage.description': 'Menus, buttons, and labels in AutoDoc.',
+  'uiLanguage.description': 'Menus, buttons, and labels in Gideon\'s Notizen.',
   'uiLanguage.offerTitle': 'Also use {language} for the app?',
   'uiLanguage.offerBody':
-    'Meeting notes will use {language}. You can also switch AutoDoc’s buttons and menus to {language}.',
+    'Meeting notes will use {language}. You can also switch Gideon\'s Notizen’s buttons and menus to {language}.',
   'uiLanguage.offerConfirm': 'Use {language}',
   'uiLanguage.offerKeep': 'Keep current app language',
 
@@ -48,11 +48,11 @@ export const en = {
   'settings.reportSave': 'Save as file',
   'settings.reportGenerating': 'Creating…',
   'settings.reportCopied': 'The report was copied to the clipboard.',
-  'settings.reportSaved': 'The report was saved to your Downloads folder (AutoDoc subfolder).',
+  'settings.reportSaved': 'The report was saved to your Downloads folder (Gideon\'s Notizen subfolder).',
   'settings.reportFailed': 'The report could not be created.',
   'settings.launchAtLoginDescription':
-    'Start AutoDoc automatically when you sign in to your computer.',
-  'settings.launchAtLoginAria': 'Toggle launching AutoDoc at login',
+    'Start Gideon\'s Notizen automatically when you sign in to your computer.',
+  'settings.launchAtLoginAria': 'Toggle launching Gideon\'s Notizen at login',
   'settings.addGoogle': 'Add Google Calendar',
   'settings.addMicrosoft': 'Add Microsoft Outlook',
   'settings.connecting': 'Connecting...',
@@ -71,13 +71,13 @@ export const en = {
   'settings.meetingLanguageUnavailable':
     '{language} isn’t available on this {machine}. New recordings use English.',
   'settings.videoPlayback': 'Video playback',
-  'settings.watermarkTitle': 'AutoDoc watermark',
+  'settings.watermarkTitle': 'Gideon\'s Notizen watermark',
   'settings.watermarkDescription':
-    'Show “Meeting notes by AutoDoc” while watching recorded video. Original recordings stay unchanged.',
-  'settings.watermarkAria': 'Show AutoDoc watermark on recorded video',
+    'Show “Meeting notes by Gideon\'s Notizen” while watching recorded video. Original recordings stay unchanged.',
+  'settings.watermarkAria': 'Show Gideon\'s Notizen watermark on recorded video',
   'settings.analytics': 'Analytics & Crash Reports',
   'settings.analyticsDescription':
-    'Share anonymous usage data and crash reports to help improve AutoDoc. Meeting content stays local, and technical logs are optional.',
+    'Share anonymous usage data and crash reports to help improve Gideon\'s Notizen. Meeting content stays local, and technical logs are optional.',
   'settings.analyticsAria': 'Toggle analytics and crash reports',
   'settings.diagnosticLogsTitle': 'Attach technical app logs to error reports',
   'settings.diagnosticLogsDescription':
@@ -93,25 +93,25 @@ export const en = {
   'settings.otherLocalData': 'Other local app data',
   'settings.total': 'Total',
   'settings.uninstallGuidanceWindows':
-    'Windows uninstall can optionally remove AutoDoc local data. Use the controls here any time you want to reclaim space without uninstalling.',
+    'Windows uninstall can optionally remove Gideon\'s Notizen local data. Use the controls here any time you want to reclaim space without uninstalling.',
   'settings.uninstallGuidanceMac':
-    'Deleting AutoDoc from Applications does not remove local data on macOS. Use the controls here to reclaim space or reset the app.',
+    'Deleting Gideon\'s Notizen from Applications does not remove local data on macOS. Use the controls here to reclaim space or reset the app.',
   'settings.removeDownloads': 'Remove Downloaded AI Components',
   'settings.removingDownloads': 'Removing Downloaded AI...',
   'settings.removeDownloadsConfirm':
-    'Remove the downloaded AI components from this machine? AutoDoc will download them again the next time they are needed.',
+    'Remove the downloaded AI components from this machine? Gideon\'s Notizen will download them again the next time they are needed.',
   'settings.removeDownloadsDone':
-    'Downloaded AI components removed. AutoDoc will re-download them when needed.',
+    'Downloaded AI components removed. Gideon\'s Notizen will re-download them when needed.',
   'settings.removeDownloadsFailed': 'Failed to remove downloaded AI components.',
-  'settings.deleteAllData': 'Delete All Local AutoDoc Data',
-  'settings.deletingAllData': 'Restarting AutoDoc...',
+  'settings.deleteAllData': 'Delete All Local Gideon\'s Notizen Data',
+  'settings.deletingAllData': 'Restarting Gideon\'s Notizen...',
   'settings.deleteAllDataConfirm':
-    'Delete all local AutoDoc data and restart? This removes recordings, transcripts, settings, and downloaded AI components from this machine.',
-  'settings.deleteAllDataRestarting': 'Restarting AutoDoc and clearing local data...',
-  'settings.deleteAllDataFailed': 'Failed to delete local AutoDoc data.',
+    'Delete all local Gideon\'s Notizen data and restart? This removes recordings, transcripts, settings, and downloaded AI components from this machine.',
+  'settings.deleteAllDataRestarting': 'Restarting Gideon\'s Notizen and clearing local data...',
+  'settings.deleteAllDataFailed': 'Failed to delete local Gideon\'s Notizen data.',
   'settings.about': 'About',
   'settings.licenses': 'Open-source and model licenses',
-  'settings.version': 'AutoDoc v{version}',
+  'settings.version': 'Gideon\'s Notizen v{version}',
   'settings.checkForUpdates': 'Check for updates',
   'settings.updatesDisabledQa': 'Updates disabled in QA builds',
   'settings.checking': 'Checking...',
@@ -239,17 +239,17 @@ export const en = {
   'recording.stop': 'Stop',
   'recording.stopRecording': 'Stop Recording',
   'recording.saveFailedStopped':
-    "Recording stopped because AutoDoc couldn't save it. Some of it may be missing. Check your free disk space before recording again.",
+    "Recording stopped because Gideon's Notizen couldn't save it. Some of it may be missing. Check your free disk space before recording again.",
   'recording.startNotes': 'Start AI Notes',
   'recording.chooseWindow': 'Choose a window.',
   'recording.selectWindow': 'Select window',
   'recording.selectWindowToRecord': 'Select a window to record',
-  'recording.highlightedWindow': 'AutoDoc highlighted the most likely meeting window.',
+  'recording.highlightedWindow': 'Gideon\'s Notizen highlighted the most likely meeting window.',
   'recording.detectedMeeting': 'Detected meeting',
   'recording.suggestedWindow': 'Suggested window',
   'recording.wouldYouLikeToStart': 'Would you like to start AI notes?',
   'recording.screenPermission':
-    'AutoDoc needs Screen Recording access. If you just enabled it, fully quit and reopen AutoDoc, then press Record again.',
+    'Gideon\'s Notizen needs Screen Recording access. If you just enabled it, fully quit and reopen Gideon\'s Notizen, then press Record again.',
 
   'notesReady.title': 'Notes Ready',
   'notesReady.body': 'Notes are ready.',
@@ -265,9 +265,9 @@ export const en = {
   'tray.quitApp': 'Quit {app}',
   'tray.recordingTooltip': '{app} — recording',
 
-  'update.readyTitle': 'AutoDoc update ready',
+  'update.readyTitle': 'Gideon\'s Notizen update ready',
   'update.readyBody': 'Restart to install.',
-  'update.savingRecordingTitle': 'AutoDoc is still saving your recording',
+  'update.savingRecordingTitle': 'Gideon\'s Notizen is still saving your recording',
 
   'setup.checkingEngine': 'Checking transcription engine...',
   'setup.checkingBackend': 'Checking {backend}...',
@@ -303,7 +303,7 @@ export const en = {
 
   'onboarding.chooseMeetingLanguage': 'Choose your meeting language',
   'onboarding.meetingLanguageBody':
-    'AutoDoc transcribes and writes notes in this language. You can change it later in Settings.',
+    'Gideon\'s Notizen transcribes and writes notes in this language. You can change it later in Settings.',
   'onboarding.openSettingsAgain': 'Open Settings again',
   'onboarding.continue': 'Continue →',
   'onboarding.enableScreenRecording': 'Enable Screen Recording',
@@ -317,7 +317,7 @@ export const en = {
     'Reprocessing failed. Your previous transcript and notes are still available.',
   'meeting.wrappingUp': 'Wrapping up this recording. It should finish appearing in a moment.',
   'meeting.notesSlowTitle': 'Notes are taking longer than usual.',
-  'meeting.notesSlowBody': 'AutoDoc is still waiting for the local AI model to respond.',
+  'meeting.notesSlowBody': 'Gideon\'s Notizen is still waiting for the local AI model to respond.',
   'meeting.regenerateNotes': 'Regenerate notes',
   'meeting.tryAgain': 'Try again',
   'meeting.viewTranscript': 'View transcript',
@@ -327,9 +327,9 @@ export const en = {
   'meeting.add': '+ Add',
   'meeting.analyzingTranscript': 'Analyzing transcript...',
   'meeting.noStructuredNotes':
-    'AutoDoc could not turn this transcript into structured notes. The transcript is still available below.',
+    'Gideon\'s Notizen could not turn this transcript into structured notes. The transcript is still available below.',
   'meeting.ollamaMemory':
-    'AutoDoc could not generate notes because Ollama did not have enough available RAM.',
+    'Gideon\'s Notizen could not generate notes because Ollama did not have enough available RAM.',
   'meeting.segmentationFailed': 'Segmentation failed. Try retrying above.',
   'meeting.noCategoryYet': 'No {category} recorded yet.',
   'meeting.exportDisabledAfterRecording': 'Notes are available after this recording finishes.',
@@ -342,7 +342,7 @@ export const en = {
   'meeting.settingUpModel': 'Setting up the local AI model...',
   'meeting.processing': 'Processing...',
   'meeting.writingNotes':
-    'AutoDoc is writing structured notes from the transcript, right on this device. This can take a few minutes for longer meetings.',
+    'Gideon\'s Notizen is writing structured notes from the transcript, right on this device. This can take a few minutes for longer meetings.',
   'meeting.languageAria': 'Meeting language: {language}',
   'meeting.languageOptionsAria': 'Meeting language options',
   'meeting.reprocessTranscriptHint':

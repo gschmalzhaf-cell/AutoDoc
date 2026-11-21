@@ -179,8 +179,8 @@ describe('application-install', () => {
       expect.objectContaining({
         type: 'warning',
         title: 'Unsupported macOS Version',
-        message: 'AutoDoc requires macOS Sonoma or newer.',
-        buttons: ['Quit AutoDoc']
+        message: "Gideon's Notizen requires macOS Sonoma or newer.",
+        buttons: ["Quit Gideon's Notizen"]
       })
     )
     expect(mockExit).toHaveBeenCalledWith(0)

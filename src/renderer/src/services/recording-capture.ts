@@ -622,7 +622,7 @@ function handleChunkSaveFailure(meetingId: string): void {
     type: 'warning',
     messageKey: 'recording.saveFailedStopped',
     message:
-      "Recording stopped because AutoDoc couldn't save it. Some of it may be missing. Check your free disk space before recording again."
+      "Recording stopped because Gideon's Notizen couldn't save it. Some of it may be missing. Check your free disk space before recording again."
   })
   if (activeCapture?.meetingId !== meetingId) return
   // Not awaited: stopping drains pendingChunkWrites, which still holds the write that failed.
@@ -826,7 +826,7 @@ async function createVideoStream(
         type: 'screen',
         messageKey: 'recording.screenPermission',
         message:
-          'Screen recording lets AutoDoc capture meeting visuals. Enable it in System Settings → Privacy → Screen Recording.',
+          "Screen recording lets Gideon's Notizen capture meeting visuals. Enable it in System Settings → Privacy → Screen Recording.",
         action: {
           label: 'Open Settings',
           labelKey: 'upcoming.openSettings',
@@ -857,7 +857,7 @@ async function createCaptureStreams(
         type: 'screen',
         messageKey: 'recording.systemAudioCaptureFailed',
         message:
-          'System audio capture failed. AutoDoc can still record, but speaker labeling may be unavailable for this recording.'
+          "System audio capture failed. Gideon's Notizen can still record, but speaker labeling may be unavailable for this recording."
       })
     }
   }

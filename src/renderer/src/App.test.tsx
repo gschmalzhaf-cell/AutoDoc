@@ -712,13 +712,13 @@ describe('App', () => {
 
   it.each([
     ['Finish your recording before restarting.', 'settings.finishRecordingBeforeRestart'],
-    ['AutoDoc is starting. Try again shortly.', 'update.startingBeforeRestart'],
+    ['Gideon\'s Notizen is starting. Try again shortly.', 'update.startingBeforeRestart'],
     [
-      'AutoDoc is processing your meeting. Restart when it finishes.',
+      'Gideon\'s Notizen is processing your meeting. Restart when it finishes.',
       'update.processingBeforeRestart'
     ],
     ['Wait for the model download to finish before restarting.', 'update.downloadBeforeRestart'],
-    ['AutoDoc is saving your recording.', 'update.savingBeforeRestart']
+    ['Gideon\'s Notizen is saving your recording.', 'update.savingBeforeRestart']
   ] as const)(
     'localizes a visible restart block and preserves its guard: %s',
     async (reason, key: MessageKey) => {
@@ -785,7 +785,7 @@ describe('App', () => {
     })
 
     const bannerTitle = await screen.findByText("You're up to date")
-    expect(screen.getByText('AutoDoc is running the latest available version.')).toBeInTheDocument()
+    expect(screen.getByText('Gideon\'s Notizen is running the latest available version.')).toBeInTheDocument()
     expect(
       Boolean(
         bannerTitle.compareDocumentPosition(settingsHeading) & Node.DOCUMENT_POSITION_FOLLOWING

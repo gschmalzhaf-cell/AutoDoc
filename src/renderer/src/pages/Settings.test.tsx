@@ -211,7 +211,7 @@ describe('Settings', () => {
     const user = userEvent.setup()
     const view = render(<Settings />)
     const toggle = await screen.findByRole('button', {
-      name: /show autodoc watermark on recorded video/i
+      name: /show gideon's notizen watermark on recorded video/i
     })
 
     expect(toggle).toHaveAttribute('aria-pressed', 'true')
@@ -226,7 +226,7 @@ describe('Settings', () => {
 
     expect(
       await screen.findByRole('button', {
-        name: /show autodoc watermark on recorded video/i
+        name: /show gideon's notizen watermark on recorded video/i
       })
     ).toHaveAttribute('aria-pressed', 'false')
   })
@@ -557,12 +557,12 @@ describe('Settings', () => {
     render(<Settings />)
 
     await screen.findByText('Downloaded AI components')
-    await user.click(screen.getByRole('button', { name: /delete all local autodoc data/i }))
+    await user.click(screen.getByRole('button', { name: /delete all local gideon's notizen data/i }))
 
     await waitFor(() => {
       expect(api.invoke).toHaveBeenCalledWith('app:reset-local-data')
     })
-    expect(screen.getByText(/restarting autodoc and clearing local data/i)).toBeInTheDocument()
+    expect(screen.getByText(/restarting gideon's notizen and clearing local data/i)).toBeInTheDocument()
 
     confirmSpy.mockRestore()
   })

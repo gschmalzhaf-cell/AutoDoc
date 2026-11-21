@@ -604,7 +604,7 @@ describe('MeetingDetail', () => {
     expect(screen.getByRole('button', { name: 'Play' })).toBeInTheDocument()
     expect(screen.getByRole('slider', { name: 'Seek' })).toBeInTheDocument()
     const watermark = screen.getByText(/Meeting notes by/)
-    expect(watermark).toHaveTextContent('Meeting notes by AutoDoc')
+    expect(watermark).toHaveTextContent('Meeting notes by Gideon\'s Notizen')
     expect(watermark.closest('[aria-hidden="true"]')).toHaveClass('pointer-events-none')
 
     const api = window.electronAPI as unknown as MockElectronAPI
@@ -1259,7 +1259,7 @@ describe('MeetingDetail', () => {
     })
     expect(screen.getByText('Notes are taking longer than usual.')).toBeInTheDocument()
     expect(
-      screen.getByText(/AutoDoc is still waiting for the local AI model to respond/i)
+      screen.getByText(/Gideon's Notizen is still waiting for the local AI model to respond/i)
     ).toBeInTheDocument()
 
     await act(async () => {
@@ -1410,7 +1410,7 @@ describe('MeetingDetail', () => {
       expect(screen.getByText('No notes were generated')).toBeInTheDocument()
       expect(
         screen.getByText(
-          'AutoDoc didn’t find anything in the transcript to turn into notes. You can retry, and your transcript is still available.'
+          'Gideon\'s Notizen didn’t find anything in the transcript to turn into notes. You can retry, and your transcript is still available.'
         )
       ).toBeInTheDocument()
       expect(screen.queryByText(/There wasn’t enough conversation/)).not.toBeInTheDocument()
